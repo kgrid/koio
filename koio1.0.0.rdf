@@ -60,9 +60,9 @@
     
 
 
-    <!-- http://www.kgrid.org/koio#hasDeploymentInstructionPart -->
+    <!-- http://www.kgrid.org/koio#hasDeploymentInstruction -->
 
-    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#hasDeploymentInstructionPart">
+    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#hasDeploymentInstruction">
         <rdfs:subPropertyOf rdf:resource="http://www.kgrid.org/koio#hasPart"/>
         <owl:inverseOf rdf:resource="http://www.kgrid.org/koio#isDeploymentInstructionPartOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
@@ -75,9 +75,9 @@
     
 
 
-    <!-- http://www.kgrid.org/koio#hasImplementationPart -->
+    <!-- http://www.kgrid.org/koio#hasImplementation -->
 
-    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#hasImplementationPart">
+    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#hasImplementation">
         <rdfs:subPropertyOf rdf:resource="http://www.kgrid.org/koio#hasPart"/>
         <owl:inverseOf rdf:resource="http://www.kgrid.org/koio#isImplementationPartOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
@@ -104,9 +104,9 @@ BFO</koio1:definition>
     
 
 
-    <!-- http://www.kgrid.org/koio#hasPayloadPart -->
+    <!-- http://www.kgrid.org/koio#hasPayload -->
 
-    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#hasPayloadPart">
+    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#hasPayload">
         <rdfs:subPropertyOf rdf:resource="http://www.kgrid.org/koio#hasPart"/>
         <owl:inverseOf rdf:resource="http://www.kgrid.org/koio#isPayloadPartOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
@@ -119,9 +119,9 @@ BFO</koio1:definition>
     
 
 
-    <!-- http://www.kgrid.org/koio#hasServiceSpecificationPart -->
+    <!-- http://www.kgrid.org/koio#hasServiceSpecification -->
 
-    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#hasServiceSpecificationPart">
+    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#hasServiceSpecification">
         <rdfs:subPropertyOf rdf:resource="http://www.kgrid.org/koio#hasPart"/>
         <owl:inverseOf rdf:resource="http://www.kgrid.org/koio#isServiceSpecificationPartOf"/>
         <rdfs:domain rdf:resource="http://www.kgrid.org/koio#Implementation"/>
@@ -142,7 +142,7 @@ BFO</koio1:definition>
         <rdfs:range rdf:resource="http://www.kgrid.org/koio#Implementation"/>
         <koio1:definition>isDeploymentInstruction, def., a core relation that holds between an DeploymentInstruction that is part of a Knowledge Object and its whole</koio1:definition>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
-        <rdfs:label>isDeploymentInstructionPart</rdfs:label>
+        <rdfs:label>isDeploymentInstructionPartOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -156,7 +156,7 @@ BFO</koio1:definition>
         <rdfs:range rdf:resource="http://www.kgrid.org/koio#KnowledgeObject"/>
         <koio1:definition>isImplementation, def., a core relation that holds between an Implementation that is part of a Knowledge Object and its whole</koio1:definition>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
-        <rdfs:label>isImplementationPart</rdfs:label>
+        <rdfs:label>isImplementationPartOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -183,7 +183,7 @@ BFO</koio1:definition>
         <rdfs:range rdf:resource="http://www.kgrid.org/koio#Implementation"/>
         <koio1:definition>isPayload, def., a core relation that holds between an Payload that is part of a Knowledge Object and its whole</koio1:definition>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
-        <rdfs:label>isPayloadPart</rdfs:label>
+        <rdfs:label>isPayloadPartOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -197,7 +197,7 @@ BFO</koio1:definition>
         <rdfs:range rdf:resource="http://www.kgrid.org/koio#Implementation"/>
         <koio1:definition>isServiceSpecification, def., a core relation that holds between a ServiceSpecification that is part of a Knowledge Object and its whole</koio1:definition>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
-        <rdfs:label>isServiceSpecificationPart</rdfs:label>
+        <rdfs:label>isServiceSpecificationPartOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -573,8 +573,8 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
 
     <owl:NamedIndividual rdf:about="http://www.kgrid.org/koio#UUIDIMP01">
         <rdf:type rdf:resource="http://www.kgrid.org/koio#Implementation"/>
-        <koio1:hasDeploymentInstructionPart rdf:resource="http://www.kgrid.org/koio#UUIDDI01"/>
-        <koio1:hasPayloadPart rdf:resource="http://www.kgrid.org/koio#UUIDPAYLOAD01"/>
+        <koio1:hasDeploymentInstruction rdf:resource="http://www.kgrid.org/koio#UUIDDI01"/>
+        <koio1:hasPayload rdf:resource="http://www.kgrid.org/koio#UUIDPAYLOAD01"/>
     </owl:NamedIndividual>
     
 
@@ -583,7 +583,7 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
 
     <owl:NamedIndividual rdf:about="http://www.kgrid.org/koio#UUIDKO1">
         <rdf:type rdf:resource="http://www.kgrid.org/koio#KnowledgeObject"/>
-        <koio1:hasImplementationPart rdf:resource="http://www.kgrid.org/koio#UUIDIMP01"/>
+        <koio1:hasImplementation rdf:resource="http://www.kgrid.org/koio#UUIDIMP01"/>
         <koio1:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">TrialTitle</koio1:title>
     </owl:NamedIndividual>
     
