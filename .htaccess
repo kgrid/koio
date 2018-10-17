@@ -1,0 +1,10 @@
+# Directive to ensure *.rdf files served as appropriate content type,
+# if not present in main apache config
+#AddType application/ld+json .json
+
+# Rewrite engine setup
+RewriteEngine On
+#RewriteBase /targets
+
+# Rewrite rule to serve JSON-LD content from the vocabulary URI
+RewriteRule ^koio$ http://purl.kgrid.org/koio1.0.0.json 
