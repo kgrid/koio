@@ -1,0 +1,7 @@
+# Redirects from what the browser requests to what we serve
+/koio              /koio1.0.0.json         301
+
+
+#/blog/my-post.php  /blog/my-post
+#/news              /blog
+#/google            https://www.google.com
