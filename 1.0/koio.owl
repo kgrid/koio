@@ -1,0 +1,634 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.kgrid.org/koio#"
+     xml:base="http://www.kgrid.org/koio"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:koio="http://www.kgrid.org/koio#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.kgrid.org/koio">
+        <owl:versionIRI rdf:resource="http://www.kgrid.org/koio/1.0.0/koio.rdf"/>
+        <dc:contributor>Greg Farris</dc:contributor>
+        <rdfs:comment>KOIO is an ontology describing Knowledge Objects and their parts as they are implemented in the Knoweldge Grid (KGrid) reference platform.  As such, KOIO is subject to evolve as KGrid reference platform development evolves.
+
+The primary overriding objective of developing and implementing KOIO is to describe Knowledge Objects and their parts in enough detail to achieve a degree  interoperability that is sufficient to enable Knowledge Objects to be incorporated into multiple platforms, including but not limited to, the KGrid reference platform
+
+With the exception of several upper level classes from BFO and IAO, KOIO versions 1.X.X are limited in scope to classes of material entities spanning Knowledge Objects, parts of Knowledge Objects, and Collections of Knowledge Objects.
+
+It has yet to be determined whether development of KOIO subontologies and/or extensions of KOIO are the preferred method for modeling (a) other KGrid components besides Knowledge Objects and the subcompnent parts of other KGrid components, (b) actions and operations involving Knowledge Objects and KGrid components, and (c) relationships between actions and operations, components, and parts.</rdfs:comment>
+        <dc:contributor>Nate Gittlen</dc:contributor>
+        <dc:contributor>George Meng</dc:contributor>
+        <dc:title>Knowledge Object Implementation Ontology (KOIO) version 1.0.0</dc:title>
+        <dc:contributor>Allen Flynn</dc:contributor>
+        <dc:contributor>Peter Boisvert</dc:contributor>
+        <dc:contributor>Charles P. Friedman</dc:contributor>
+        <dc:contributor>Carl Lagoze</dc:contributor>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://www.kgrid.org/koio#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.kgrid.org/koio#definition">
+        <definition>definition, def., an Information Artifact about a Thing that annotates the Thing with an Aristotelian description of the Thing</definition>
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#type -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#type"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.kgrid.org/koio#hasDeploymentInstruction -->
+
+    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#hasDeploymentInstruction">
+        <rdfs:subPropertyOf rdf:resource="http://www.kgrid.org/koio#hasPart"/>
+        <owl:inverseOf rdf:resource="http://www.kgrid.org/koio#isDeploymentInstructionPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#Implementation"/>
+        <rdfs:range rdf:resource="http://www.kgrid.org/koio#DeploymentInstruction"/>
+        <definition>hasDeploymentInstruction, def., a relation that holds between a whole KnowledgeObject and its DeploymentInstruction parts</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label>hasDeploymentInstruction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#hasImplementation -->
+
+    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#hasImplementation">
+        <rdfs:subPropertyOf rdf:resource="http://www.kgrid.org/koio#hasPart"/>
+        <owl:inverseOf rdf:resource="http://www.kgrid.org/koio#isImplementationPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#KnowledgeObject"/>
+        <rdfs:range rdf:resource="http://www.kgrid.org/koio#Implementation"/>
+        <definition>hasImplementation, def., a relation that holds between a whole KnowledgeObject and its Implementation part(s)</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label>hasImplementation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#hasPart">
+        <owl:inverseOf rdf:resource="http://www.kgrid.org/koio#isPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <definition>def = a core relation that holds between a whole and its part
+
+BFO</definition>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">hasPart</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#hasPayload -->
+
+    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#hasPayload">
+        <rdfs:subPropertyOf rdf:resource="http://www.kgrid.org/koio#hasPart"/>
+        <owl:inverseOf rdf:resource="http://www.kgrid.org/koio#isPayloadPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#Implementation"/>
+        <rdfs:range rdf:resource="http://www.kgrid.org/koio#Payload"/>
+        <definition>hasPayload, def., a relation that holds between a whole KnowledgeObject and its Payload part(s)</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label>hasPayload</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#hasServiceSpecification -->
+
+    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#hasServiceSpecification">
+        <rdfs:subPropertyOf rdf:resource="http://www.kgrid.org/koio#hasPart"/>
+        <owl:inverseOf rdf:resource="http://www.kgrid.org/koio#isServiceSpecificationPartOf"/>
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#Implementation"/>
+        <rdfs:range rdf:resource="http://www.kgrid.org/koio#ServiceSpecification"/>
+        <definition>hasServiceSpecification, def., a relation that holds between a whole KnowledgeObject and its ServiceSpecification part</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label>hasServiceSpecification</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#isDeploymentInstructionPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#isDeploymentInstructionPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.kgrid.org/koio#isPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#DeploymentInstruction"/>
+        <rdfs:range rdf:resource="http://www.kgrid.org/koio#Implementation"/>
+        <definition>isDeploymentInstruction, def., a core relation that holds between an DeploymentInstruction that is part of a Knowledge Object and its whole</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label>isDeploymentInstructionPartOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#isImplementationPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#isImplementationPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.kgrid.org/koio#isPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#Implementation"/>
+        <rdfs:range rdf:resource="http://www.kgrid.org/koio#KnowledgeObject"/>
+        <definition>isImplementation, def., a core relation that holds between an Implementation that is part of a Knowledge Object and its whole</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label>isImplementationPartOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <definition>isPartOf, def., a core relation that holds between a part and its whole
+
+BFO</definition>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">isPartOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#isPayloadPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#isPayloadPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.kgrid.org/koio#isPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#Payload"/>
+        <rdfs:range rdf:resource="http://www.kgrid.org/koio#Implementation"/>
+        <definition>isPayload, def., a core relation that holds between an Payload that is part of a Knowledge Object and its whole</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label>isPayloadPartOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#isServiceSpecificationPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.kgrid.org/koio#isServiceSpecificationPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.kgrid.org/koio#isPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#ServiceSpecification"/>
+        <rdfs:range rdf:resource="http://www.kgrid.org/koio#Implementation"/>
+        <definition>isServiceSpecification, def., a core relation that holds between a ServiceSpecification that is part of a Knowledge Object and its whole</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label>isServiceSpecificationPartOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.kgrid.org/koio#access -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kgrid.org/koio#access">
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#KnowledgeObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>The expected strings are &quot;public&quot; or &quot;private&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label>access</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#adapterType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kgrid.org/koio#adapterType">
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#DeploymentInstruction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <definition>adapterType = def., a label describing a Knowledge Grid adapter</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label>adapterType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#contributors -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kgrid.org/koio#contributors">
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#KnowledgeObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>From Dublin Core Metadata Element Set Version 1.1</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/contributors"/>
+        <rdfs:label xml:lang="en">contributors</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kgrid.org/koio#description">
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#KnowledgeObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>From Dublin Core Metadata Element Set Version 1.1</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#endpoints -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kgrid.org/koio#endpoints">
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#ServiceSpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <definition>endpoints = def., is a virtual address for a service that accepts communications back and forth across the network</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label>endpoints</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#identifer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kgrid.org/koio#identifer">
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#KnowledgeObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>From Dublin Core Metadata Element Set Version 1.1</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#keywords -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kgrid.org/koio#keywords">
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#KnowledgeObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>From Dublin Core Metadata Element Set Version 1.1</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/keywords"/>
+        <rdfs:label xml:lang="en">keywords</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#language -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kgrid.org/koio#language">
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#Payload"/>
+        <rdfs:comment>From Dublin Core Metadata Element Set Version 1.1</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/contributors"/>
+        <rdfs:label>language</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#owners -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kgrid.org/koio#owners">
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#KnowledgeObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>From Dublin Core Metadata Element Set Version 1.1</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/owners"/>
+        <rdfs:label xml:lang="en">owners</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kgrid.org/koio#title">
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#KnowledgeObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>From Dublin Core Metadata Element Set Version 1.1</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:label xml:lang="en">title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kgrid.org/koio#versionIdentifer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kgrid.org/koio#versionIdentifer">
+        <rdfs:subPropertyOf rdf:resource="http://www.kgrid.org/koio#identifer"/>
+        <rdfs:domain rdf:resource="http://www.kgrid.org/koio#Implementation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>From Dublin Core Metadata Element Set Version 1.1</rdfs:comment>
+        <rdfs:isDefinedBy>http://purl.org/dc/elements/1.1/identifier</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">versionIdentifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.kgrid.org/koio#Artifact -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#Artifact">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#MaterialEntity"/>
+        <definition>Artifact =def. a MaterialEntity created or modified or selected by some agent to realize a certain FUNCTION or ROLE (Examples: a key, a lock, a digital file stored on a particular computing machine, a screwdriver)
+
+
+Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifact Ontology</definition>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">Artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#Bundle -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#Bundle">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#Collection"/>
+        <definition>Bundle = def., A collection of two or more descriptive statements (sometimes referred to as statements of metadata) about one or more Information Artifacts</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label xml:lang="en">Bundle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#Collection -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#Collection">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#InformationArtifact"/>
+        <definition>Collection = def. an InformationArtifact comprised of two or more InformationArtifacts and at least one collectionIdentifier</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label xml:lang="en">Collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#ComputableKnowledgeResource -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#ComputableKnowledgeResource">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#InformationArtifact"/>
+        <definition>ComputableKnowledgeResource = def. An InformationArtifact about some computable knowledge</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label xml:lang="en">ComputableKnowledgeResource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#Continuant -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#Continuant">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#Entity"/>
+        <owl:disjointWith rdf:resource="http://www.kgrid.org/koio#Occurrant"/>
+        <definition>Continuant = def. an Entity that continues or persists through time, including (1) independent continuants that can be material entities and objects, (2) dependent continuants, including qualities and functions; together with (3) the spatial entities these entities occupy at any given time
+
+(Introduction to Basic Formal Ontology I, p. 87, Arp, Smith, and Spear, 2015)</definition>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">Continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#DeploymentInstruction -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#DeploymentInstruction">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#InformationArtifact"/>
+        <owl:disjointWith rdf:resource="http://www.kgrid.org/koio#KnowledgeObject"/>
+        <definition>DeploymentInstructions = def. , an InformationArtifact that describes how to deploy a KnowledgeObject in the Knowledge Grid platform</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label xml:lang="en">DeploymentInstruction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#Entity -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#Entity">
+        <definition>Entity = def. a thing (more precisely an owl:Thing) that exists or has existed or will exist (sources: BFO2; IAO, 2017)</definition>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#Implementation -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#Implementation">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#InformationArtifact"/>
+        <owl:disjointWith rdf:resource="http://www.kgrid.org/koio#KnowledgeObject"/>
+        <definition>Implementation = def., an InformationArtifact that functions as part of a KnowledgeObject AND is comprised of a Payload with a payloadVersionIdentifier</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label>Implementation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#IndependentContinuant -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#IndependentContinuant">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#Continuant"/>
+        <definition>IndependentContinuant = def. a Continuant that is the bearer of qualities, such that qualities inhere in it
+
+(Introduction to Basic Formal Ontology I, Arp, Smith, and Spear, 2015)</definition>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">IndependentContinuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#InformationArtifact -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#InformationArtifact">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#Artifact"/>
+        <definition>An InformationArtifact = def., an Artifact that is the IndependentContinuant bearer created as the result of one or more intentional processes. Examples: uniprot, the english language, the contents of this document or a printout of it, the temperature measurements from a weather balloon. For more information, see the project home page at https://github.com/information-artifact-ontology/IAO</definition>
+        <rdfs:comment>Per KOIO, Knowledge Objects are InformationArtifacts by definition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">InformationArtifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#KnowledgeObject -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#KnowledgeObject">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#InformationArtifact"/>
+        <owl:disjointWith rdf:resource="http://www.kgrid.org/koio#Payload"/>
+        <owl:disjointWith rdf:resource="http://www.kgrid.org/koio#ServiceSpecification"/>
+        <definition>KnowledgeObject = def., an Information Artifact capable of serving a role as the atomic unit of computable knowledge and therefore comprised of at least one KnowledgeObjectImplementation</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label xml:lang="en">KnowledgeObject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#KnowledgeObjectCollection -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#KnowledgeObjectCollection">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#Collection"/>
+        <definition>Knowledge Object Collection = def., two or more Knowledge Objects with a collectionIdentifer</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label xml:lang="en">KnowledgeObjectCollection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#MaterialEntity -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#MaterialEntity">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#IndependentContinuant"/>
+        <definition>MaterialEntity = def. an IndependentContinuant that has some portion of matter as part.
+
+(Introduction to Basic Formal Ontology I, Arp, Smith, and Spear, 2015)</definition>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">MaterialEntity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#Occurrant -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#Occurrant">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#Entity"/>
+        <definition>An entity that has temporal parts and that happens, unfolds or develops through time.</definition>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">Occurrent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#Payload -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#Payload">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#ComputableKnowledgeResource"/>
+        <definition>Payload = def. , an ComputableKnowledgeResource represented in manner that is machine-interpretable</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label xml:lang="en">Payload</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#ProvenanceBundle -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#ProvenanceBundle">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#Bundle"/>
+        <definition>Provenance Bundle = def, A Bundle of two or more descriptive statements (sometimes referred to as metadata statements) about the ORIGIN(S) of one or more Information Artifacts</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label xml:lang="en">ProvenanceBundle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kgrid.org/koio#ServiceSpecification -->
+
+    <owl:Class rdf:about="http://www.kgrid.org/koio#ServiceSpecification">
+        <rdfs:subClassOf rdf:resource="http://www.kgrid.org/koio#InformationArtifact"/>
+        <definition>ServiceSpecification = def. , an InformationArtifact that describes a computational service that is somehow enabled by a KnowledgeObject</definition>
+        <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
+        <rdfs:label xml:lang="en">ServiceSpecification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.kgrid.org/koio#UUIDDI01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kgrid.org/koio#UUIDDI01">
+        <rdf:type rdf:resource="http://www.kgrid.org/koio#DeploymentInstruction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kgrid.org/koio#UUIDIMP01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kgrid.org/koio#UUIDIMP01">
+        <rdf:type rdf:resource="http://www.kgrid.org/koio#Implementation"/>
+        <hasDeploymentInstruction rdf:resource="http://www.kgrid.org/koio#UUIDDI01"/>
+        <hasPayload rdf:resource="http://www.kgrid.org/koio#UUIDPAYLOAD01"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kgrid.org/koio#UUIDKO1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kgrid.org/koio#UUIDKO1">
+        <rdf:type rdf:resource="http://www.kgrid.org/koio#KnowledgeObject"/>
+        <hasImplementation rdf:resource="http://www.kgrid.org/koio#UUIDIMP01"/>
+        <title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">TrialTitle</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kgrid.org/koio#UUIDPAYLOAD01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kgrid.org/koio#UUIDPAYLOAD01">
+        <rdf:type rdf:resource="http://www.kgrid.org/koio#Payload"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kgrid.org/koio#UUIDSS01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kgrid.org/koio#UUIDSS01">
+        <rdf:type rdf:resource="http://www.kgrid.org/koio#ServiceSpecification"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
