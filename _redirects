@@ -1,5 +1,5 @@
 # Redirects from what the browser requests to what we serve
-/koio              /koio1.0.0.json         301
+/koio              /1.0/koio.owl         302
 
 
 #/blog/my-post.php  /blog/my-post
