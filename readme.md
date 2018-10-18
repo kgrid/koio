@@ -2,13 +2,13 @@
 This repository is for the Knowledge Object Implementation Ontology (KOIO)
 
 ## Structure 
-The following structure 
+Each version of the will be contain in its own version directory.  We will use index.html to redirect to the 
+current version and the default KOIO format (OWL).  Each version will contain its own documentation. 
 
 * **index.html** will redirect to the current version
-* **#.#** is intended to capture each version or implentation of Knowledge Object Implementation Ontology (KOIO)
+* **version (#.#)** is intended to capture each version or implentation of Knowledge Object Implementation Ontology (KOIO)
   * **index.html** will redirect to the correct KOIO format (_turtle, RDF, JSON LD, etc_)
-  * **docs/** contians the documentation for this implemetaion of the KOIO
-
+  * **docs** contains the documentation for this implemetaion of the KOIO
 
 
 ## Tools

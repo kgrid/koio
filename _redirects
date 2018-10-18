@@ -1,7 +1,0 @@
-# Redirects from what the browser requests to what we serve
-/koio              /1.0/koio.owl         302
-
-
-#/blog/my-post.php  /blog/my-post
-#/news              /blog
-#/google            https://www.google.com
