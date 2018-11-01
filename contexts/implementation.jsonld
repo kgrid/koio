@@ -2,10 +2,6 @@
     "@context": {
         "koio": "http://kgrid.org/koio#",
         "dc": "http://purl.org/dc/elements/1.1/",
-        "hasImplementation": {
-             "@id": "http://kgrid.org/koio#hasImplementation",
-             "@type": "@id"
-        },
         "hasServiceSpecification": {
              "@id": "http://kgrid.org/koio#hasServiceSpecification",
              "@type": "@id"

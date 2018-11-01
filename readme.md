@@ -9,9 +9,10 @@ current version and the default KOIO format (OWL).  Each version will contain it
 * **version (#.#)** is intended to capture each version or implentation of Knowledge Object Implementation Ontology (KOIO)
   * **index.html** will redirect to the correct KOIO format (_turtle, RDF, JSON LD, etc_)
   * **docs** contains the documentation for this implemetaion of the KOIO
-
+* **contexts** hosts the context files for KnowledgeObject and Implementations
 
 ## Tools
 - Ontology [validation service](http://iot.ee.surrey.ac.uk/SSNValidation/)
 - [JSON LD Playground](https://json-ld.org/playground/)
 - [Google Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool)
+- [JSON-LD](http://www.w3.org/TR/json-ld/)
