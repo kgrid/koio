@@ -1,6 +1,5 @@
 {
     "@context": {
-
         "koio": "http://kgrid.org/koio#",
         "dc": "http://purl.org/dc/elements/1.1/",
         "hasImplementation": {
