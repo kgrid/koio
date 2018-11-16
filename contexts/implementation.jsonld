@@ -2,6 +2,15 @@
     "@context": {
         "koio": "http://kgrid.org/koio#",
         "dc": "http://purl.org/dc/elements/1.1/",
+        "identifier": {
+          "@id": "http://purl.org/dc/elements/1.1/identifer"
+        },
+        "title": {
+          "@id": "http://purl.org/dc/elements/1.1/title"
+        },
+        "description": {
+          "@id": "http://purl.org/dc/elements/1.1/description"
+        },
         "hasServiceSpecification": {
              "@id": "http://kgrid.org/koio#hasServiceSpecification",
              "@type": "@id"
