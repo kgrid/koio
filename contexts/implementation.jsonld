@@ -3,7 +3,7 @@
         "koio": "http://kgrid.org/koio#",
         "dc": "http://purl.org/dc/elements/1.1/",
         "identifier": {
-          "@id": "http://purl.org/dc/elements/1.1/identifer"
+          "@id": "http://purl.org/dc/elements/1.1/identifier"
         },
         "title": {
           "@id": "http://purl.org/dc/elements/1.1/title"
