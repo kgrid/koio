@@ -3,7 +3,6 @@
     {
       "dc": "http://purl.org/dc/elements/1.1/",
       "koio":"http://kgrid.org/koio#",
-      "@base":"file://home/dev/test",
     
       "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
       "implementedBy": "http://www.ebi.ac.uk/swo/SWO_0000085",
