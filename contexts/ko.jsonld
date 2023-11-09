@@ -1,0 +1,21 @@
+{
+    "@context":  
+    {
+      "@version":"1.1",  
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "koio":"http://kgrid.org/koio#",
+      "@base":"file://home/dev/test",
+    
+      "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
+      "implementedBy": "http://www.ebi.ac.uk/swo/SWO_0000085",
+      "API":"http://www.ebi.ac.uk/swo/interface/SWO_9000054",
+      "cli":"http://www.ebi.ac.uk/swo/interface/SWO_9000053",
+      "javascript":"http://www.ebi.ac.uk/swo/SWO_0000108",
+      "batch":"https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch",
+      "function":"http://purl.obolibrary.org/obo/BFO_0000034",
+      "hasServiceSpecification": {
+        "@id":"koio:hasServiceSpcification",
+        "@type": "@id"
+      }
+    }
+}
