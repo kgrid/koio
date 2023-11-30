@@ -74,7 +74,7 @@ Here are the main steps to follow:
 4. __Add service implementations__: Add your implementation files and folders for each service implementation to its corresponding location, created in previous step. If you are implementing a service for a specific activator, check specific requirements for knowledge objects compliant to that activator. For example python activator requires that the service is implemented as a python package. You may decide to separate knowledge implementation from service implementation for reusability.
 5. __Add metadata__: Create a metadata in the root of the KO and include the content as listed in the [kgrid 2.0 Metadata](#kgrid2metadata) section below.  
 6. __Add service specification per service__: Each service may have a service specification that is used to describe its usage in more detail. For API services it could be an OpenAPI service specification which could be used by an activator to provide an interface to test the service. For a CLI service it could be the help that indicates the available commands. See examples of service specifications for different types of services at the [Service Specification](#kgrid2ServiceSpec) section below. Service specification file needs to be added inside the service folder. If you do not have a service folder then the service specification file could be created in the root of KO.
-7. __Add deployment file for API services__: If you are implementing a service that will be activated by an activator, include a deployment file in the same place that you added the service implemenetation at step 4. The deployment file will include the list of available routes. Each route includes the engine specific information, which is needed by the activator to map the route to a specific function that implements the service. See examples of deployment file for different engines at [Deployment File](kgrid2DeploymentFile) section. 
+7. __Add deployment file for API services__: If you are implementing a service that will be activated by an activator, include a deployment file in the same place that you added the service implemenetation at step 4. The deployment file will include the list of available routes. Each route includes the engine specific information, which is needed by the activator to map the route to a specific function that implements the service. See examples of deployment file for different engines at [Deployment File](#kgrid2DeploymentFile) section. 
 
 
 ### Metadata <a name="kgrid2metadata"></a>
@@ -154,7 +154,7 @@ Here is an example of a kgrid 2.0 metadata, followed by a detailed description o
 
 - __@id__: It is a unique identifier for this object that allows it to be resolved within the knowledge grid. It can either be an absolute or relative URL. See [Node Identifiers](https://w3c.github.io/json-ld-syntax/#node-identifiers) section of json-ld syntax.
 
-- __dc:identifier__: The identifier field is an extra globally unique identifier. The Knowledge Grid currently uses [ARK](https://n2t.net/e/ark_ids.html) identifiers natively which interoperate with [EZID](http://ezid.cdlib.org/) and top-level resolvers like [Name2Thing](http://www.n2t.net/) and [Identifiers.org](http://www.identifiers.org/). (Support for other identifiers like [DOI](http://www.doi.org/)s is planned).
+- __dc:identifier__: The identifier field is an extra globally unique identifier. The Knowledge Grid currently uses [ARK](https://n2t.net/e/ark_ids.html) identifiers natively which interoperate with [EZID](http://ezid.cdlib.org/) and top-level resolvers like [Name2Thing](http://www.n2t.net/). (Support for other identifiers like [DOI](http://www.doi.org/)s is planned).
 
 - __koio:kgrid__: This field is used to version kgrid model. For kgrid 2.0 use "2".
 
@@ -387,7 +387,7 @@ A knowledge object must include a metadata file (metadata.json) in the root of K
 
 - __@id__: It is a unique identifier for this object that allows it to be resolved within the knowledge grid. It can either be an absolute or relative URL. See [Node Identifiers](https://w3c.github.io/json-ld-syntax/#node-identifiers) section of json-ld syntax.
 
-- __@identifier__: The identifier field is an extra globally unique identifier. The Knowledge Grid currently uses [ARK](https://n2t.net/e/ark_ids.html) identifiers natively which interoperate with [EZID](http://ezid.cdlib.org/) and top-level resolvers like [Name2Thing](http://www.n2t.net/) and [Identifiers.org](http://www.identifiers.org/). (Support for other identifiers like [DOI](http://www.doi.org/)s is planned).
+- __@identifier__: The identifier field is an extra globally unique identifier. The Knowledge Grid currently uses [ARK](https://n2t.net/e/ark_ids.html) identifiers natively which interoperate with [EZID](http://ezid.cdlib.org/) and top-level resolvers like [Name2Thing](http://www.n2t.net/). (Support for other identifiers like [DOI](http://www.doi.org/)s is planned).
 
 - __@type__: Setting this to "koio:KnowledgeObject" is what declares this as a Knowledge Object. The Knowledge Grid depends on this when determining whether something is a Knowledge Object.
 
