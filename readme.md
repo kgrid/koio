@@ -1,5 +1,5 @@
 # KOIO
-This repository is for evolving, sharing, and managing the Knowledge Object Implementation Ontology (KOIO). KOIO formally defines the structure of Knowledge Objects.  
+This repository is for evolving, sharing, and managing the Knowledge Object Implementation Ontology (KOIO). KOIO formally defines the structure of Knowledge Objects using linked data representations made available in OWL files. 
 
 ## Knowledge Systems Laboratory
 
