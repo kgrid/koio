@@ -1,5 +1,9 @@
 # KOIO
-This repository is for the Knowledge Object Implementation Ontology (KOIO)
+This repository is for evolving, sharing, and managing the Knowledge Object Implementation Ontology (KOIO). KOIO formally defines the structure of Knowledge Objects.  
+
+## Knowledge Systems Laboratory
+
+The Knowledge Systems Laboratory (KSL) created KOIO. KSL is an R&D lab in the Department of Learning Health Sciences at the University of Michigan Medical School.
 
 ## Structure 
 Each version of the will be contain in its own version directory.  We will use index.html to redirect to the 
