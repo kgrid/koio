@@ -1,6 +1,8 @@
 # KOIO
 This repository is for evolving, sharing, and managing the Knowledge Object Implementation Ontology (KOIO). KOIO formally defines the structure of Knowledge Objects using linked data representations made available in OWL files. 
 
+A Knowledge Object is an information content resource and, when concretized, also a compound digital object that is formalized as a lightweight or minimalist user-oriented, computation-focused container specifically for packaging and organizing machine-processable knowledge assets with code that runs.
+
 ## Knowledge Systems Laboratory
 
 The Knowledge Systems Laboratory (KSL) created KOIO. KSL is an R&D lab in the Department of Learning Health Sciences at the University of Michigan Medical School.
