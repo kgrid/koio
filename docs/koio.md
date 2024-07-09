@@ -592,6 +592,22 @@ bmi-calculator/
 
 The Ko may include some test files that test the KO payloads with some sample test cases.
 
+## Generate JSON_LD Context File From OWL File Using owl2jsonld Tool
+[owl2jsonld](https://github.com/stain/owl2jsonld) is a tool that generate a JSON-LD @context for concepts (classes and properties) found in the specified OWL or RDFS ontology. 
+1. Install Java
+```batch
+# JAVA installation on Linux
+sudo apt update
+sudo apt install default-jre
+```
+
+2. Download the Tool: You can download the owl2jsonld tool from its [GitHub repository](https://github.com/stain/owl2jsonld). The official releases include an uberjar (standalone JAR) that bundles all dependencies and can be used as a command-line tool.
+
+3. Run the JAR File and create the context.json form the owl file:
+```batch
+java -jar owl2jsonld-0.2.1-standalone.jar file:///path/to/owl/file/koio.owl -o context.json
+```
+
 ## Related links
 - [Kgrid Website](https://kgrid.org/)
 - [Knowledge Grid Activator Specifications](https://kgrid.org/specs/activationSpec.html) 
