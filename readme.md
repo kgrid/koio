@@ -10,7 +10,7 @@ KOIO ontology is currently used in the [Knowledge Grid (KGrid) poject](https://g
 ## Downloads
 - Download latest version of KOIO at [https://kgrid.org/koio/koio.owl](https://kgrid.org/koio/koio.owl)
 - Access older releases at [https://github.com/kgrid/koio/releases](https://github.com/kgrid/koio/releases)
-- Download context file for [KGRID knowledge object development](https://github.com/kgrid/specs/blob/master/docs/kgrid-knowledge-objects.md) at [https://kgrid.org/koio/knowledgeobject.jsonld](https://kgrid.org/koio/knowledgeobject.jsonld)
+- Download context file for [KGRID knowledge object development](https://github.com/kgrid/specs/blob/master/docs/kgrid-knowledge-objects.md) at [https://kgrid.org/koio/knowledgeobject.jsonld](https://kgrid.org/koio/context/koio.jsonld)
 
 ## Documentation
 The KOIO ontology documentation could be found at [https://kgrid.org/koio/data/docs/](https://kgrid.org/koio/data/docs/)
