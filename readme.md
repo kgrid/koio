@@ -61,7 +61,7 @@ Here are the roles of people who will contribute in the development of this onto
     - Develop competency questions
     - Implement unit tests using SPARQL Queries
     - Integrate testing to GitHub using GitHub Actions for automatic Continuous Integration
-
+testing manual deployment
 
 
 ## Tools
