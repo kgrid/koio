@@ -1,0 +1,6 @@
+/calculate70:
+  post:    
+    engine: 
+      name: org.kgrid.javascript-activator
+      artifact: src/index70.js
+      function: calculate70
