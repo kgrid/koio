@@ -27,9 +27,16 @@ jobs:
         run: |
           echo 'kgrid.org' > CNAME
 
+      - name: Install Jekyll dependencies
+        run: |
+          gem install bundler
+          bundle init
+          echo "gem 'jekyll-theme-cayman'" >> Gemfile
+          bundle install
+
       - name: Build Jekyll site with trace
         run: |
-          jekyll build --trace -d ./build
+          bundle exec jekyll build --trace -d ./build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
