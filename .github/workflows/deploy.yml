@@ -11,11 +11,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Convert README.md to index.html
+      - name: Convert readme.md to index.html
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc
-          pandoc README.md -o index.html
+          pandoc readme.md -o index.html
 
       - name: Create CNAME file
         run: echo 'kgrid.org' > CNAME
