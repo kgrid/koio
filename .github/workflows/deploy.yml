@@ -1,4 +1,4 @@
-name: Manual GitHub Pages Deployment
+mename: Manual GitHub Pages Deployment
 
 on:
   workflow_dispatch:
@@ -18,10 +18,10 @@ jobs:
         run: |
           echo "theme: jekyll-theme-cayman" > _config.yml
 
-      - name: Create _posts directory and move README.md
+      - name: Create _posts directory and move readme.md
         run: |
           mkdir -p _posts
-          mv README.md _posts/2024-01-01-readme.md
+          mv readme.md _posts/2024-01-01-readme.md
 
       - name: Create CNAME file
         run: |
