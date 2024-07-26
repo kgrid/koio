@@ -7,17 +7,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    container:
+      image: jekyll/builder:latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Jekyll environment
-        run: |
-          gem install bundler jekyll
-
       - name: Create _config.yml
-        run: |
-          echo "theme: jekyll-theme-cayman" > _config.yml
+        run: echo "theme: jekyll-theme-cayman" > _config.yml
 
       - name: Create _posts directory and move README.md
         run: |
