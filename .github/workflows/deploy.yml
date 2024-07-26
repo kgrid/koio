@@ -18,18 +18,18 @@ jobs:
         run: |
           echo "theme: jekyll-theme-cayman" > _config.yml
 
-      - name: Create _posts directory and move readme.md
+      - name: Create _posts directory and move README.md
         run: |
           mkdir -p _posts
-          mv readme.md _posts/2024-01-01-readme.md
+          mv README.md _posts/2024-01-01-readme.md
 
       - name: Create CNAME file
         run: |
           echo 'kgrid.org' > CNAME
 
-      - name: Build Jekyll site
+      - name: Build Jekyll site with trace
         run: |
-          jekyll build -d ./build
+          jekyll build --trace -d ./build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
