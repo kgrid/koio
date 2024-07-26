@@ -15,7 +15,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Create _config.yml
-        run: echo "theme: jekyll-theme-cayman" > _config.yml
+        run: |
+          echo "theme: jekyll-theme-cayman" > _config.yml
 
       - name: Create _posts directory and move README.md
         run: |
@@ -23,10 +24,12 @@ jobs:
           mv README.md _posts/2024-01-01-readme.md
 
       - name: Create CNAME file
-        run: echo 'kgrid.org' > CNAME
+        run: |
+          echo 'kgrid.org' > CNAME
 
       - name: Build Jekyll site
-        run: jekyll build -d ./build
+        run: |
+          jekyll build -d ./build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
