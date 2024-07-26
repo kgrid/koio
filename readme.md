@@ -1,3 +1,9 @@
+---
+layout: default
+title: Home
+permalink: /index.html
+---
+
 # KOIO - The Knowledge Object Implementation Ontology
 This repository is for evolving, sharing, and managing KOIO. KOIO formally defines the structure of Knowledge Objects using linked data representations made available in canonical OWL files. 
 
@@ -61,7 +67,6 @@ Here are the roles of people who will contribute in the development of this onto
     - Develop competency questions
     - Implement unit tests using SPARQL Queries
     - Integrate testing to GitHub using GitHub Actions for automatic Continuous Integration
-    - Testing manual deployment (delete me)
 
 
 ## Tools
