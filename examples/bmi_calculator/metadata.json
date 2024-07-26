@@ -1,0 +1,15 @@
+{
+  "@id" : "calculate_bmi",
+  "@type" : "koio:KnowledgeObject",
+  "dc:identifier" : "ark:calculate_bmi",
+  "version" : "1.0.0",
+  "title" : "BMI Calculator",
+  "contributors" : "AIIT Team",
+  "description" : "Calculates BMI",
+  "keywords" : [ "BMI" ],
+  "hasServiceSpecification" : "service.yaml",
+  "hasDeploymentSpecification" : "deployment.yaml",
+  "private" : true,
+  "hasPayload" : [ "src/index70.js" ],
+  "@context" : "https://kgrid.org/koio/1.0/context"
+}

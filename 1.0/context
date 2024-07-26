@@ -1,9 +1,8 @@
 {
   "@id": "https://kgrid.org/koio/1.0/context",
-  "koio": "http://kgrid.org/koio#",
-  "dc": "http://purl.org/dc/elements/1.1/",
-
   "@context" : {
+    "koio": "http://kgrid.org/koio#",
+    "dc": "http://purl.org/dc/elements/1.1/",
     "KnowledgeObject" : {
       "@id" : "https://kgrid.org/koio#KnowledgeObject"
     },
