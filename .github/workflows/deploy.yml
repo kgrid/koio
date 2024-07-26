@@ -11,18 +11,28 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Convert readme.md to index.html
+      - name: Setup Jekyll environment
         run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc
-          pandoc readme.md -o index.html
+          gem install bundler jekyll
+
+      - name: Create _config.yml
+        run: |
+          echo "theme: jekyll-theme-cayman" > _config.yml
+
+      - name: Create _posts directory and move README.md
+        run: |
+          mkdir -p _posts
+          mv README.md _posts/2024-01-01-readme.md
 
       - name: Create CNAME file
         run: echo 'kgrid.org' > CNAME
+
+      - name: Build Jekyll site
+        run: jekyll build -d ./build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: .  # Use . if your static files are in the root directory
+          publish_dir: ./build
