@@ -2,155 +2,155 @@
   "@id": "https://kgrid.org/koio/1.0/context",
   "@context" : {
     "KnowledgeObject" : {
-      "@id" : "http://www.kgrid.org/koio#KnowledgeObject"
+      "@id" : "https://kgrid.org/koio#KnowledgeObject"
     },
     "hasDeploymentInstruction" : {
-      "@id" : "http://www.kgrid.org/koio#hasDeploymentInstruction",
+      "@id" : "https://kgrid.org/koio#hasDeploymentInstruction",
       "@type" : "@id"
     },
     "hasImplementation" : {
-      "@id" : "http://www.kgrid.org/koio#hasImplementation",
+      "@id" : "https://kgrid.org/koio#hasImplementation",
       "@type" : "@id"
     },
     "isImplementationPartOf" : {
-      "@id" : "http://www.kgrid.org/koio#isImplementationPartOf",
+      "@id" : "https://kgrid.org/koio#isImplementationPartOf",
       "@type" : "@id"
     },
     "ComputableKnowledgeResource" : {
-      "@id" : "http://www.kgrid.org/koio#ComputableKnowledgeResource"
+      "@id" : "https://kgrid.org/koio#ComputableKnowledgeResource"
     },
     "hasPayload" : {
-      "@id" : "http://www.kgrid.org/koio#hasPayload",
+      "@id" : "https://kgrid.org/koio#hasPayload",
       "@type" : "@id"
     },
     "endpoints" : {
-      "@id" : "http://www.kgrid.org/koio#endpoints",
+      "@id" : "https://kgrid.org/koio#endpoints",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "access" : {
-      "@id" : "http://www.kgrid.org/koio#access",
+      "@id" : "https://kgrid.org/koio#access",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "isPayloadPartOf" : {
-      "@id" : "http://www.kgrid.org/koio#isPayloadPartOf",
+      "@id" : "https://kgrid.org/koio#isPayloadPartOf",
       "@type" : "@id"
     },
     "isPartOf" : {
-      "@id" : "http://www.kgrid.org/koio#isPartOf",
+      "@id" : "https://kgrid.org/koio#isPartOf",
       "@type" : "@id"
     },
     "hasPart" : {
-      "@id" : "http://www.kgrid.org/koio#hasPart",
+      "@id" : "https://kgrid.org/koio#hasPart",
       "@type" : "@id"
     },
     "IndependentContinuant" : {
-      "@id" : "http://www.kgrid.org/koio#IndependentContinuant"
+      "@id" : "https://kgrid.org/koio#IndependentContinuant"
     },
     "isServiceSpecificationPartOf" : {
-      "@id" : "http://www.kgrid.org/koio#isServiceSpecificationPartOf",
+      "@id" : "https://kgrid.org/koio#isServiceSpecificationPartOf",
       "@type" : "@id"
     },
     "Bundle" : {
-      "@id" : "http://www.kgrid.org/koio#Bundle"
+      "@id" : "https://kgrid.org/koio#Bundle"
     },
     "owners" : {
-      "@id" : "http://www.kgrid.org/koio#owners",
+      "@id" : "https://kgrid.org/koio#owners",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "Payload" : {
-      "@id" : "http://www.kgrid.org/koio#Payload"
+      "@id" : "https://kgrid.org/koio#Payload"
     },
     "Artifact" : {
-      "@id" : "http://www.kgrid.org/koio#Artifact"
+      "@id" : "https://kgrid.org/koio#Artifact"
     },
     "MaterialEntity" : {
-      "@id" : "http://www.kgrid.org/koio#MaterialEntity"
+      "@id" : "https://kgrid.org/koio#MaterialEntity"
     },
     "Continuant" : {
-      "@id" : "http://www.kgrid.org/koio#Continuant"
+      "@id" : "https://kgrid.org/koio#Continuant"
     },
     "Occurrant" : {
-      "@id" : "http://www.kgrid.org/koio#Occurrant"
+      "@id" : "https://kgrid.org/koio#Occurrant"
     },
     "ProvenanceBundle" : {
-      "@id" : "http://www.kgrid.org/koio#ProvenanceBundle"
+      "@id" : "https://kgrid.org/koio#ProvenanceBundle"
     },
     "DeploymentInstruction" : {
-      "@id" : "http://www.kgrid.org/koio#DeploymentInstruction"
+      "@id" : "https://kgrid.org/koio#DeploymentInstruction"
     },
     "versionIdentifer" : {
-      "@id" : "http://www.kgrid.org/koio#versionIdentifer",
+      "@id" : "https://kgrid.org/koio#versionIdentifer",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "ServiceSpecification" : {
-      "@id" : "http://www.kgrid.org/koio#ServiceSpecification"
+      "@id" : "https://kgrid.org/koio#ServiceSpecification"
     },
     "isDefinedBy" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
     },
     "definition" : {
-      "@id" : "http://www.kgrid.org/koio#definition"
+      "@id" : "https://kgrid.org/koio#definition"
     },
     "keywords" : {
-      "@id" : "http://www.kgrid.org/koio#keywords",
+      "@id" : "https://kgrid.org/koio#keywords",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "hasServiceSpecification" : {
-      "@id" : "http://www.kgrid.org/koio#hasServiceSpecification",
+      "@id" : "https://kgrid.org/koio#hasServiceSpecification",
       "@type" : "@id"
     },
     "title" : {
-      "@id" : "http://www.kgrid.org/koio#title",
+      "@id" : "https://kgrid.org/koio#title",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "Implementation" : {
-      "@id" : "http://www.kgrid.org/koio#Implementation"
+      "@id" : "https://kgrid.org/koio#Implementation"
     },
     "type" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#type"
     },
     "identifer" : {
-      "@id" : "http://www.kgrid.org/koio#identifer",
+      "@id" : "https://kgrid.org/koio#identifer",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "Entity" : {
-      "@id" : "http://www.kgrid.org/koio#Entity"
+      "@id" : "https://kgrid.org/koio#Entity"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "language" : {
-      "@id" : "http://www.kgrid.org/koio#language"
+      "@id" : "https://kgrid.org/koio#language"
     },
     "contributor" : {
       "@id" : "http://purl.org/dc/elements/1.1/contributor"
     },
     "InformationArtifact" : {
-      "@id" : "http://www.kgrid.org/koio#InformationArtifact"
+      "@id" : "https://kgrid.org/koio#InformationArtifact"
     },
     "KnowledgeObjectCollection" : {
-      "@id" : "http://www.kgrid.org/koio#KnowledgeObjectCollection"
+      "@id" : "https://kgrid.org/koio#KnowledgeObjectCollection"
     },
     "contributors" : {
-      "@id" : "http://www.kgrid.org/koio#contributors",
+      "@id" : "https://kgrid.org/koio#contributors",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "description" : {
-      "@id" : "http://www.kgrid.org/koio#description",
+      "@id" : "https://kgrid.org/koio#description",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "Collection" : {
-      "@id" : "http://www.kgrid.org/koio#Collection"
+      "@id" : "https://kgrid.org/koio#Collection"
     },
     "isDeploymentInstructionPartOf" : {
-      "@id" : "http://www.kgrid.org/koio#isDeploymentInstructionPartOf",
+      "@id" : "https://kgrid.org/koio#isDeploymentInstructionPartOf",
       "@type" : "@id"
     },
     "adapterType" : {
-      "@id" : "http://www.kgrid.org/koio#adapterType",
+      "@id" : "https://kgrid.org/koio#adapterType",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     }
   }
