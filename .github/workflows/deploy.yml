@@ -1,4 +1,4 @@
-mename: Manual GitHub Pages Deployment
+name: Manual GitHub Pages Deployment
 
 on:
   workflow_dispatch:
