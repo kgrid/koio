@@ -11,10 +11,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Create CNAME file
+        run: echo 'kgrid.org' > CNAME
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages # The branch to which you want to deploy
-          publish_dir: . # The directory to deploy; adjust if needed
-
+          publish_branch: gh-pages
+          publish_dir: . # Adjust if your static files are in a subdirectory
