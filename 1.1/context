@@ -1,5 +1,5 @@
 {
-  "@id": "https://kgrid.org/koio/context", 
+  "@id": "https://kgrid.org/koio/1.1/context",
   "@context" : {
     "koio": "http://kgrid.org/koio#",
     "dc": "http://purl.org/dc/elements/1.1/",
