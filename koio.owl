@@ -1,16 +1,26 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://kgrid.org/koio/"
-     xml:base="https://kgrid.org/koio/"
+<rdf:RDF xmlns="https://kgrid.org/koio#"
+     xml:base="https://kgrid.org/koio"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:efo="http://www.ebi.ac.uk/efo/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:koio="http://www.kgrid.org/koio#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:koio1="https://kgrid.org/koio#">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:edamontology="http://edamontology.org#">
     <owl:Ontology rdf:about="https://kgrid.org/koio">
-        <owl:versionIRI rdf:resource="https://kgrid.org/koio/1.0.0/koio.rdf"/>
+        <owl:versionIRI rdf:resource="http://www.kgrid.org/koio/1.0.0/koio.rdf"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/allysonlister/swo/master/swo-full.owl"/>
         <dc:contributor>Allen Flynn</dc:contributor>
         <dc:contributor>Carl Lagoze</dc:contributor>
         <dc:contributor>Charles P. Friedman</dc:contributor>
@@ -63,7 +73,7 @@ It has yet to be determined whether development of KOIO subontologies and/or ext
 
     <owl:AnnotationProperty rdf:about="https://kgrid.org/koio#definition">
         <rdfs:label xml:lang="en">definition</rdfs:label>
-        <koio1:definition>definition, def., an Information Artifact about a Thing that annotates the Thing with an Aristotelian description of the Thing</koio1:definition>
+        <definition>definition, def., an Information Artifact about a Thing that annotates the Thing with an Aristotelian description of the Thing</definition>
     </owl:AnnotationProperty>
     
 
@@ -79,6 +89,27 @@ It has yet to be determined whether development of KOIO subontologies and/or ext
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0002502 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002502">
+        <rdfs:domain rdf:resource="https://kgrid.org/koio#Service"/>
+        <rdfs:range rdf:resource="https://kgrid.org/koio#Knowledge"/>
+        <obo:IAO_0000115>depends on, def., indicates that a service uses a specific knowledge</obo:IAO_0000115>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ebi.ac.uk/swo/SWO_0000085 -->
+
+    <rdf:Description rdf:about="http://www.ebi.ac.uk/swo/SWO_0000085">
+        <rdfs:domain rdf:resource="https://kgrid.org/koio#Service"/>
+        <rdfs:range rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000001"/>
+        <obo:IAO_0000115>implemented by, def., is the relationship between a service and a piece of software which includes an implementation of that service for use when the software is executed.</obo:IAO_0000115>
+        <rdfs:label>implemented by</rdfs:label>
+    </rdf:Description>
+    
+
+
     <!-- https://kgrid.org/koio#hasDeploymentInstruction -->
 
     <owl:ObjectProperty rdf:about="https://kgrid.org/koio#hasDeploymentInstruction">
@@ -89,7 +120,7 @@ It has yet to be determined whether development of KOIO subontologies and/or ext
         <rdfs:range rdf:resource="https://kgrid.org/koio#DeploymentInstruction"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label>hasDeploymentInstruction</rdfs:label>
-        <koio1:definition>hasDeploymentInstruction, def., a relation that holds between a whole KnowledgeObject and its DeploymentInstruction parts</koio1:definition>
+        <definition>hasDeploymentInstruction, def., a relation that holds between a whole KnowledgeObject and its DeploymentInstruction parts</definition>
     </owl:ObjectProperty>
     
 
@@ -104,7 +135,19 @@ It has yet to be determined whether development of KOIO subontologies and/or ext
         <rdfs:range rdf:resource="https://kgrid.org/koio#Implementation"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label>hasImplementation</rdfs:label>
-        <koio1:definition>hasImplementation, def., a relation that holds between a whole KnowledgeObject and its Implementation part(s)</koio1:definition>
+        <definition>hasImplementation, def., a relation that holds between a whole KnowledgeObject and its Implementation part(s)</definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://kgrid.org/koio#hasKnowledge -->
+
+    <owl:ObjectProperty rdf:about="https://kgrid.org/koio#hasKnowledge">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:domain rdf:resource="https://kgrid.org/koio#KnowledgeObject"/>
+        <rdfs:range rdf:resource="https://kgrid.org/koio#Knowledge"/>
+        <obo:IAO_0000115>hasKnowledge, def., indicates that a Knowledge Object contains or is associated with specific Knowledge.</obo:IAO_0000115>
+        <rdfs:label>has knowledge</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -116,9 +159,9 @@ It has yet to be determined whether development of KOIO subontologies and/or ext
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">hasPart</rdfs:label>
-        <koio1:definition>def = a core relation that holds between a whole and its part
+        <definition>def = a core relation that holds between a whole and its part
 
-BFO</koio1:definition>
+BFO</definition>
     </owl:ObjectProperty>
     
 
@@ -133,7 +176,19 @@ BFO</koio1:definition>
         <rdfs:range rdf:resource="https://kgrid.org/koio#Payload"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label>hasPayload</rdfs:label>
-        <koio1:definition>hasPayload, def., a relation that holds between a whole KnowledgeObject and its Payload part(s)</koio1:definition>
+        <definition>hasPayload, def., a relation that holds between a whole KnowledgeObject and its Payload part(s)</definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://kgrid.org/koio#hasService -->
+
+    <owl:ObjectProperty rdf:about="https://kgrid.org/koio#hasService">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:domain rdf:resource="https://kgrid.org/koio#KnowledgeObject"/>
+        <rdfs:range rdf:resource="https://kgrid.org/koio#Service"/>
+        <obo:IAO_0000115>hasService , def., a relation that holds between a whole KnowledgeObject and its Service part(s). Denotes that a KnowledgeObject includes or provides a specific Service.</obo:IAO_0000115>
+        <rdfs:label>has service</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -147,7 +202,7 @@ BFO</koio1:definition>
         <rdfs:range rdf:resource="https://kgrid.org/koio#ServiceSpecification"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label>hasServiceSpecification</rdfs:label>
-        <koio1:definition>hasServiceSpecification, def., a relation that holds between a whole KnowledgeObject and its ServiceSpecification part</koio1:definition>
+        <definition>hasServiceSpecification, def., a relation that holds between a whole KnowledgeObject and its ServiceSpecification part</definition>
     </owl:ObjectProperty>
     
 
@@ -161,7 +216,7 @@ BFO</koio1:definition>
         <rdfs:range rdf:resource="https://kgrid.org/koio#Implementation"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label>isDeploymentInstructionPartOf</rdfs:label>
-        <koio1:definition>isDeploymentInstruction, def., a core relation that holds between an DeploymentInstruction that is part of a Knowledge Object and its whole</koio1:definition>
+        <definition>isDeploymentInstruction, def., a core relation that holds between an DeploymentInstruction that is part of a Knowledge Object and its whole</definition>
     </owl:ObjectProperty>
     
 
@@ -175,7 +230,7 @@ BFO</koio1:definition>
         <rdfs:range rdf:resource="https://kgrid.org/koio#KnowledgeObject"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label>isImplementationPartOf</rdfs:label>
-        <koio1:definition>isImplementation, def., a core relation that holds between an Implementation that is part of a Knowledge Object and its whole</koio1:definition>
+        <definition>isImplementation, def., a core relation that holds between an Implementation that is part of a Knowledge Object and its whole</definition>
     </owl:ObjectProperty>
     
 
@@ -186,9 +241,9 @@ BFO</koio1:definition>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">isPartOf</rdfs:label>
-        <koio1:definition>isPartOf, def., a core relation that holds between a part and its whole
+        <definition>isPartOf, def., a core relation that holds between a part and its whole
 
-BFO</koio1:definition>
+BFO</definition>
     </owl:ObjectProperty>
     
 
@@ -202,7 +257,7 @@ BFO</koio1:definition>
         <rdfs:range rdf:resource="https://kgrid.org/koio#Implementation"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label>isPayloadPartOf</rdfs:label>
-        <koio1:definition>isPayload, def., a core relation that holds between an Payload that is part of a Knowledge Object and its whole</koio1:definition>
+        <definition>isPayload, def., a core relation that holds between an Payload that is part of a Knowledge Object and its whole</definition>
     </owl:ObjectProperty>
     
 
@@ -216,7 +271,7 @@ BFO</koio1:definition>
         <rdfs:range rdf:resource="https://kgrid.org/koio#Implementation"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label>isServiceSpecificationPartOf</rdfs:label>
-        <koio1:definition>isServiceSpecification, def., a core relation that holds between a ServiceSpecification that is part of a Knowledge Object and its whole</koio1:definition>
+        <definition>isServiceSpecification, def., a core relation that holds between a ServiceSpecification that is part of a Knowledge Object and its whole</definition>
     </owl:ObjectProperty>
     
 
@@ -251,7 +306,7 @@ BFO</koio1:definition>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label>adapterType</rdfs:label>
-        <koio1:definition>adapterType = def., a label describing a Knowledge Grid adapter</koio1:definition>
+        <definition>adapterType = def., a label describing a Knowledge Grid adapter</definition>
     </owl:DatatypeProperty>
     
 
@@ -287,7 +342,7 @@ BFO</koio1:definition>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label>endpoints</rdfs:label>
-        <koio1:definition>endpoints = def., is a virtual address for a service that accepts communications back and forth across the network</koio1:definition>
+        <definition>endpoints = def., is a virtual address for a service that accepts communications back and forth across the network</definition>
     </owl:DatatypeProperty>
     
 
@@ -377,13 +432,13 @@ BFO</koio1:definition>
     <!-- https://kgrid.org/koio#Artifact -->
 
     <owl:Class rdf:about="https://kgrid.org/koio#Artifact">
-        <rdfs:subClassOf rdf:resource="https://kgrid.org/koio#MaterialEntity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <rdfs:label xml:lang="en">Artifact</rdfs:label>
-        <koio1:definition>Artifact =def. a MaterialEntity created or modified or selected by some agent to realize a certain FUNCTION or ROLE (Examples: a key, a lock, a digital file stored on a particular computing machine, a screwdriver)
+        <definition>Artifact =def. a MaterialEntity created or modified or selected by some agent to realize a certain FUNCTION or ROLE (Examples: a key, a lock, a digital file stored on a particular computing machine, a screwdriver)
 
 
-Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifact Ontology</koio1:definition>
+Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifact Ontology</definition>
     </owl:Class>
     
 
@@ -394,7 +449,7 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
         <rdfs:subClassOf rdf:resource="https://kgrid.org/koio#Collection"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label xml:lang="en">Bundle</rdfs:label>
-        <koio1:definition>Bundle = def., A collection of two or more descriptive statements (sometimes referred to as statements of metadata) about one or more Information Artifacts</koio1:definition>
+        <definition>Bundle = def., A collection of two or more descriptive statements (sometimes referred to as statements of metadata) about one or more Information Artifacts</definition>
     </owl:Class>
     
 
@@ -405,7 +460,7 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
         <rdfs:subClassOf rdf:resource="https://kgrid.org/koio#InformationArtifact"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label xml:lang="en">Collection</rdfs:label>
-        <koio1:definition>Collection = def. an InformationArtifact comprised of two or more InformationArtifacts and at least one collectionIdentifier</koio1:definition>
+        <definition>Collection = def. an InformationArtifact comprised of two or more InformationArtifacts and at least one collectionIdentifier</definition>
     </owl:Class>
     
 
@@ -416,21 +471,7 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
         <rdfs:subClassOf rdf:resource="https://kgrid.org/koio#InformationArtifact"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label xml:lang="en">ComputableKnowledgeResource</rdfs:label>
-        <koio1:definition>ComputableKnowledgeResource = def. An InformationArtifact about some computable knowledge</koio1:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://kgrid.org/koio#Continuant -->
-
-    <owl:Class rdf:about="https://kgrid.org/koio#Continuant">
-        <rdfs:subClassOf rdf:resource="https://kgrid.org/koio#Entity"/>
-        <owl:disjointWith rdf:resource="https://kgrid.org/koio#Occurrant"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
-        <rdfs:label xml:lang="en">Continuant</rdfs:label>
-        <koio1:definition>Continuant = def. an Entity that continues or persists through time, including (1) independent continuants that can be material entities and objects, (2) dependent continuants, including qualities and functions; together with (3) the spatial entities these entities occupy at any given time
-
-(Introduction to Basic Formal Ontology I, p. 87, Arp, Smith, and Spear, 2015)</koio1:definition>
+        <definition>ComputableKnowledgeResource = def. An InformationArtifact about some computable knowledge</definition>
     </owl:Class>
     
 
@@ -442,17 +483,7 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
         <owl:disjointWith rdf:resource="https://kgrid.org/koio#KnowledgeObject"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label xml:lang="en">DeploymentInstruction</rdfs:label>
-        <koio1:definition>DeploymentInstructions = def. , an InformationArtifact that describes how to deploy a KnowledgeObject in the Knowledge Grid platform</koio1:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://kgrid.org/koio#Entity -->
-
-    <owl:Class rdf:about="https://kgrid.org/koio#Entity">
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
-        <rdfs:label xml:lang="en">Entity</rdfs:label>
-        <koio1:definition>Entity = def. a thing (more precisely an owl:Thing) that exists or has existed or will exist (sources: BFO2; IAO, 2017)</koio1:definition>
+        <definition>DeploymentInstructions = def. , an InformationArtifact that describes how to deploy a KnowledgeObject in the Knowledge Grid platform</definition>
     </owl:Class>
     
 
@@ -464,20 +495,7 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
         <owl:disjointWith rdf:resource="https://kgrid.org/koio#KnowledgeObject"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label>Implementation</rdfs:label>
-        <koio1:definition>Implementation = def., an InformationArtifact that functions as part of a KnowledgeObject AND is comprised of a Payload with a payloadVersionIdentifier</koio1:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://kgrid.org/koio#IndependentContinuant -->
-
-    <owl:Class rdf:about="https://kgrid.org/koio#IndependentContinuant">
-        <rdfs:subClassOf rdf:resource="https://kgrid.org/koio#Continuant"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
-        <rdfs:label xml:lang="en">IndependentContinuant</rdfs:label>
-        <koio1:definition>IndependentContinuant = def. a Continuant that is the bearer of qualities, such that qualities inhere in it
-
-(Introduction to Basic Formal Ontology I, Arp, Smith, and Spear, 2015)</koio1:definition>
+        <definition>Implementation = def., an InformationArtifact that functions as part of a KnowledgeObject AND is comprised of a Payload with a payloadVersionIdentifier</definition>
     </owl:Class>
     
 
@@ -489,7 +507,17 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
         <rdfs:comment>Per KOIO, Knowledge Objects are InformationArtifacts by definition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <rdfs:label xml:lang="en">InformationArtifact</rdfs:label>
-        <koio1:definition>An InformationArtifact = def., an Artifact that is the IndependentContinuant bearer created as the result of one or more intentional processes. Examples: uniprot, the english language, the contents of this document or a printout of it, the temperature measurements from a weather balloon. For more information, see the project home page at https://github.com/information-artifact-ontology/IAO</koio1:definition>
+        <definition>An InformationArtifact = def., an Artifact that is the IndependentContinuant bearer created as the result of one or more intentional processes. Examples: uniprot, the english language, the contents of this document or a printout of it, the temperature measurements from a weather balloon. For more information, see the project home page at https://github.com/information-artifact-ontology/IAO</definition>
+    </owl:Class>
+    
+
+
+    <!-- https://kgrid.org/koio#Knowledge -->
+
+    <owl:Class rdf:about="https://kgrid.org/koio#Knowledge">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
+        <obo:IAO_0000115>Knowledge, def., information or understanding about a subject, obtained through experience or study.</obo:IAO_0000115>
+        <rdfs:label>knowledge</rdfs:label>
     </owl:Class>
     
 
@@ -502,7 +530,7 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
         <owl:disjointWith rdf:resource="https://kgrid.org/koio#ServiceSpecification"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label xml:lang="en">KnowledgeObject</rdfs:label>
-        <koio1:definition>KnowledgeObject = def., an Information Artifact capable of serving a role as the atomic unit of computable knowledge and therefore comprised of at least one KnowledgeObjectImplementation</koio1:definition>
+        <definition>KnowledgeObject = def., an Information Artifact capable of serving a role as the atomic unit of computable knowledge and therefore comprised of at least one KnowledgeObjectImplementation</definition>
     </owl:Class>
     
 
@@ -513,31 +541,7 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
         <rdfs:subClassOf rdf:resource="https://kgrid.org/koio#Collection"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label xml:lang="en">KnowledgeObjectCollection</rdfs:label>
-        <koio1:definition>Knowledge Object Collection = def., two or more Knowledge Objects with a collectionIdentifer</koio1:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://kgrid.org/koio#MaterialEntity -->
-
-    <owl:Class rdf:about="https://kgrid.org/koio#MaterialEntity">
-        <rdfs:subClassOf rdf:resource="https://kgrid.org/koio#IndependentContinuant"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
-        <rdfs:label xml:lang="en">MaterialEntity</rdfs:label>
-        <koio1:definition>MaterialEntity = def. an IndependentContinuant that has some portion of matter as part.
-
-(Introduction to Basic Formal Ontology I, Arp, Smith, and Spear, 2015)</koio1:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://kgrid.org/koio#Occurrant -->
-
-    <owl:Class rdf:about="https://kgrid.org/koio#Occurrant">
-        <rdfs:subClassOf rdf:resource="https://kgrid.org/koio#Entity"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
-        <rdfs:label xml:lang="en">Occurrent</rdfs:label>
-        <koio1:definition>An entity that has temporal parts and that happens, unfolds or develops through time.</koio1:definition>
+        <definition>Knowledge Object Collection = def., two or more Knowledge Objects with a collectionIdentifer</definition>
     </owl:Class>
     
 
@@ -548,7 +552,7 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
         <rdfs:subClassOf rdf:resource="https://kgrid.org/koio#ComputableKnowledgeResource"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label xml:lang="en">Payload</rdfs:label>
-        <koio1:definition>Payload = def. , an ComputableKnowledgeResource represented in manner that is machine-interpretable</koio1:definition>
+        <definition>Payload = def. , an ComputableKnowledgeResource represented in manner that is machine-interpretable</definition>
     </owl:Class>
     
 
@@ -559,7 +563,17 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
         <rdfs:subClassOf rdf:resource="https://kgrid.org/koio#Bundle"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label xml:lang="en">ProvenanceBundle</rdfs:label>
-        <koio1:definition>Provenance Bundle = def, A Bundle of two or more descriptive statements (sometimes referred to as metadata statements) about the ORIGIN(S) of one or more Information Artifacts</koio1:definition>
+        <definition>Provenance Bundle = def, A Bundle of two or more descriptive statements (sometimes referred to as metadata statements) about the ORIGIN(S) of one or more Information Artifacts</definition>
+    </owl:Class>
+    
+
+
+    <!-- https://kgrid.org/koio#Service -->
+
+    <owl:Class rdf:about="https://kgrid.org/koio#Service">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/swo/SWO_9000050"/>
+        <obo:IAO_0000115>Service, def., a Service is a defined function or capability provided by a software system. Each Service provides a way to use or interact with a KnowledgeObject, facilitating access and utilization of the Knowledge encapsulated within the KnowledgeObject.</obo:IAO_0000115>
+        <rdfs:label>service</rdfs:label>
     </owl:Class>
     
 
@@ -570,7 +584,7 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
         <rdfs:subClassOf rdf:resource="https://kgrid.org/koio#InformationArtifact"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label xml:lang="en">ServiceSpecification</rdfs:label>
-        <koio1:definition>ServiceSpecification = def. , an InformationArtifact that describes a computational service that is somehow enabled by a KnowledgeObject</koio1:definition>
+        <definition>ServiceSpecification = def. , an InformationArtifact that describes a computational service that is somehow enabled by a KnowledgeObject</definition>
     </owl:Class>
     
 
@@ -598,8 +612,8 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
 
     <owl:NamedIndividual rdf:about="https://kgrid.org/koio#UUIDIMP01">
         <rdf:type rdf:resource="https://kgrid.org/koio#Implementation"/>
-        <koio1:hasDeploymentInstruction rdf:resource="https://kgrid.org/koio#UUIDDI01"/>
-        <koio1:hasPayload rdf:resource="https://kgrid.org/koio#UUIDPAYLOAD01"/>
+        <hasDeploymentInstruction rdf:resource="https://kgrid.org/koio#UUIDDI01"/>
+        <hasPayload rdf:resource="https://kgrid.org/koio#UUIDPAYLOAD01"/>
     </owl:NamedIndividual>
     
 
@@ -608,8 +622,8 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
 
     <owl:NamedIndividual rdf:about="https://kgrid.org/koio#UUIDKO1">
         <rdf:type rdf:resource="https://kgrid.org/koio#KnowledgeObject"/>
-        <koio1:hasImplementation rdf:resource="https://kgrid.org/koio#UUIDIMP01"/>
-        <koio1:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">TrialTitle</koio1:title>
+        <hasImplementation rdf:resource="https://kgrid.org/koio#UUIDIMP01"/>
+        <title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">TrialTitle</title>
     </owl:NamedIndividual>
     
 
