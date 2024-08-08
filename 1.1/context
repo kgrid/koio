@@ -113,9 +113,6 @@
     "type" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#type"
     },
-    "informationContentEntity" : {
-      "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    },
     "identifer" : {
       "@id" : "https://kgrid.org/koio#identifer",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
@@ -152,7 +149,7 @@
       "@id" : "http://purl.obolibrary.org/obo/RO_0002502",
       "@type" : "@id"
     },
-    "isImplementedBy" : {
+    "implementedBy" : {
       "@id" : "http://www.ebi.ac.uk/swo/SWO_0000085",
       "@type" : "@id"
     },
