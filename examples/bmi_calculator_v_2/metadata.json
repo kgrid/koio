@@ -1,0 +1,36 @@
+{
+  "@id" : "calculate_bmi",
+  "koio:kgrid":"2",
+  "@type" : "koio:KnowledgeObject",
+  "dc:identifier" : "ark:calculate_bmi",
+  "version" : "1.0.0",
+  "dc:title" : "BMI Calculator",
+  "koio:contributors" : "AIIT Team",
+  "dc:description" : "Calculates BMI",
+  "koio:keywords" : [ "BMI" ],  
+  "koio:hasService":[      
+    {
+      "@type":"API",
+      "hasServiceSpecification":"APIService/service.yaml",
+      "dependsOn":"bmiFunction",
+      "implementedBy" : [{
+        "@id": "APIService",
+        "@type":[
+            "https://kgrid.org/specs/activationSpec.html#object",
+            "javascript"            
+          ]
+      }]
+    },
+    {
+      "@type":["cli","javascript"],
+      "dependsOn":"bmiFunction",
+      "implementedBy" : "CLIService"
+    }
+    ],
+    "koio:hasKnowledge":{
+      "@id":"bmiFunction",
+      "@type":"function",
+      "implementedBy" : ["Knowledge/bmi.js"]
+    },
+  "@context" : "https://kgrid.org/koio/1.1/context"  
+}

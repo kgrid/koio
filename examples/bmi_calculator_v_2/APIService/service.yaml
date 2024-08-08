@@ -1,0 +1,58 @@
+openapi: 3.0.2
+info:
+  version: '0.2'
+  title: BMI Calculator
+  description: Calculates BMI
+servers:
+- url: /endpoints/calculate_bmi
+  description: Calculates BMI
+paths:
+  /calculate70:
+    post:
+      description: Calculates BMI
+      operationId: calculate70
+      requestBody:
+        description: inputs
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/input70'
+      responses:
+        '200':
+          description: response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/output70'
+              encoding:
+                recommendation:
+                  contentType: charset=utf-8
+components:
+  schemas:
+    input70:
+      required:
+      - zhyl24
+      - zhyl55
+      properties:
+        zhyl24:
+          type: number
+          description: weight (kg)
+        zhyl55:
+          type: number
+          description: height (cm)
+    output70:
+      required:
+      - value
+      - resultCode
+      - resultMsg
+      properties:
+        value:
+          type: number
+          description: risk value
+        resultCode:
+          type: number
+          description: resultCode
+        resultMsg:
+          type: string
+          description: detail result message
