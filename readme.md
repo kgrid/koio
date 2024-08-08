@@ -7,10 +7,10 @@ permalink: /index.html
 # KOIO - The Knowledge Object Implementation Ontology
 This repository is for evolving, sharing, and managing KOIO. KOIO formally defines the structure of Knowledge Objects using linked data representations made available in canonical OWL files. 
 
+![koio](https://github.com/user-attachments/assets/a7e8a58a-e855-4847-9ff7-ef941315e30e)
+
+
 A Knowledge Object is a formally-stuctured information content resource that, when concretized, becomes a compound digital object. By intention, KOIO specifies a lightweight or minimalist user-oriented, computation-focused digital object container specifically for packaging and organizing machine-processable knowledge assets that include "code that runs."
-
-![koio](https://github.com/user-attachments/assets/9ecc8907-590f-4994-93d9-0560b1b9a5bb)
-
 
 KOIO ontology is currently used in the [Knowledge Grid (KGrid) poject](https://github.com/kgrid/specs/blob/master/docs/evolving-conceptual-model.md) for [creating knowledge objects](https://github.com/kgrid/specs/blob/master/docs/kgrid-knowledge-objects.md).
 
