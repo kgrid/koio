@@ -5,7 +5,7 @@ permalink: /index.html
 ---
 
 # KOIO - The Knowledge Object Implementation Ontology
-This repository is for evolving, sharing, and managing KOIO. KOIO formally defines the structure of Knowledge Objects using linked data representations made available in canonical OWL files. 
+The [KOIO repository](https://github.com/kgrid/koio) is used for evolving, sharing, and managing KOIO. KOIO formally defines the structure of Knowledge Objects using linked data representations made available in canonical OWL files. 
 
 ![koio](https://github.com/user-attachments/assets/23adeed3-54e3-4bc5-88e9-e327cf558479)
 
