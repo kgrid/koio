@@ -20,7 +20,7 @@
 {"@context":"https://schema.org","@type":"WebSite","description":"This repository is for the Knowledge Object Implementation Ontology (KOIO)","headline":"KOIO","name":"koio","url":"/koio/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/koio/assets/css/style.css?v=4293743646e1cda6986b9f710495290b6ea66d02">
+    <link rel="stylesheet" href="/koio/assets/css/style.css?v=a07406af2554d0b44b36086e090fb374497eb5f9">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -122,6 +122,24 @@
     </ul>
   </li>
 </ul>
+
+<h2 id="appendix-agenerate-json_ld-context-file-from-koio-owl-file-using-owl2jsonld-tool">Appendix A—Generate JSON_LD Context File From KOIO OWL File Using owl2jsonld Tool</h2>
+<p><a href="https://github.com/stain/owl2jsonld">owl2jsonld</a> is a tool that generate a JSON-LD @context for concepts (classes and properties) found in the specified OWL or RDFS ontology.</p>
+<ol>
+  <li>Install Java
+    <div class="language-batch highlighter-rouge"><div class="highlight"><pre class="highlight"><code># <span class="kd">JAVA</span> <span class="kd">installation</span> <span class="na">on</span> <span class="kd">Linux</span>
+<span class="kd">sudo</span> <span class="kd">apt</span> <span class="kd">update</span>
+<span class="kd">sudo</span> <span class="kd">apt</span> <span class="kd">install</span> <span class="kd">default</span><span class="na">-jre
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Download the Tool: You can download the owl2jsonld tool from its <a href="https://github.com/stain/owl2jsonld">GitHub repository</a>. The official releases include an uberjar (standalone JAR) that bundles all dependencies and can be used as a command-line tool.</p>
+  </li>
+  <li>Run the JAR File and create the context.json form the owl file:
+    <div class="language-batch highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">java</span> <span class="na">-jar </span><span class="kd">owl2jsonld</span><span class="o">-</span><span class="m">0</span>.2.1<span class="na">-standalone</span>.jar <span class="kd">file</span>:///path/to/owl/file/koio.owl <span class="na">-o </span><span class="kd">context</span>.json
+</code></pre></div>    </div>
+  </li>
+</ol>
 
 <h2 id="tools">Tools</h2>
 <ul>
