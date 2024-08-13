@@ -1,10 +1,9 @@
 {
-  "@id": "https://kgrid.org/koio/context",
-  "koio": "http://kgrid.org/koio#",
-  "dc": "http://purl.org/dc/elements/1.1/",
+  "@id": "https://kgrid.org/koio/context", 
   "@context" : {
     "koio": "http://kgrid.org/koio#",
     "dc": "http://purl.org/dc/elements/1.1/",
+    
     "KnowledgeObject" : {
       "@id" : "https://kgrid.org/koio#KnowledgeObject"
     },
@@ -15,6 +14,9 @@
     "hasImplementation" : {
       "@id" : "https://kgrid.org/koio#hasImplementation",
       "@type" : "@id"
+    },
+    "algorithm" : {
+      "@id" : "http://purl.obolibrary.org/obo/IAO_0000064"
     },
     "isImplementationPartOf" : {
       "@id" : "https://kgrid.org/koio#isImplementationPartOf",
@@ -46,13 +48,6 @@
       "@id" : "https://kgrid.org/koio#isPartOf",
       "@type" : "@id"
     },
-    "hasPart" : {
-      "@id" : "https://kgrid.org/koio#hasPart",
-      "@type" : "@id"
-    },
-    "IndependentContinuant" : {
-      "@id" : "https://kgrid.org/koio#IndependentContinuant"
-    },
     "isServiceSpecificationPartOf" : {
       "@id" : "https://kgrid.org/koio#isServiceSpecificationPartOf",
       "@type" : "@id"
@@ -67,17 +62,22 @@
     "Payload" : {
       "@id" : "https://kgrid.org/koio#Payload"
     },
+    "Knowledge" : {
+      "@id" : "https://kgrid.org/koio#Knowledge"
+    },
     "Artifact" : {
       "@id" : "https://kgrid.org/koio#Artifact"
     },
-    "MaterialEntity" : {
-      "@id" : "https://kgrid.org/koio#MaterialEntity"
+    "materialEntity" : {
+      "@id" : "http://purl.obolibrary.org/obo/BFO_0000040"
     },
-    "Continuant" : {
-      "@id" : "https://kgrid.org/koio#Continuant"
+    "hasPart" : {
+      "@id" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "@type" : "@id"
     },
-    "Occurrant" : {
-      "@id" : "https://kgrid.org/koio#Occurrant"
+    "hasService" : {
+      "@id" : "https://kgrid.org/koio#hasService",
+      "@type" : "@id"
     },
     "ProvenanceBundle" : {
       "@id" : "https://kgrid.org/koio#ProvenanceBundle"
@@ -94,9 +94,6 @@
     },
     "isDefinedBy" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
-    },
-    "definition" : {
-      "@id" : "https://kgrid.org/koio#definition"
     },
     "keywords" : {
       "@id" : "https://kgrid.org/koio#keywords",
@@ -120,17 +117,23 @@
       "@id" : "https://kgrid.org/koio#identifer",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
-    "Entity" : {
-      "@id" : "https://kgrid.org/koio#Entity"
+    "software" : {
+      "@id" : "http://www.ebi.ac.uk/swo/SWO_0000001"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Service" : {
+      "@id" : "https://kgrid.org/koio#Service"
     },
     "language" : {
       "@id" : "https://kgrid.org/koio#language"
     },
     "contributor" : {
       "@id" : "http://purl.org/dc/elements/1.1/contributor"
+    },
+    "softwareInterface" : {
+      "@id" : "http://www.ebi.ac.uk/swo/SWO_9000050"
     },
     "InformationArtifact" : {
       "@id" : "https://kgrid.org/koio#InformationArtifact"
@@ -141,6 +144,14 @@
     "contributors" : {
       "@id" : "https://kgrid.org/koio#contributors",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "dependsOn" : {
+      "@id" : "http://purl.obolibrary.org/obo/RO_0002502",
+      "@type" : "@id"
+    },
+    "implementedBy" : {
+      "@id" : "http://www.ebi.ac.uk/swo/SWO_0000085",
+      "@type" : "@id"
     },
     "description" : {
       "@id" : "https://kgrid.org/koio#description",
@@ -153,9 +164,16 @@
       "@id" : "https://kgrid.org/koio#isDeploymentInstructionPartOf",
       "@type" : "@id"
     },
+    "hasKnowledge" : {
+      "@id" : "https://kgrid.org/koio#hasKnowledge",
+      "@type" : "@id"
+    },
     "adapterType" : {
       "@id" : "https://kgrid.org/koio#adapterType",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "definition" : {
+      "@id" : "http://purl.obolibrary.org/obo/IAO_0000115"
     }
   }
 }
