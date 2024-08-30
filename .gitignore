@@ -1,2 +1,6 @@
 
 .DS_Store
+.vscode/settings.json
+tests/__pycache__/test_ontology.cpython-311-pytest-8.2.2.pyc
+catalog-v001.xml
+koio.properties

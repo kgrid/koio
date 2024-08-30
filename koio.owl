@@ -6,6 +6,7 @@
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:swo="http://www.ebi.ac.uk/swo/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -599,6 +600,42 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
     
 
 
+    <!-- https://kgrid.org/koio#APIService1 -->
+
+    <owl:NamedIndividual rdf:about="https://kgrid.org/koio#APIService1">
+        <rdf:type rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000108"/>
+        <rdf:type rdf:resource="http://www.ebi.ac.uk/swo/interface/SWO_9000054"/>
+        <rdf:type rdf:resource="https://kgrid.org/koio#Service"/>
+        <obo:RO_0002502 rdf:resource="https://kgrid.org/koio#bmiKnowledge"/>
+        <swo:SWO_0000085 rdf:resource="https://raw.githubusercontent.com/kgrid/koio/master/examples/bmi_calculator_v_2/APIService/index70.js"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://kgrid.org/koio#CLIService1 -->
+
+    <owl:NamedIndividual rdf:about="https://kgrid.org/koio#CLIService1">
+        <rdf:type rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000108"/>
+        <rdf:type rdf:resource="http://www.ebi.ac.uk/swo/interface/SWO_9000053"/>
+        <rdf:type rdf:resource="https://kgrid.org/koio#Service"/>
+        <obo:RO_0002502 rdf:resource="https://kgrid.org/koio#tobaccoKnowledge"/>
+        <swo:SWO_0000085 rdf:resource="https://raw.githubusercontent.com/kgrid-lab/MCBK_2024_demo/main/tobacco/cli_service/cli.ts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://kgrid.org/koio#CLIService2 -->
+
+    <owl:NamedIndividual rdf:about="https://kgrid.org/koio#CLIService2">
+        <rdf:type rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000108"/>
+        <rdf:type rdf:resource="http://www.ebi.ac.uk/swo/interface/SWO_9000053"/>
+        <rdf:type rdf:resource="https://kgrid.org/koio#Service"/>
+        <obo:RO_0002502 rdf:resource="https://kgrid.org/koio#bmiKnowledge"/>
+        <swo:SWO_0000085 rdf:resource="https://raw.githubusercontent.com/kgrid/koio/master/examples/bmi_calculator_v_2/CLIService/cli.ts"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://kgrid.org/koio#UUIDDI01 -->
 
     <owl:NamedIndividual rdf:about="https://kgrid.org/koio#UUIDDI01">
@@ -639,6 +676,85 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
 
     <owl:NamedIndividual rdf:about="https://kgrid.org/koio#UUIDSS01">
         <rdf:type rdf:resource="https://kgrid.org/koio#ServiceSpecification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://kgrid.org/koio#bmiKO -->
+
+    <owl:NamedIndividual rdf:about="https://kgrid.org/koio#bmiKO">
+        <rdf:type rdf:resource="https://kgrid.org/koio#KnowledgeObject"/>
+        <hasKnowledge rdf:resource="https://kgrid.org/koio#bmiKnowledge"/>
+        <hasService rdf:resource="https://kgrid.org/koio#APIService1"/>
+        <hasService rdf:resource="https://kgrid.org/koio#CLIService2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://kgrid.org/koio#bmiKnowledge -->
+
+    <owl:NamedIndividual rdf:about="https://kgrid.org/koio#bmiKnowledge">
+        <rdf:type rdf:resource="https://kgrid.org/koio#Knowledge"/>
+        <swo:SWO_0000085 rdf:resource="https://raw.githubusercontent.com/kgrid/koio/master/examples/bmi_calculator_v_2/Knowledge/bmi.js"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://kgrid.org/koio#tobaccoKO -->
+
+    <owl:NamedIndividual rdf:about="https://kgrid.org/koio#tobaccoKO">
+        <rdf:type rdf:resource="https://kgrid.org/koio#KnowledgeObject"/>
+        <hasKnowledge rdf:resource="https://kgrid.org/koio#tobaccoKnowledge"/>
+        <hasService rdf:resource="https://kgrid.org/koio#CLIService1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://kgrid.org/koio#tobaccoKnowledge -->
+
+    <owl:NamedIndividual rdf:about="https://kgrid.org/koio#tobaccoKnowledge">
+        <rdf:type rdf:resource="https://kgrid.org/koio#Knowledge"/>
+        <swo:SWO_0000085 rdf:resource="https://raw.githubusercontent.com/kgrid-lab/MCBK_2024_demo/main/tobacco/knowledge/tobacco.js"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/kgrid-lab/MCBK_2024_demo/main/tobacco/cli_service/cli.ts -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/kgrid-lab/MCBK_2024_demo/main/tobacco/cli_service/cli.ts">
+        <rdf:type rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/kgrid-lab/MCBK_2024_demo/main/tobacco/knowledge/tobacco.js -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/kgrid-lab/MCBK_2024_demo/main/tobacco/knowledge/tobacco.js">
+        <rdf:type rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/kgrid/koio/master/examples/bmi_calculator_v_2/APIService/index70.js -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/kgrid/koio/master/examples/bmi_calculator_v_2/APIService/index70.js">
+        <rdf:type rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/kgrid/koio/master/examples/bmi_calculator_v_2/CLIService/cli.ts -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/kgrid/koio/master/examples/bmi_calculator_v_2/CLIService/cli.ts">
+        <rdf:type rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/kgrid/koio/master/examples/bmi_calculator_v_2/Knowledge/bmi.js -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/kgrid/koio/master/examples/bmi_calculator_v_2/Knowledge/bmi.js">
+        <rdf:type rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000001"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
