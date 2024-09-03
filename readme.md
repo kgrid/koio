@@ -58,7 +58,8 @@ Here are the roles of people who will contribute in the development of this onto
     - Change proposals should be recorded under issues in the KOIO Ontology Management project with all the details needed to discuss, plan and execute the change. 
     - Issue templates will be used to help contributors know all the details needed for their proposed changes (i.e. add term, add synonym, revise subclass relationship, new annotation, Obsolete a term, …) when adding a new issue
     - A branch will be created for the work needed to be done to complete each approved change 
-    - Changes are only considered complete and ready for merge to the main when the OWL file, documentation, context files and examples are updated
+    - Changes are only considered complete and ready for merge to the main when the OWL file, documentation, tests, context files and examples are updated
+    - All existing and new tests should pass before commiting any changes to a branch.
     - Once the changes are finalized they will be merged to the main branch 
 
 - **Ontology Evaluation Procedures**    
