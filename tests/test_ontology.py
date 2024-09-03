@@ -28,6 +28,10 @@ def test_what_KOs_have_at_least_a_service_of_type_CLI(graph):
     KO_list = set(graph.subjects( KOIO.hasService / RDF.type, SWO["interface/SWO_9000053"]))
     assert {KOIO.tobaccoKO, KOIO.bmiKO} == KO_list  
 
+def test_what_KOs_have_at_least_a_service_of_type_API(graph):
+    KO_list = set(graph.subjects( KOIO.hasService / RDF.type, SWO["interface/SWO_9000054"]))
+    assert {KOIO.bmiKO} == KO_list  
+
 def test_what_services_are_implemented_for_a_specific_KO(graph):
     service_list = set(graph.objects( KOIO.tobaccoKO , KOIO.hasService))  
     assert {KOIO.CLIService1} == service_list  
