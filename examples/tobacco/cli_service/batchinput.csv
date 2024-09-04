@@ -1,0 +1,6 @@
+id,age,gender,race,racelc,racebc,edu,emp,famlc,smokeyear,quityear,cigpday,bmi,hypertension,cad,famaaa,diabetes,pad,carotid,cerebrovascular,hxbngnbiopsy,biopsyathyperplasia,fambc,sexpartner,fulltmpregnancy,ageat1stbirth,oralcontraceptivecurrent,HPVpositive,colitis,fap,hiv,famcrc,totalcholesterol,hdl,ldl,hicholesterol,sbp,htmedication,a1c,clinical_risk,hiv_risk,cg_risk,syphilis_risk,flu_risk,pneumonia_risk,alcohol_abuse,sexual_risk
+TR01-patient-S01,65,1,0,0,1,2,1,2,30,0,20,25,1,1,1,1,1,0,1,1,1,2,1,1,2,1,0,0,1,1,0,200,30,80,1,110,0,0.057,0,0,0,0,0,0,1,1
+TR01-patient-S02,65,0,0,0,1,2,1,2,30,0,20,25,1,1,1,1,1,0,1,1,1,2,1,1,2,1,0,0,1,1,0,200,30,80,1,110,0,0.057,0,0,0,0,0,0,1,1
+TR01-patient-S03,70,1,0,0,1,2,1,2,30,0,20,22,1,1,1,1,1,0,1,1,1,2,0,0,2,1,0,0,1,1,0,200,30,80,1,110,0,0.057,0,0,0,0,0,0,1,1
+TR01-patient-S04,50,0,0,0,0,5,0,0,0,0,0,23.96023669,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,175,55,80,0,120,0,0,0,0,0,0,0,0,1,0
+TR01-patient-S05,-10,0,0,0,0,5,0,0,0,0,0,23.96023669,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,175,55,80,0,120,0,0,0,0,0,0,0,0,1,0

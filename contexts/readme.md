@@ -1,0 +1,1 @@
+Note: This context file is depricated and this folder and the knowledgeobject.jsonld file is kept here in favor of the legacy knowledge objects that are created using kgird 1.0 model.
