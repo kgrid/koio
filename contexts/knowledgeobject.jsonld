@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "koio": "http://kgrid.org/koio#",
+        "dc": "http://purl.org/dc/elements/1.1/",
+        "identifier": {
+          "@id": "http://purl.org/dc/elements/1.1/identifier"
+        },
+        "title": {
+          "@id": "http://purl.org/dc/elements/1.1/title"
+        },
+        "keywords": {
+          "@id": "http://kgrid.org/koio#keywords"
+        },
+        "contributors": {
+          "@id": "http://kgrid.org/koio#contributors"
+        },
+        "description": {
+          "@id": "http://purl.org/dc/elements/1.1/description"
+        },
+        "hasImplementation": {
+          "@id": "http://kgrid.org/koio#hasImplementation",
+          "@type": "@id"
+        }
+
+   }
+}
