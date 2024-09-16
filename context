@@ -3,7 +3,6 @@
   "@context" : {
     "koio": "http://kgrid.org/koio#",
     "dc": "http://purl.org/dc/elements/1.1/",
-    "swo": "http://www.ebi.ac.uk/swo/",
     
     "KnowledgeObject" : {
       "@id" : "https://kgrid.org/koio#KnowledgeObject"
@@ -175,6 +174,18 @@
     },
     "definition" : {
       "@id" : "http://purl.obolibrary.org/obo/IAO_0000115"
+    },
+    "CLI": {
+      "@id" : "http://www.ebi.ac.uk/swo/interface/SWO_9000053"
+    },
+    "API": {
+      "@id" : "http://www.ebi.ac.uk/swo/interface/SWO_9000054"
+    },
+    "JavaScript": {
+      "@id" : "http://www.ebi.ac.uk/swo/SWO_0000108"
+    },
+    "Python": {
+      "@id" : "http://www.ebi.ac.uk/swo/SWO_0000118"
     }
   }
 }
