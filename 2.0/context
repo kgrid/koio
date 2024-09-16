@@ -3,6 +3,7 @@
   "@context" : {
     "koio": "http://kgrid.org/koio#",
     "dc": "http://purl.org/dc/elements/1.1/",
+    "swo": "http://www.ebi.ac.uk/swo/",
     
     "KnowledgeObject" : {
       "@id" : "https://kgrid.org/koio#KnowledgeObject"
