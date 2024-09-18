@@ -186,8 +186,9 @@
     },
     "Python": {
       "@id" : "http://www.ebi.ac.uk/swo/SWO_0000118"
+    },
+    "Function":{
+      "@id" : "https://w3id.org/function/ontology#Function"
     }
-
-
   }
 }
