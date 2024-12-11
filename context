@@ -65,6 +65,12 @@
     "Knowledge" : {
       "@id" : "https://kgrid.org/koio#Knowledge"
     },
+    "Test" : {
+      "@id" : "https://kgrid.org/koio#Test"
+    },
+    "Documentation" : {
+      "@id" : "https://kgrid.org/koio#Documentation"
+    },
     "Artifact" : {
       "@id" : "https://kgrid.org/koio#Artifact"
     },
@@ -166,6 +172,14 @@
     },
     "hasKnowledge" : {
       "@id" : "https://kgrid.org/koio#hasKnowledge",
+      "@type" : "@id"
+    },
+    "hasTest" : {
+      "@id" : "https://kgrid.org/koio#hasTest",
+      "@type" : "@id"
+    },
+    "hasDocumentation" : {
+      "@id" : "https://kgrid.org/koio#hasDocumentation",
       "@type" : "@id"
     },
     "adapterType" : {

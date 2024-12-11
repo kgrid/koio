@@ -126,6 +126,23 @@ It has yet to be determined whether development of KOIO subontologies and/or ext
     
 
 
+    <!-- https://kgrid.org/koio#hasDocumentation -->
+
+    <owl:ObjectProperty rdf:about="https://kgrid.org/koio#hasDocumentation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:domain rdf:resource="https://kgrid.org/koio#Knowledge"/>
+        <rdfs:domain rdf:resource="https://kgrid.org/koio#KnowledgeObject"/>
+        <rdfs:domain rdf:resource="https://kgrid.org/koio#Service"/>
+        <rdfs:range rdf:resource="https://kgrid.org/koio#Documentation"/>
+        <obo:IAO_0000115>hasDocumentation, def., a property that indicates an association between a knowledge object, knowledge, or service and documentation that describes, relates to, or provides information about each of these things.</obo:IAO_0000115>
+        <rdfs:label>has documentation</rdfs:label>
+        <rdfs:seeAlso>from SPDX find term hasDocumentation: https://spdx.github.io/spdx-spec/v3.0.1/model/Core/Vocabularies/RelationshipType/
+from SPDX find term Documentation:
+http://spdx.org/rdf/terms#documentation</rdfs:seeAlso>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://kgrid.org/koio#hasImplementation -->
 
     <owl:ObjectProperty rdf:about="https://kgrid.org/koio#hasImplementation">
@@ -204,6 +221,22 @@ BFO</definition>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label>hasServiceSpecification</rdfs:label>
         <definition>hasServiceSpecification, def., a relation that holds between a whole KnowledgeObject and its ServiceSpecification part</definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://kgrid.org/koio#hasTest -->
+
+    <owl:ObjectProperty rdf:about="https://kgrid.org/koio#hasTest">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:domain rdf:resource="https://kgrid.org/koio#Knowledge"/>
+        <rdfs:domain rdf:resource="https://kgrid.org/koio#KnowledgeObject"/>
+        <rdfs:domain rdf:resource="https://kgrid.org/koio#Service"/>
+        <rdfs:range rdf:resource="https://kgrid.org/koio#Test"/>
+        <obo:IAO_0000115>hasTest, def., a property that links a knowledge object, service, or knowledge to a specific test designed to evaluate its functionality, performance, or reliability. This property signifies that the component has an associated test to verify or validate its behavior.</obo:IAO_0000115>
+        <rdfs:label>has test</rdfs:label>
+        <rdfs:seeAlso>from SPDX find term hasTest:
+https://spdx.github.io/spdx-spec/v3.0.1/model/Core/Vocabularies/RelationshipType/</rdfs:seeAlso>
     </owl:ObjectProperty>
     
 
@@ -489,6 +522,19 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
     
 
 
+    <!-- https://kgrid.org/koio#Documentation -->
+
+    <owl:Class rdf:about="https://kgrid.org/koio#Documentation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>Documentation, def., an information content entity that conveys information, usually in a structured or semi-structured format, about some other thing.</obo:IAO_0000115>
+        <rdfs:label>documentation</rdfs:label>
+        <rdfs:seeAlso>from SPDX find term Documentation:
+http://spdx.org/rdf/terms#documentation
+from SPDX find term hasDocumentation: https://spdx.github.io/spdx-spec/v3.0.1/model/Core/Vocabularies/RelationshipType/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- https://kgrid.org/koio#Implementation -->
 
     <owl:Class rdf:about="https://kgrid.org/koio#Implementation">
@@ -586,6 +632,20 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label xml:lang="en">ServiceSpecification</rdfs:label>
         <definition>ServiceSpecification = def. , an InformationArtifact that describes a computational service that is somehow enabled by a KnowledgeObject</definition>
+    </owl:Class>
+    
+
+
+    <!-- https://kgrid.org/koio#Test -->
+
+    <owl:Class rdf:about="https://kgrid.org/koio#Test">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>Test, def., an information content entity conveying a systematic procedure to assess specific aspects of software performance, functionality, or security. Tests are created to ensure that the software meets specified requirements or to identify any defects.</obo:IAO_0000115>
+        <rdfs:label>test</rdfs:label>
+        <rdfs:seeAlso>Test Case, Test, Test Code, Code To Be Tested
+https://dev.nemo.inf.ufes.br/seon/ROoST.html
+
+Souza ÉF, Falbo RD, Vijaykumar NL. ROoST: Reference ontology on software testing. Applied Ontology. 2017 Jan 1;12(1):59-90.</rdfs:seeAlso>
     </owl:Class>
     
 
