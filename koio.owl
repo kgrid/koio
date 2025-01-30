@@ -104,7 +104,6 @@ It has yet to be determined whether development of KOIO subontologies and/or ext
     <!-- http://www.ebi.ac.uk/swo/SWO_0000085 -->
 
     <rdf:Description rdf:about="http://www.ebi.ac.uk/swo/SWO_0000085">
-        <rdfs:domain rdf:resource="https://kgrid.org/koio#Knowledge"/>
         <rdfs:domain rdf:resource="https://kgrid.org/koio#Service"/>
         <rdfs:domain rdf:resource="https://kgrid.org/koio#Test"/>
         <rdfs:range rdf:resource="https://kgrid.org/koio#Implementation"/>
@@ -140,10 +139,12 @@ It has yet to be determined whether development of KOIO subontologies and/or ext
 
     <owl:ObjectProperty rdf:about="https://kgrid.org/koio#hasDocumentation">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:domain rdf:resource="https://kgrid.org/koio#Implementation"/>
         <rdfs:domain rdf:resource="https://kgrid.org/koio#Knowledge"/>
         <rdfs:domain rdf:resource="https://kgrid.org/koio#KnowledgeObject"/>
         <rdfs:domain rdf:resource="https://kgrid.org/koio#Service"/>
-        <rdfs:range rdf:resource="https://kgrid.org/koio#Documentation"/>
+        <rdfs:domain rdf:resource="https://kgrid.org/koio#Test"/>
+        <rdfs:range rdf:resource="https://kgrid.org/koio#InformationArtifact"/>
         <obo:IAO_0000115>hasDocumentation, def., a property that indicates an association between a knowledge object, knowledge, or service and documentation that describes, relates to, or provides information about each of these things.</obo:IAO_0000115>
         <rdfs:label>has documentation</rdfs:label>
         <rdfs:seeAlso>from SPDX find term hasDocumentation: https://spdx.github.io/spdx-spec/v3.0.1/model/Core/Vocabularies/RelationshipType/
@@ -313,6 +314,16 @@ BFO</definition>
     
 
 
+    <!-- https://kgrid.org/koio#knowledgeIsImplementedBy -->
+
+    <owl:ObjectProperty rdf:about="https://kgrid.org/koio#knowledgeIsImplementedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000085"/>
+        <rdfs:domain rdf:resource="https://kgrid.org/koio#Knowledge"/>
+        <rdfs:range rdf:resource="https://kgrid.org/koio#KnowledgeRepresentation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -321,6 +332,14 @@ BFO</definition>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.ebi.ac.uk/swo/SWO_0000043 -->
+
+    <rdf:Description rdf:about="http://www.ebi.ac.uk/swo/SWO_0000043">
+        <rdfs:domain rdf:resource="https://kgrid.org/koio#Test"/>
+    </rdf:Description>
     
 
 
@@ -489,19 +508,6 @@ Smith &amp; Ceusters, Aboutness: Towards Foundations for the Information Artifac
     
 
 
-    <!-- https://kgrid.org/koio#Documentation -->
-
-    <owl:Class rdf:about="https://kgrid.org/koio#Documentation">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115>Documentation, def., an information content entity that conveys information, usually in a structured or semi-structured format, about some other thing.</obo:IAO_0000115>
-        <rdfs:label>documentation</rdfs:label>
-        <rdfs:seeAlso>from SPDX find term Documentation:
-http://spdx.org/rdf/terms#documentation
-from SPDX find term hasDocumentation: https://spdx.github.io/spdx-spec/v3.0.1/model/Core/Vocabularies/RelationshipType/</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
     <!-- https://kgrid.org/koio#Implementation -->
 
     <owl:Class rdf:about="https://kgrid.org/koio#Implementation">
@@ -509,7 +515,7 @@ from SPDX find term hasDocumentation: https://spdx.github.io/spdx-spec/v3.0.1/mo
         <owl:disjointWith rdf:resource="https://kgrid.org/koio#KnowledgeObject"/>
         <rdfs:isDefinedBy rdf:resource="http://kgrid.org/koio/1.0.0/"/>
         <rdfs:label>Implementation</rdfs:label>
-        <definition>Implementation = def., an InformationArtifact that functions as part of a KnowledgeObject</definition>
+        <definition>def., a computer or machine processable file that is or informs a series of instructions that can be directly interpreted or executed.</definition>
     </owl:Class>
     
 
@@ -559,11 +565,23 @@ from SPDX find term hasDocumentation: https://spdx.github.io/spdx-spec/v3.0.1/mo
     
 
 
+    <!-- https://kgrid.org/koio#KnowledgeRepresentation -->
+
+    <owl:Class rdf:about="https://kgrid.org/koio#KnowledgeRepresentation">
+        <rdfs:subClassOf rdf:resource="https://kgrid.org/koio#Implementation"/>
+        <obo:IAO_0000115>def., an implementation of knowledge.</obo:IAO_0000115>
+        <rdfs:label>knowledge representation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://kgrid.org/koio#Service -->
 
     <owl:Class rdf:about="https://kgrid.org/koio#Service">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115>Service, def., a Service is a defined function or capability provided by a software system. Each Service provides a way to use or interact with a KnowledgeObject, facilitating access and utilization of the Knowledge encapsulated within the KnowledgeObject.</obo:IAO_0000115>
+        <obo:IAO_0000115>Service, def., a Service is a defined function or capability provided by a software system. Each Service provides a way to use or interact with a KnowledgeObject, facilitating access and utilization of the Knowledge encapsulated within the KnowledgeObject.
+
+A Service is a specification of what a self-contained piece of software does.</obo:IAO_0000115>
         <rdfs:label>service</rdfs:label>
     </owl:Class>
     
@@ -681,13 +699,21 @@ Souza ÉF, Falbo RD, Vijaykumar NL. ROoST: Reference ontology on software testin
     
 
 
+    <!-- https://kgrid.org/koio#bmiDocumentation -->
+
+    <owl:NamedIndividual rdf:about="https://kgrid.org/koio#bmiDocumentation"/>
+    
+
+
     <!-- https://kgrid.org/koio#bmiKO -->
 
     <owl:NamedIndividual rdf:about="https://kgrid.org/koio#bmiKO">
         <rdf:type rdf:resource="https://kgrid.org/koio#KnowledgeObject"/>
+        <hasDocumentation rdf:resource="https://kgrid.org/koio#bmiDocumentation"/>
         <hasKnowledge rdf:resource="https://kgrid.org/koio#bmiKnowledge"/>
         <hasService rdf:resource="https://kgrid.org/koio#APIService1"/>
         <hasService rdf:resource="https://kgrid.org/koio#CLIService2"/>
+        <hasTest rdf:resource="https://kgrid.org/koio#bmiTest"/>
     </owl:NamedIndividual>
     
 
@@ -697,6 +723,14 @@ Souza ÉF, Falbo RD, Vijaykumar NL. ROoST: Reference ontology on software testin
     <owl:NamedIndividual rdf:about="https://kgrid.org/koio#bmiKnowledge">
         <rdf:type rdf:resource="https://kgrid.org/koio#Knowledge"/>
         <swo:SWO_0000085 rdf:resource="https://raw.githubusercontent.com/kgrid/koio/master/examples/bmi_calculator_v_2/Knowledge/bmi.js"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://kgrid.org/koio#bmiTest -->
+
+    <owl:NamedIndividual rdf:about="https://kgrid.org/koio#bmiTest">
+        <rdf:type rdf:resource="https://kgrid.org/koio#Test"/>
     </owl:NamedIndividual>
     
 

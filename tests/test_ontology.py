@@ -40,5 +40,13 @@ def test_which_KO_is_implemented_by_a_specific_piece_of_software(graph):
     KO = next(graph.subjects( KOIO.hasService / SWO.SWO_0000085 , URIRef("https://raw.githubusercontent.com/kgrid-lab/MCBK_2024_demo/main/tobacco/cli_service/cli.ts")),None)  
     assert KOIO.tobaccoKO == KO
     
-  
+def test_which_KO_bmiTest_belong_to(graph):
+    KO = next(graph.subjects( KOIO.hasTest , KOIO.bmiTest),None)  
+    assert KOIO.bmiKO == KO
+    
+def test_bmiKO_hasTest(graph):
+    tests = next(graph.objects( KOIO.bmiKO , KOIO.hasTest),None)  
+    assert tests
+    
+
     
