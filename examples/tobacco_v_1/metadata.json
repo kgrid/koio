@@ -1,0 +1,26 @@
+{
+    "@id":"tobacco",
+    "koio:kgrid":"2",
+    "@type" : "koio:KnowledgeObject",
+    "dc:title" : "QALY Gain By Stop Using Tobacco",
+    "dc:identifier" : "ark:tobacco",
+    "version" : "1.0",
+    "dc:description" : "Quality-Adjusted Life Year Gain By Stop Using Tobacco",
+    "koio:contributors" : "Dr. John Doe",
+    "koio:keywords" : [ "QALY", "Tobacco" ],
+    "citation":"https://pubmed.ncbi.nlm.nih.gov/a234567/",
+    "koio:hasService":[     
+      {
+        "@type":["cli","javascript"],
+        "dependsOn":"tobaccoKnowledge",
+        "implementedBy" : "cli_service"
+      }
+    ],
+    "koio:hasKnowledge":{
+      "@id":"tobaccoKnowledge",
+      "@type":"function",
+      "implementedBy" : ["knowledge/tobacco.js"]
+    },
+    "@context" : "https://kgrid.org/koio/2.0/context"  
+
+  }

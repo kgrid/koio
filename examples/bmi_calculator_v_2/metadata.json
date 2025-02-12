@@ -3,7 +3,7 @@
   "koio:kgrid":"2",
   "@type" : "koio:KnowledgeObject",
   "dc:identifier" : "ark:calculate_bmi",
-  "version" : "1.0.0",
+  "version" : "2.0.0",
   "dc:title" : "BMI Calculator",
   "koio:contributors" : "AIIT Team",
   "dc:description" : "Calculates BMI",

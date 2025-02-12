@@ -7,7 +7,7 @@
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>KOIO | koio</title>
-<meta name="generator" content="Jekyll v4.3.4" />
+<meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="KOIO" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This repository is for the Knowledge Object Implementation Ontology (KOIO)" />
@@ -20,7 +20,7 @@
 {"@context":"https://schema.org","@type":"WebSite","description":"This repository is for the Knowledge Object Implementation Ontology (KOIO)","headline":"KOIO","name":"koio","url":"/koio/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/koio/assets/css/style.css?v=3d5032e6d2805cf3b586bfa4b3db2068c21b9683">
+    <link rel="stylesheet" href="/koio/assets/css/style.css?v=711c2716d4aa84205ef4449546e3065beee2971d">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -42,7 +42,7 @@
       <h1 id="koio---the-knowledge-object-implementation-ontology">KOIO - The Knowledge Object Implementation Ontology</h1>
 <p>The <a href="https://github.com/kgrid/koio">KOIO repository</a> is used for evolving, sharing, and managing KOIO. KOIO formally defines the structure of Knowledge Objects using linked data representations made available in canonical OWL files.</p>
 
-<p><img src="https://github.com/user-attachments/assets/23adeed3-54e3-4bc5-88e9-e327cf558479" alt="koio" /></p>
+<p><img src="https://github.com/user-attachments/assets/cd93852c-ad4c-4916-9df0-d1846e51b2b7" alt="image" /></p>
 
 <p>A Knowledge Object is a formally-stuctured information content resource that, when concretized, becomes a compound digital object. By intention, KOIO specifies a lightweight or minimalist user-oriented, computation-focused digital object container specifically for packaging and organizing machine-processable knowledge assets that include “code that runs.”</p>
 
@@ -97,7 +97,7 @@
       </li>
       <li>Technical ontology documentation:
         <ul>
-          <li>created using Protégé’s OWLDoc generator for the active ontology</li>
+          <li>created using Protégé’s OWLDoc generator for the active ontology (delete doc folder and recreate it using OWLDoc)</li>
           <li>must be updated every time the ontology changes</li>
         </ul>
       </li>
@@ -108,7 +108,11 @@
       <li>Change proposals should be recorded under issues in the KOIO Ontology Management project with all the details needed to discuss, plan and execute the change.</li>
       <li>Issue templates will be used to help contributors know all the details needed for their proposed changes (i.e. add term, add synonym, revise subclass relationship, new annotation, Obsolete a term, …) when adding a new issue</li>
       <li>A branch will be created for the work needed to be done to complete each approved change</li>
-      <li>Changes are only considered complete and ready for merge to the main when the OWL file, documentation, tests, context files and examples are updated</li>
+      <li>Changes are only considered complete and ready for merge to the main when the OWL file, documentation, tests, context files, graph and examples are updated
+        <ul>
+          <li>Example in a released KOIO owl file will conform to the version of that file and only to the version of that file.</li>
+        </ul>
+      </li>
       <li>All existing and new tests should pass before commiting any changes to a branch.</li>
       <li>Once the changes are finalized they will be merged to the main branch</li>
     </ul>
@@ -142,6 +146,7 @@
   </li>
 </ol>
 
+<p>Note: path to owl file must be an IRI starting with <code class="language-plaintext highlighter-rouge">file://</code>.</p>
 <h2 id="tools">Tools</h2>
 <ul>
   <li>Ontology <a href="http://iot.ee.surrey.ac.uk/SSNValidation/">validation service</a></li>
