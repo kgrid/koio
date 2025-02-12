@@ -7,7 +7,7 @@ permalink: /index.html
 # KOIO - The Knowledge Object Implementation Ontology
 The [KOIO repository](https://github.com/kgrid/koio) is used for evolving, sharing, and managing KOIO. KOIO formally defines the structure of Knowledge Objects using linked data representations made available in canonical OWL files. 
 
-![test](https://github.com/user-attachments/assets/1d656312-ab07-48d9-98f3-2abd1e3aa523)
+![image](https://github.com/user-attachments/assets/cd93852c-ad4c-4916-9df0-d1846e51b2b7)
 
 A Knowledge Object is a formally-stuctured information content resource that, when concretized, becomes a compound digital object. By intention, KOIO specifies a lightweight or minimalist user-oriented, computation-focused digital object container specifically for packaging and organizing machine-processable knowledge assets that include "code that runs."
 
@@ -59,6 +59,7 @@ Here are the roles of people who will contribute in the development of this onto
     - Issue templates will be used to help contributors know all the details needed for their proposed changes (i.e. add term, add synonym, revise subclass relationship, new annotation, Obsolete a term, …) when adding a new issue
     - A branch will be created for the work needed to be done to complete each approved change 
     - Changes are only considered complete and ready for merge to the main when the OWL file, documentation, tests, context files, graph and examples are updated
+        - Example in a released KOIO owl file will conform to the version of that file and only to the version of that file.
     - All existing and new tests should pass before commiting any changes to a branch.
     - Once the changes are finalized they will be merged to the main branch 
 
@@ -85,6 +86,7 @@ sudo apt install default-jre
 java -jar owl2jsonld-0.2.1-standalone.jar file:///path/to/owl/file/koio.owl -o context.json
 ```
 
+Note: path to owl file must be an IRI starting with `file://`. 
 ## Tools
 - Ontology [validation service](http://iot.ee.surrey.ac.uk/SSNValidation/)
 - [JSON LD Playground](https://json-ld.org/playground/)

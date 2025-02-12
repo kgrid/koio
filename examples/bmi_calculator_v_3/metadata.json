@@ -1,0 +1,129 @@
+{
+  "@context": "https://kgrid.org/koio/2.1/context",
+  "@id": "bmiKO",
+  "koio:KOIOVersion": "2.1",
+  "@type": "koio:KnowledgeObject",
+  "dc:identifier": "ark:calculate_bmi",
+  "dc:version": "3.0.0",
+  "dc:title": "BMI Calculator",
+  "dc:contributors": "AIIT Team",
+  "dc:description": "Calculates BMI",
+  "dc:date": "2025-02-06",
+  "schema:creator": {
+    "@id": "https://kgrid.org",
+    "@type": "team",
+    "schema:ame": "Knowledge Systems Lab",
+    "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
+    "schema:email": "kgrid-developers@umich.edu"
+  },
+  "dc:publisher": "Knowledge Systems Lab",
+  "dc:bibliographicCitation": "https://pubmed.ncbi.nlm.nih.gov/t34-349/",
+  "dc:license": "license.md",
+  "koio:hasService": [
+    {
+      "@id": "_:APIService",
+      "@type": [
+        "koio:Service",
+        "API"
+      ],
+      "dc:description": "This service is used through JavaScript Activator",
+      "hasServiceSpecification": "APIService/service.yaml",
+      "dependsOn": "_:bmiKnowledge",
+      "implementedBy": [
+        {
+          "@id": "APIService",
+          "@type": [
+            "koio:Implementation",
+            "https://kgrid.org/specs/activationSpec.html#object",
+            "javascript"
+          ]
+        }
+      ],
+      "koio:hasDocumentation": [
+        {
+          "@id": "bmiKOAPIDocumentation.md",
+          "@type": "koio:InformationArtifact",
+          "dc:title": "Knowledge object's API service documentation",
+          "dc:description": "Instruction on how to use an activator to use API service"
+        }
+      ],
+      "koio:hasTest": [
+        {
+          "@id": "tests/bmiTestAPIService.ts",
+          "dc:title": "API service test",
+          "@type": "koio:Test",
+          "dc:description": "These tests are written to test the implementation of API service and its usage."
+        }
+      ]
+    },
+    {
+      "@id": "_:CLIService",
+      "@type": [
+        "koio:Service"
+      ],
+      "dependsOn": "_:bmiKnowledge",
+      "implementedBy": [
+        {
+          "@id": "CLIService/bmi_cli.ts",
+          "@type": [
+            "koio:Implementation",
+            "cli"
+          ]
+        }
+      ]
+    }
+  ],
+  "koio:hasKnowledge": {
+    "@id": "-:bmiKnowledge",
+    "@type": "koio:Knowledge",
+    "implementedBy": {
+      "@id": "Knowledge/bmi.js",
+      "@type": [
+        "JavaScript",
+        "function"
+      ]
+    },
+    "schema:creator": {
+      "@type": "team",
+      "schema:name": "DISPLAY Lab"
+    },
+    "koio:hasDocumentation": [
+      {
+        "@id": "bmiKnowledgeDocumentation.md",
+        "@type": "koio:InformationArtifact",
+        "dc:title": "BMI Knowledge documentation",
+        "dc:description": "Documentation for bmi formula and how it is implemented as a function."
+      }
+    ],
+    "koio:hasTest": [
+      {
+        "@id": "tests/bmiKnowledgeTest.ts",
+        "dc:title": "knowledge test",
+        "@type": "koio:Test",
+        "dc:description": "These tests are written to test the implementation of bmi formula."
+      }
+    ]
+  },
+  "koio:hasDocumentation": [
+    {
+      "@id": "bmiKODocumentation.md",
+      "@type": "koio:InformationArtifact",
+      "dc:title": "Knowledge object documentation",
+      "dc:description": "Knowledge object read me file."
+    },
+    {
+      "@id": "bmiJupiterNotebookTutorial.ipynb",
+      "@type": "koio:InformationArtifact",
+      "dc:title": "BMI Calculation",
+      "dc:description": "An interactive jupiter notebook tutorial for BMI calculation."
+    }
+  ],
+  "koio:hasTest": [
+    {
+      "@id": "tests/bmiKOTest.ts",
+      "dc:title": "KO test",
+      "@type": "koio:Test",
+      "dc:description": "These tests are written to test the usage of the knowledge object and provide examples on how to use it."
+    }
+  ]
+}
