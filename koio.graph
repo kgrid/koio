@@ -1,5 +1,4 @@
 Optional.of(https://kgrid.org/koio)
-https://kgrid.org/koio#KnowledgeRepresentation,1862.0,80.0
 https://kgrid.org/koio#Knowledge,1402.2156475443996,-3.987461167602308
 http://www.ebi.ac.uk/swo/SWO_9000050,1609.3402500613392,-135.71904918159714
 https://kgrid.org/koio#Implementation,1387.8301759251583,155.60901145562465
@@ -11,8 +10,7 @@ http://purl.obolibrary.org/obo/BFO_0000001,674.1048332298195,-83.52921098574048
 https://kgrid.org/koio#InformationArtifact,1130.2486559223419,146.49355797405315
 https://kgrid.org/koio#Service,1612.9576602132227,-76.6418168293101
 http://purl.obolibrary.org/obo/BFO_0000040,936.4032421359365,80.22280036929494
-https://kgrid.org/koio#KnowledgeObject,1123.5187337597426,-87.82952268905595
-https://kgrid.org/koio#ServiceSpecification,1387.0301864956461,288.4857004681565
+https://kgrid.org/koio#KnowledgeObject,1121.9395822717888,30.606838907479275
 http://purl.obolibrary.org/obo/IAO_0000030,1036.6764876478105,-254.3850006803916
 https://kgrid.org/koio#Test,1586.1616218042054,-245.27026658548513
 http://purl.obolibrary.org/obo/BFO_0000031,865.4026095391185,-187.08207102056994

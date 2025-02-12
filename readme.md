@@ -59,6 +59,7 @@ Here are the roles of people who will contribute in the development of this onto
     - Issue templates will be used to help contributors know all the details needed for their proposed changes (i.e. add term, add synonym, revise subclass relationship, new annotation, Obsolete a term, …) when adding a new issue
     - A branch will be created for the work needed to be done to complete each approved change 
     - Changes are only considered complete and ready for merge to the main when the OWL file, documentation, tests, context files, graph and examples are updated
+        - Example in a released KOIO owl file will conform to the version of that file and only to the version of that file.
     - All existing and new tests should pass before commiting any changes to a branch.
     - Once the changes are finalized they will be merged to the main branch 
 
@@ -85,6 +86,7 @@ sudo apt install default-jre
 java -jar owl2jsonld-0.2.1-standalone.jar file:///path/to/owl/file/koio.owl -o context.json
 ```
 
+Note: path to owl file must be an IRI starting with `file://`. 
 ## Tools
 - Ontology [validation service](http://iot.ee.surrey.ac.uk/SSNValidation/)
 - [JSON LD Playground](https://json-ld.org/playground/)

@@ -1,0 +1,55 @@
+{
+  "@context": "https://kgrid.org/koio/2.1/context",
+  "@id": "tobaccoKO",
+  "koio:KOIOVersion": "2.1",
+  "@type": "koio:KnowledgeObject",
+  "dc:identifier": "ark:tobacco",
+  "version": "2.0.0",
+  "dc:title": "QALY Gain By Stop Using Tobacco",
+  "koio:contributors": "Dr. John Doe",
+  "dc:description": "Quality-Adjusted Life Year Gain By Stop Using Tobacco",
+  "dc:date": "2025-02-11",
+  "schema:creator": {
+    "@id": "https://kgrid.org",
+    "@type": "team",
+    "schema:ame": "Knowledge Systems Lab",
+    "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
+    "schema:email": "kgrid-developers@umich.edu"
+  },
+  "dc:publisher": "Knowledge Systems Lab",
+  "dc:bibliographicCitation": "https://pubmed.ncbi.nlm.nih.gov/a234567/",
+  "dc:license": "license.md",
+  "koio:hasService": [
+    {
+      "@id": "_:CLIService",
+      "@type": [
+        "koio:Service"
+      ],
+      "dependsOn": "_:tobaccoKnowledge",
+      "implementedBy": [
+        {
+          "@id": "cli_service/tobacco_cli.ts",
+          "@type": [
+            "koio:Implementation",
+            "cli"
+          ]
+        }
+      ]
+    }
+  ],
+  "koio:hasKnowledge": {
+    "@id": "_:tobaccoKnowledge",
+    "@type": "koio:Knowledge",
+    "implementedBy": {
+      "@id": "knowledge/tobacco.js",
+      "@type": [
+        "JavaScript",
+        "function"
+      ]
+    },
+    "schema:creator": {
+      "@type": "team",
+      "schema:name": "DISPLAY Lab"
+    }
+  }
+}
