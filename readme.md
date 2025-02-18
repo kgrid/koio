@@ -53,6 +53,7 @@ Here are the roles of people who will contribute in the development of this onto
     - Different versions of the ontology will be available under releases and tags (1.0, 1.1, 1.2, 2.0, …)
     - Once a new release is created, main (the new version) will manually be deployed on https://kgrid.org/koio/ using GitHub Actions workflow.
     - When creating a new release, add a version folder to the main branch like 1.1 and include the context file. The context file will have an @id with the version number (for example: "@id": "https://kgrid.org/koio/1.0/context" )
+    - Each time KSL releases a version of KOIO its record in the NCBO Bioportal needs to be updated.
 
 - **Documentation Procedures**
     - Readme.md includes
@@ -73,8 +74,8 @@ Here are the roles of people who will contribute in the development of this onto
     - Changes are only considered complete and ready for merge to the main when the OWL file, documentation, tests, context files, graph and examples are updated
         - Example in a released KOIO owl file will conform to the version of that file and only to the version of that file.
     - All existing and new tests should pass before commiting any changes to a branch.
-    - Once the changes are finalized they will be merged to the main branch 
-
+    - Once the changes are finalized they will be merged to the main branch   
+    
 - **Ontology Evaluation Procedures**    
     - Add individuals\instances to the ontology
     - Perform Syntax Validation using tools like Protégé
