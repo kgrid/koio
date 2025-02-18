@@ -30,7 +30,7 @@ KOIO comes in several versions indicated by folders labeled with version numbers
 - Access older releases at [https://github.com/kgrid/koio/releases](https://github.com/kgrid/koio/releases)
 
 ## Documentation for latest release
-The KOIO ontology documentation could be found at [https://kgrid.org/koio/docs/](https://kgrid.org/koio/docs/)
+The KOIO ontology documentation could be found at [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)
 
 For more detail about the current release please see the slides at [https://drive.google.com/file/d/19DmeYajmh0Wxll7hOjfbEfO_mnDvkSL8/view?usp=drive_link](https://drive.google.com/file/d/19DmeYajmh0Wxll7hOjfbEfO_mnDvkSL8/view?usp=drive_link).
 ## Knowledge Systems Laboratory (KSL)

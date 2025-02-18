@@ -21,14 +21,14 @@
   "dc:license": "license.md",
   "koio:hasService": [
     {
-      "@id": "_:APIService",
+      "@id": "APIService",
       "@type": [
         "koio:Service",
         "API"
       ],
       "dc:description": "This service is used through JavaScript Activator",
       "hasServiceSpecification": "APIService/service.yaml",
-      "dependsOn": "_:bmiKnowledge",
+      "dependsOn": "bmiKnowledge",
       "implementedBy": [
         {
           "@id": "APIService",
@@ -57,11 +57,11 @@
       ]
     },
     {
-      "@id": "_:CLIService",
+      "@id": "CLIService",
       "@type": [
         "koio:Service"
       ],
-      "dependsOn": "_:bmiKnowledge",
+      "dependsOn": "bmiKnowledge",
       "implementedBy": [
         {
           "@id": "CLIService/bmi_cli.ts",

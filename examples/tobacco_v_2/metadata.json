@@ -21,11 +21,11 @@
   "dc:license": "license.md",
   "koio:hasService": [
     {
-      "@id": "_:CLIService",
+      "@id": "CLIService",
       "@type": [
         "koio:Service"
       ],
-      "dependsOn": "_:tobaccoKnowledge",
+      "dependsOn": "tobaccoKnowledge",
       "implementedBy": [
         {
           "@id": "cli_service/tobacco_cli.ts",
@@ -38,7 +38,7 @@
     }
   ],
   "koio:hasKnowledge": {
-    "@id": "_:tobaccoKnowledge",
+    "@id": "tobaccoKnowledge",
     "@type": "koio:Knowledge",
     "implementedBy": {
       "@id": "knowledge/tobacco.js",
