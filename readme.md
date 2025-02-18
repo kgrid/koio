@@ -99,9 +99,5 @@ java -jar owl2jsonld-0.2.1-standalone.jar file:///path/to/owl/file/koio.owl -o c
 ```
 
 Note: path to owl file must be an IRI starting with `file://`. 
-## Tools
-- Ontology [validation service](http://iot.ee.surrey.ac.uk/SSNValidation/)
-- [JSON LD Playground](https://json-ld.org/playground/)
-- [Google Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool)
-- [JSON-LD](http://www.w3.org/TR/json-ld/)
+
 
