@@ -18,9 +18,10 @@ KOIO ontology is currently used in the [Knowledge Grid (KGrid) poject](https://g
 - Download context file for [KGRID knowledge object development](https://github.com/kgrid/specs/blob/master/docs/kgrid-knowledge-objects.md) at [https://kgrid.org/koio/koio.json](https://kgrid.org/koio/koio.json)
 - Access older releases at [https://github.com/kgrid/koio/releases](https://github.com/kgrid/koio/releases)
 
-## Documentation
+## Documentation for latest release
 The KOIO ontology documentation could be found at [https://kgrid.org/koio/docs/](https://kgrid.org/koio/docs/)
 
+For more detail about the current release please see the slides at [https://drive.google.com/file/d/19DmeYajmh0Wxll7hOjfbEfO_mnDvkSL8/view?usp=drive_link](https://drive.google.com/file/d/19DmeYajmh0Wxll7hOjfbEfO_mnDvkSL8/view?usp=drive_link).
 ## Knowledge Systems Laboratory (KSL)
 KSL is an R&D lab in the Department of Learning Health Sciences at the University of Michigan Medical School. KSL created KOIO in 2016-17. It was first conceived as part of the Knowledge Grid (KGrid) project for devising better socio-technical knowledge infrastructure components for learning health systems. By 2023-24, KOIO came to be seen as an important KSL deliverable in its own right.
 
