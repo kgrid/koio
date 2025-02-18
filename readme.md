@@ -5,13 +5,24 @@ permalink: /index.html
 ---
 
 # KOIO - The Knowledge Object Implementation Ontology
-The [KOIO repository](https://github.com/kgrid/koio) is used for evolving, sharing, and managing KOIO. KOIO formally defines the structure of Knowledge Objects using linked data representations made available in canonical OWL files. 
+KOIO is a domain ontology that tells us what a Knowledge Object is as an artifact. It describes Knowledge Objects and their parts as they are implemented. For this reason, KOIO generally serves as an evolving formal and explicit model of Knowledge Objects. It can be used to describe the parts of many computable biomedical knowledge (CBK) artifacts found in the wild. In addition, KOIO functions as a formal specification for linked metadata relevant for describing, annotating, packaging, and handling CBK artifacts.
+
+The Knowledge Systems Lab (KSL) at the University of Michigan began work on KOIO in 2016 and continues to evolve KOIO over time. KSL’s general approach is to keep KOIO concise, connected, and common.
+
+To keep it concise, only a very small number of new terms describing key parts known to be valuable to CBK stakeholders are included in KOIO. These KOIO-defined terms include “Knowledge”, “Service”, and “Test”. As a model of Knowledge Objects, KOIO supports multiplicity of these parts meaning that a Knowledge Object may have one or more elements of knowledge plus multiple corresponding services and tests. KOIO enables the lifecycles and provenance of the key individual parts of Knowledge Objects to be tracked and documented independently.
+
+The key parts of Knowledge Objects defined in KOIO are logically connected to terms from the upper-level Basic Formal Ontology (BFO). In addition, KOIO adopts terms from the Information Artifact Ontology (IAO) and the Software Ontology (SWO) wherever possible.
+
+Finally, KOIO tries to leave implementation details out so that it can serve as a common ontology for describing nearly all CBK artifacts, regardless of the platforms or applications that support and incorporate them.
 
 ![image](https://github.com/user-attachments/assets/cd93852c-ad4c-4916-9df0-d1846e51b2b7)
 
-A Knowledge Object is a formally-stuctured information content resource that, when concretized, becomes a compound digital object. By intention, KOIO specifies a lightweight or minimalist user-oriented, computation-focused digital object container specifically for packaging and organizing machine-processable knowledge assets that include "code that runs."
-
 KOIO ontology is currently used in the [Knowledge Grid (KGrid) poject](https://github.com/kgrid/specs/blob/master/docs/evolving-conceptual-model.md) for [creating knowledge objects](https://github.com/kgrid/specs/blob/master/docs/kgrid-knowledge-objects.md).
+
+## About this repository
+The [KOIO repository](https://github.com/kgrid/koio) is used for evolving, sharing, and managing KOIO. KOIO formally defines the structure of Knowledge Objects using linked data representations made available in canonical OWL files. 
+
+KOIO comes in several versions indicated by folders labeled with version numbers. In addition several legacy contexts and examples of knwoledge objects conforming to various versions of KOIO are included. The other folders and files generaly pertain to the current working version of KOIO which has yet to be released.
 
 ## Downloads
 - Download latest version of KOIO at [https://kgrid.org/koio/koio.owl](https://kgrid.org/koio/koio.owl)
