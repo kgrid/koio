@@ -1,0 +1,196 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QALY Gain By Stop Using Tobacco</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            width: 100%;
+        }
+        .left-column {
+            width: 70%;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        /* Right Column */
+        .right-column {
+            width: 30%;
+            background-color: #e9e9e9;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .metadata {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .metadata p {
+            margin: 5px 0;
+        }
+        .doc-section, .test-section {
+            
+            right: 20px;
+            width: 250px;
+            color: black;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 250px;
+            font-size: 16px;
+        }
+        .doc-section {
+            top: 20px;
+            background-color: #97c8ed;
+        }
+        .doc-section h3 {
+            margin-top: 0;
+        }
+        .doc-section a {
+            text-decoration: underline;
+        }
+        .doc-section p {
+            margin-top: 5px;
+        }
+        
+        .test-section {
+            
+            background-color: #96d6b7;
+        }
+        .test-section h3 {
+            margin-top: 0;
+        }
+        
+        .test-section a {
+            text-decoration: underline;
+        }
+        
+        .test-section p {
+            margin-top: 5px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="left-column">
+            <div class="metadata" id="metadata">
+            <h1>QALY Gain By Stop Using Tobacco</h1>
+            <p>Quality-Adjusted Life Year Gain By Stop Using Tobacco</p>
+            <p><strong>Id:</strong> <a href="https://github.com/kgrid/koio/blob/master/examples/tobacco_v_2" target='_blank'> 
+                tobaccoKO
+            </a></p>
+            <p><strong>Identifier:</strong> ark:tobacco</p>
+            <p><strong>Type:</strong> <a href="http://kgrid.org/koio#KnowledgeObject" target='_blank'>koio:KnowledgeObject</a></p>
+            <p><strong>Version:</strong> Undefined</p>
+            <p><strong>Date:</strong> 2025-02-11</p>
+            
+            <p><strong>License:</strong> 
+                    <a href="https://github.com/kgrid/koio/blob/master/examples/tobacco_v_2/license.md" target='_blank'>
+                        license.md
+                    </a></p>
+            
+            
+            <hr>
+            <h2>Creator Information</h2>
+            <p><strong>Name:</strong> 
+                 </p>
+            <p><strong>Affiliation:</strong> Knowledge Systems Lab, University of Michigan Medical School</p>
+            <p><strong>Email:</strong> 
+                <a href="mailto:kgrid-developers@umich.edu" target='_blank'>
+                    kgrid-developers@umich.edu
+                </a>
+            </p>
+            <p><strong>Website:</strong> 
+                <a href="https://kgrid.org" target='_blank'>
+                    https://kgrid.org
+                </a>
+            </p>
+
+            
+            <hr>
+            <h2>Services</h2>
+            
+                <p><h3> CLIService</h3></p>
+                <p><strong>Type:</strong> koio:Service</p>
+                <p><strong>Depends on:</strong> tobaccoKnowledge</p>
+                <p><strong>Implemented by:</strong> 
+                    
+                        <a href="https://github.com/kgrid/koio/blob/master/examples/tobacco_v_2/cli_service/tobacco_cli.ts" target='_blank'>
+                            tobacco_cli.ts
+                        </a>                                 
+                                         
+                </p>
+            
+            
+            
+            
+            
+            <hr>
+            <h2>Knowledge</h2>
+            
+                <p><h3> tobaccoKnowledge</h3></p>
+                <p><strong>Type:</strong> koio:Knowledge</p>
+                
+                
+                
+                <p><strong>Implemented by:</strong> 
+                <ul>
+                
+                    <li>
+                    <a href="https://github.com/kgrid/koio/blob/master/examples/tobacco_v_2/knowledge/tobacco.js" target='_blank'>
+                        tobacco.js
+                    </a>(type: ['JavaScript', 'function'])
+                    </li>
+                
+                </ul>
+                </p>
+                
+                
+                
+                
+                <b>Creator Information:</b>
+                
+                <p><strong>Name:</strong> 
+                     DISPLAY Lab
+                </p>
+                
+                
+                
+                
+            
+            
+        </div>            
+        </div>
+        <div class="right-column">
+            <div class="doc-section" id="doc-section">
+            
+                <p>No documentation available</p>
+            
+        </div>
+
+            <div class="test-section" id="test-section">
+            
+                <p>No tests available</p>
+            
+            </div>
+        </div>
+        </div>
+    </body>
+    </html>
+    

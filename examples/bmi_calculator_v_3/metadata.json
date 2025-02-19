@@ -18,7 +18,9 @@
   },
   "dc:publisher": "Knowledge Systems Lab",
   "dc:bibliographicCitation": "https://pubmed.ncbi.nlm.nih.gov/t34-349/",
-  "dc:license": "license.md",
+  "dc:license": {
+    "@id": "license.md"
+  },
   "koio:hasService": [
     {
       "@id": "APIService",
@@ -29,16 +31,14 @@
       "dc:description": "This service is used through JavaScript Activator",
       "hasServiceSpecification": "APIService/service.yaml",
       "dependsOn": "bmiKnowledge",
-      "implementedBy": [
-        {
-          "@id": "APIService",
-          "@type": [
-            "koio:Implementation",
-            "https://kgrid.org/specs/activationSpec.html#object",
-            "javascript"
-          ]
-        }
-      ],
+      "implementedBy": {
+        "@id": "APIService",
+        "@type": [
+          "koio:Implementation",
+          "https://kgrid.org/specs/activationSpec.html#object",
+          "javascript"
+        ]
+      },
       "koio:hasDocumentation": [
         {
           "@id": "bmiKOAPIDocumentation.md",
@@ -62,48 +62,48 @@
         "koio:Service"
       ],
       "dependsOn": "bmiKnowledge",
-      "implementedBy": [
+      "implementedBy": {
+        "@id": "CLIService/bmi_cli.ts",
+        "@type": [
+          "koio:Implementation",
+          "cli"
+        ]
+      }
+    }
+  ],
+  "koio:hasKnowledge": [
+    {
+      "@id": "bmiKnowledge",
+      "@type": "koio:Knowledge",
+      "implementedBy": {
+        "@id": "Knowledge/bmi.js",
+        "@type": [
+          "JavaScript",
+          "function"
+        ]
+      },
+      "schema:creator": {
+        "@type": "team",
+        "schema:name": "DISPLAY Lab"
+      },
+      "koio:hasDocumentation": [
         {
-          "@id": "CLIService/bmi_cli.ts",
-          "@type": [
-            "koio:Implementation",
-            "cli"
-          ]
+          "@id": "bmiKnowledgeDocumentation.md",
+          "@type": "koio:InformationArtifact",
+          "dc:title": "BMI Knowledge documentation",
+          "dc:description": "Documentation for bmi formula and how it is implemented as a function."
+        }
+      ],
+      "koio:hasTest": [
+        {
+          "@id": "tests/bmiKnowledgeTest.ts",
+          "dc:title": "knowledge test",
+          "@type": "koio:Test",
+          "dc:description": "These tests are written to test the implementation of bmi formula."
         }
       ]
     }
   ],
-  "koio:hasKnowledge": {
-    "@id": "-:bmiKnowledge",
-    "@type": "koio:Knowledge",
-    "implementedBy": {
-      "@id": "Knowledge/bmi.js",
-      "@type": [
-        "JavaScript",
-        "function"
-      ]
-    },
-    "schema:creator": {
-      "@type": "team",
-      "schema:name": "DISPLAY Lab"
-    },
-    "koio:hasDocumentation": [
-      {
-        "@id": "bmiKnowledgeDocumentation.md",
-        "@type": "koio:InformationArtifact",
-        "dc:title": "BMI Knowledge documentation",
-        "dc:description": "Documentation for bmi formula and how it is implemented as a function."
-      }
-    ],
-    "koio:hasTest": [
-      {
-        "@id": "tests/bmiKnowledgeTest.ts",
-        "dc:title": "knowledge test",
-        "@type": "koio:Test",
-        "dc:description": "These tests are written to test the implementation of bmi formula."
-      }
-    ]
-  },
   "koio:hasDocumentation": [
     {
       "@id": "bmiKODocumentation.md",

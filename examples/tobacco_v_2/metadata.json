@@ -18,7 +18,9 @@
   },
   "dc:publisher": "Knowledge Systems Lab",
   "dc:bibliographicCitation": "https://pubmed.ncbi.nlm.nih.gov/a234567/",
-  "dc:license": "license.md",
+  "dc:license": {
+    "@id": "license.md"
+  },
   "koio:hasService": [
     {
       "@id": "CLIService",
@@ -26,30 +28,30 @@
         "koio:Service"
       ],
       "dependsOn": "tobaccoKnowledge",
-      "implementedBy": [
-        {
-          "@id": "cli_service/tobacco_cli.ts",
-          "@type": [
-            "koio:Implementation",
-            "cli"
-          ]
-        }
-      ]
+      "implementedBy": {
+        "@id": "cli_service/tobacco_cli.ts",
+        "@type": [
+          "koio:Implementation",
+          "cli"
+        ]
+      }
     }
   ],
-  "koio:hasKnowledge": {
-    "@id": "tobaccoKnowledge",
-    "@type": "koio:Knowledge",
-    "implementedBy": {
-      "@id": "knowledge/tobacco.js",
-      "@type": [
-        "JavaScript",
-        "function"
-      ]
-    },
-    "schema:creator": {
-      "@type": "team",
-      "schema:name": "DISPLAY Lab"
+  "koio:hasKnowledge": [
+    {
+      "@id": "tobaccoKnowledge",
+      "@type": "koio:Knowledge",
+      "implementedBy": {
+        "@id": "knowledge/tobacco.js",
+        "@type": [
+          "JavaScript",
+          "function"
+        ]
+      },
+      "schema:creator": {
+        "@type": "team",
+        "schema:name": "DISPLAY Lab"
+      }
     }
-  }
+  ]
 }
