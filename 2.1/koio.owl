@@ -22,21 +22,23 @@
         <owl:versionIRI rdf:resource="http://www.kgrid.org/koio/2.1/koio.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/allysonlister/swo/master/swo-full.owl"/>
-        <dcterms:publisher>Knowledge Systems Lab. Department of Learning Health Sciences. University of Michigan Medical School.
-https://knowledge-systems.lab.medicine.umich.edu/</dcterms:publisher>
         <dcterms:contributor>Allen Flynn</dcterms:contributor>
         <dcterms:contributor>Charles P. Friedman</dcterms:contributor>
         <dcterms:contributor>Farid Seifi</dcterms:contributor>
         <dcterms:contributor>Marisa Conte</dcterms:contributor>
         <dcterms:contributor>Peter Boisvert</dcterms:contributor>
+        <dcterms:publisher>Knowledge Systems Lab. Department of Learning Health Sciences. University of Michigan Medical School.
+https://knowledge-systems.lab.medicine.umich.edu/</dcterms:publisher>
         <dcterms:title>Knowledge Object Implementation Ontology (KOIO)</dcterms:title>
-        <rdfs:comment>KOIO is an ontology describing Knowledge Objects and their parts as they are implemented in the Knoweldge Grid (KGrid) reference platform.  As such, KOIO is subject to evolve as KGrid reference platform development evolves.
+        <rdfs:comment>KOIO is a domain ontology that tells us what a Knowledge Object is as an artifact. It describes Knowledge Objects and their parts as they are implemented. For this reason, KOIO generally serves as an evolving formal and explicit model of Knowledge Objects. It can be used to describe the parts of many computable biomedical knowledge (CBK) artifacts found in the wild. In addition, KOIO functions as a formal specification for linked metadata relevant for describing, annotating, packaging, and handling CBK artifacts.
 
-The primary overriding objective of developing and implementing KOIO is to describe Knowledge Objects and their parts in enough detail to achieve a degree  interoperability that is sufficient to enable Knowledge Objects to be incorporated into multiple platforms, including but not limited to, the KGrid reference platform
+The Knowledge Systems Lab (KSL) at the University of Michigan began work on KOIO in 2016 and continues to evolve KOIO over time. KSL’s general approach is to keep KOIO concise, connected, and common.
 
-With the exception of several upper level classes from BFO and IAO, KOIO versions 1.X.X are limited in scope to classes of material entities spanning Knowledge Objects, parts of Knowledge Objects, and Collections of Knowledge Objects.
+To keep it concise, only a very small number of new terms describing key parts known to be valuable to CBK stakeholders are included in KOIO. These KOIO-defined terms include “Knowledge”, “Service”, and “Test”. As a model of Knowledge Objects, KOIO supports multiplicity of these parts meaning that a Knowledge Object may have one or more elements of knowledge plus multiple corresponding services and tests. KOIO enables the lifecycles and provenance of the key individual parts of Knowledge Objects to be tracked and documented independently.
 
-It has yet to be determined whether development of KOIO subontologies and/or extensions of KOIO are the preferred method for modeling (a) other KGrid components besides Knowledge Objects and the subcompnent parts of other KGrid components, (b) actions and operations involving Knowledge Objects and KGrid components, and (c) relationships between actions and operations, components, and parts.</rdfs:comment>
+The key parts of Knowledge Objects defined in KOIO are logically connected to terms from the upper-level Basic Formal Ontology (BFO). In addition, KOIO adopts terms from the Information Artifact Ontology (IAO) and the Software Ontology (SWO) wherever possible.
+
+Finally, KOIO tries to leave implementation details out so that it can serve as a common ontology for describing nearly all CBK artifacts, regardless of the platforms or applications that support and incorporate them.</rdfs:comment>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1</owl:versionInfo>
     </owl:Ontology>
     
@@ -50,8 +52,15 @@ It has yet to be determined whether development of KOIO subontologies and/or ext
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
-     
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
     <!-- http://www.w3.org/2000/01/rdf-schema#type -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#type"/>
