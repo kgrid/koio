@@ -25,8 +25,8 @@ The [KOIO repository](https://github.com/kgrid/koio) is used for evolving, shari
 KOIO comes in several versions indicated by folders labeled with version numbers. In addition several legacy contexts and examples of knwoledge objects conforming to various versions of KOIO are included. The other folders and files generaly pertain to the current working version of KOIO which has yet to be released.
 
 ## Downloads
-- Download latest version of KOIO at [https://kgrid.org/koio/koio.owl](https://kgrid.org/koio/koio.owl)
-- Download context file for [KGRID knowledge object development](https://github.com/kgrid/specs/blob/master/docs/kgrid-knowledge-objects.md) at [https://kgrid.org/koio/koio.json](https://kgrid.org/koio/koio.json)
+- Download latest version of KOIO at [https://kgrid.org/koio/2.1/koio.owl](https://kgrid.org/koio/2.1/koio.owl)
+- Download context file for [KGRID knowledge object development](https://github.com/kgrid/specs/blob/master/docs/kgrid-knowledge-objects.md) at [https://kgrid.org/koio/2.1/context](https://kgrid.org/koio/2.1/context)
 - Access older releases at [https://github.com/kgrid/koio/releases](https://github.com/kgrid/koio/releases)
 
 ## Documentation for latest release
