@@ -52,7 +52,7 @@ Here are the roles of people who will contribute in the development of this onto
     - A new release with a new version number will be created whenever the main branch is ready with significant changes. Use **Simplified Two-Part Versioning**, which has two parts: Major.Minor
     - Different versions of the ontology will be available under releases and tags (1.0, 1.1, 1.2, 2.0, …)
     - Once a new release is created, main (the new version) will manually be deployed on https://kgrid.org/koio/ using GitHub Actions workflow.
-    - When creating a new release, add a version folder to the main branch like 1.1 and include the context file. The context file will have an @id with the version number (for example: "@id": "https://kgrid.org/koio/1.0/context" )
+    - When creating a new release, add a version folder to the main branch like 1.1 and include the context file and technical documentation. The context file will have an @id with the version number (for example: "@id": "https://kgrid.org/koio/1.0/context" )
     - Each time KSL releases a version of KOIO its record in the NCBO Bioportal needs to be updated.
 
 - **Documentation Procedures**
