@@ -83,6 +83,15 @@ Here are the roles of people who will contribute in the development of this onto
     - Implement unit tests using SPARQL Queries
     - Integrate testing to GitHub using GitHub Actions for automatic Continuous Integration
 
+## Namespace
+
+### KnowledgeObject
+IRI
+Is defined by
+Term status
+Domain ~
+Range ~
+
 ## Appendix A—Generate JSON_LD Context File From KOIO OWL File Using owl2jsonld Tool
 [owl2jsonld](https://github.com/stain/owl2jsonld) is a tool that generate a JSON-LD @context for concepts (classes and properties) found in the specified OWL or RDFS ontology. 
 1. Install Java
