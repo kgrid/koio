@@ -86,11 +86,11 @@ Here are the roles of people who will contribute in the development of this onto
 ## Namespace
 
 ### KnowledgeObject
-IRI
-Is defined by
-Term status
-Domain ~
-Range ~
+IRI [https://kgrid.org/koio#knowledgeobject](https://kgrid.org/koio#knowledgeobject)   
+
+Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)
+
+Term status: stable
 
 ## Appendix A—Generate JSON_LD Context File From KOIO OWL File Using owl2jsonld Tool
 [owl2jsonld](https://github.com/stain/owl2jsonld) is a tool that generate a JSON-LD @context for concepts (classes and properties) found in the specified OWL or RDFS ontology. 
