@@ -121,24 +121,6 @@ IRI [https://kgrid.org/koio#InformationArtifact](https://kgrid.org/koio#Informat
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
 
-<h4 id=""></h4>
-Knowledge is information or understanding about a subject, obtained through experience or study.  
-IRI [https://kgrid.org/koio#Knowledge](https://kgrid.org/koio#Knowledge)   
-Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
-Term status: stable 
-
-<h4 id=""></h4>
-Knowledge is information or understanding about a subject, obtained through experience or study.  
-IRI [https://kgrid.org/koio#Knowledge](https://kgrid.org/koio#Knowledge)   
-Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
-Term status: stable 
-
-<h4 id=""></h4>
-Knowledge is information or understanding about a subject, obtained through experience or study.  
-IRI [https://kgrid.org/koio#Knowledge](https://kgrid.org/koio#Knowledge)   
-Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
-Term status: stable 
-
 ### Object Properties
 <h4 id="dependsOn">depends on</h4>
 Indicates that a service uses a specific knowledge.  
