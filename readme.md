@@ -86,115 +86,115 @@ Here are the roles of people who will contribute in the development of this onto
 ## Namespace
 ### Classes
 <h4 id="KnowledgeObject">Knowledge Object</h4>
-A Knowledge Object is an Information Artifact capable of serving a role as the atomic unit of computable knowledge and therefore comprised of at least one Knowledge Object Implementation.
+A Knowledge Object is an Information Artifact capable of serving a role as the atomic unit of computable knowledge and therefore comprised of at least one Knowledge Object Implementation.  
 IRI [https://kgrid.org/koio#KnowledgeObject](https://kgrid.org/koio#KnowledgeObject)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable  
 
 <h4 id="Knowledge">Knowledge</h4>
-Knowledge is information or understanding about a subject, obtained through experience or study.
+Knowledge is information or understanding about a subject, obtained through experience or study.  
 IRI [https://kgrid.org/koio#Knowledge](https://kgrid.org/koio#Knowledge)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
 
 <h4 id="Service">Service</h4>
-A Service is a defined function or capability provided by a software system. Each Service provides a way to use or interact with a KnowledgeObject, facilitating access and utilization of the Knowledge encapsulated within the KnowledgeObject. A Service is a specification of what a self-contained piece of software does.
+A Service is a defined function or capability provided by a software system. Each Service provides a way to use or interact with a KnowledgeObject, facilitating access and utilization of the Knowledge encapsulated within the KnowledgeObject. A Service is a specification of what a self-contained piece of software does.  
 IRI [https://kgrid.org/koio#Service](https://kgrid.org/koio#Service)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
 
 <h4 id="Test">Test</h4>
-A test is an information content entity conveying a systematic procedure to assess specific aspects of software performance, functionality, or security. Tests are created to ensure that the software meets specified requirements or to identify any defects.
+A test is an information content entity conveying a systematic procedure to assess specific aspects of software performance, functionality, or security. Tests are created to ensure that the software meets specified requirements or to identify any defects.  
 IRI [https://kgrid.org/koio#Test](https://kgrid.org/koio#Test)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
 
 <h4 id="Implementation">Implementation</h4>
-An implementation is a computer or machine processable file that is or informs a series of instructions that can be directly interpreted or executed.
+An implementation is a computer or machine processable file that is or informs a series of instructions that can be directly interpreted or executed.  
 IRI [https://kgrid.org/koio#Implementation](https://kgrid.org/koio#Implementation)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
 
 <h4 id="InformationArtifact">Information Artifact</h4>
-An Information Artifact is an Artifact that is the IndependentContinuant bearer created as the result of one or more intentional processes. Examples: uniprot, the english language, the contents of this document or a printout of it, the temperature measurements from a weather balloon. For more information, see the project home page at https://github.com/information-artifact-ontology/IAO
+An Information Artifact is an Artifact that is the IndependentContinuant bearer created as the result of one or more intentional processes. Examples: uniprot, the english language, the contents of this document or a printout of it, the temperature measurements from a weather balloon. For more information, see the project home page at https://github.com/information-artifact-ontology/IAO.  
 IRI [https://kgrid.org/koio#InformationArtifact](https://kgrid.org/koio#InformationArtifact)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
 
 <h4 id=""></h4>
-Knowledge is information or understanding about a subject, obtained through experience or study.
+Knowledge is information or understanding about a subject, obtained through experience or study.  
 IRI [https://kgrid.org/koio#Knowledge](https://kgrid.org/koio#Knowledge)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
 
 <h4 id=""></h4>
-Knowledge is information or understanding about a subject, obtained through experience or study.
+Knowledge is information or understanding about a subject, obtained through experience or study.  
 IRI [https://kgrid.org/koio#Knowledge](https://kgrid.org/koio#Knowledge)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
 
 <h4 id=""></h4>
-Knowledge is information or understanding about a subject, obtained through experience or study.
+Knowledge is information or understanding about a subject, obtained through experience or study.  
 IRI [https://kgrid.org/koio#Knowledge](https://kgrid.org/koio#Knowledge)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
 
 ### Object Properties
 <h4 id="dependsOn">depends on</h4>
-Indicates that a service uses a specific knowledge
+Indicates that a service uses a specific knowledge.  
 IRI [https://kgrid.org/koio#dependsOn](https://kgrid.org/koio#dependsOn)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
-Has domain: [Service](https://kgrid.org/koio#Service)
-Has range: [Knowledge](https://kgrid.org/koio#Knowledge)
+Has domain: [Service](https://kgrid.org/koio#Service)  
+Has range: [Knowledge](https://kgrid.org/koio#Knowledge)  
 
 <h4 id="hasInterface">has interface</h4>
-Provides a method of asserting what type of interactions are possible for the class in question. The interface must be from the 'software interface' hierarchy.
+Provides a method of asserting what type of interactions are possible for the class in question. The interface must be from the 'software interface' hierarchy.  
 IRI [https://kgrid.org/koio#hasInterface](https://kgrid.org/koio#hasInterface)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
-Has domain: [Service](https://kgrid.org/koio#Service)
-Has range: [Software Interface]()
+Has domain: [Service](https://kgrid.org/koio#Service)  
+Has range: [Software Interface]()  
 
-<h4 id=""></h4>
-Knowledge is information or understanding about a subject, obtained through experience or study.
-IRI [https://kgrid.org/koio#Knowledge](https://kgrid.org/koio#Knowledge)   
+<h4 id="isImplementedBy">is implemented by</h4>
+It is the relationship between an algorithm and a piece of software which includes an implementation of that software for use when the software is executed. 
+IRI [https://kgrid.org/koio#isImplementedBy](https://kgrid.org/koio#isImplementedBy)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
-Has domain:
-Has range:
+Has domain: [Test](https://kgrid.org/koio#Test), [Service](https://kgrid.org/koio#Service), [Knowledge](https://kgrid.org/koio#Knowledge)  
+Has range: [Implementation](https://kgrid.org/koio#Implementation)  
 
-<h4 id=""></h4>
-Knowledge is information or understanding about a subject, obtained through experience or study.
-IRI [https://kgrid.org/koio#Knowledge](https://kgrid.org/koio#Knowledge)   
+<h4 id="hasDocumentation">has documentation</h4>
+Is a property that indicates an association between a knowledge object, knowledge, or service and documentation that describes, relates to, or provides information about each of these things.  
+IRI [https://kgrid.org/koio#hasDocumentation](https://kgrid.org/koio#hasDocumentation)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
-Has domain:
-Has range:
+Has domain:[Test](https://kgrid.org/koio#Test), [Service](https://kgrid.org/koio#Service), [Knowledge](https://kgrid.org/koio#Knowledge), [Implementation](https://kgrid.org/koio#Implementation), [Knowledge Object](https://kgrid.org/koio#KnowledgeObject)  
+Has range:  [Information Artifact](https://kgrid.org/koio#InformationArtifact)  
 
-<h4 id=""></h4>
-Knowledge is information or understanding about a subject, obtained through experience or study.
-IRI [https://kgrid.org/koio#Knowledge](https://kgrid.org/koio#Knowledge)   
+<h4 id="hasKnowledge">has knowledge</h4>
+indicates that a Knowledge Object contains or is associated with specific Knowledge.  
+IRI [https://kgrid.org/koio#hasKnowledge](https://kgrid.org/koio#hasKnowledge)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
-Has domain:
-Has range:
+Has domain: [Knowledge Object](https://kgrid.org/koio#KnowledgeObject)  
+Has range: [Knowledge](https://kgrid.org/koio#Knowledge)  
 
-<h4 id=""></h4>
-Knowledge is information or understanding about a subject, obtained through experience or study.
-IRI [https://kgrid.org/koio#Knowledge](https://kgrid.org/koio#Knowledge)   
+<h4 id="hasService">has service</h4>
+It is a relation that holds between a whole KnowledgeObject and its Service part(s). Denotes that a KnowledgeObject includes or provides a specific Service.  
+IRI [https://kgrid.org/koio#hasService](https://kgrid.org/koio#hasService)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
-Has domain:
-Has range:
+Has domain: [Knowledge Object](https://kgrid.org/koio#KnowledgeObject)   
+Has range: [Service](https://kgrid.org/koio#Service)  
 
-<h4 id=""></h4>
-Knowledge is information or understanding about a subject, obtained through experience or study.
-IRI [https://kgrid.org/koio#Knowledge](https://kgrid.org/koio#Knowledge)   
+<h4 id="hasTest">has test</h4>
+It is a property that links a knowledge object, service, or knowledge to a specific test designed to evaluate its functionality, performance, or reliability. This property signifies that the component has an associated test to verify or validate its behavior.  
+IRI [https://kgrid.org/koio#hasTest](https://kgrid.org/koio#hasTest)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
 Term status: stable 
-Has domain:
-Has range:
+Has domain: [Knowledge Object](https://kgrid.org/koio#KnowledgeObject), [Service](https://kgrid.org/koio#Service), [Knowledge](https://kgrid.org/koio#Knowledge)  
+Has range: [Test](https://kgrid.org/koio#Test)  
 
 ## Appendix A—Generate JSON_LD Context File From KOIO OWL File Using owl2jsonld Tool
 [owl2jsonld](https://github.com/stain/owl2jsonld) is a tool that generate a JSON-LD @context for concepts (classes and properties) found in the specified OWL or RDFS ontology. 
