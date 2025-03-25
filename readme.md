@@ -85,12 +85,18 @@ Here are the roles of people who will contribute in the development of this onto
 
 ## Namespace
 
-### KnowledgeObject
+<a id="KnowledgeObject"></a>
+### Knowledge Object
+A Knowledge Object is an Information Artifact capable of serving a role as the atomic unit of computable knowledge and therefore comprised of at least one Knowledge Object Implementation.
 IRI [https://kgrid.org/koio#knowledgeobject](https://kgrid.org/koio#knowledgeobject)   
+Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
+Term status: stable  
 
-Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)
-
-Term status: stable
+### Knowledge
+Knowledge is information or understanding about a subject, obtained through experience or study.
+IRI [https://kgrid.org/koio#knowledge](https://kgrid.org/koio#knowledge)   
+Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
+Term status: stable 
 
 ## Appendix A—Generate JSON_LD Context File From KOIO OWL File Using owl2jsonld Tool
 [owl2jsonld](https://github.com/stain/owl2jsonld) is a tool that generate a JSON-LD @context for concepts (classes and properties) found in the specified OWL or RDFS ontology. 
