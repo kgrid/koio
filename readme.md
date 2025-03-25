@@ -85,8 +85,7 @@ Here are the roles of people who will contribute in the development of this onto
 
 ## Namespace
 
-<a id="KnowledgeObject"></a>
-### Knowledge Object
+<h2 id="KnowledgeObject">Knowledge Object</h2>
 A Knowledge Object is an Information Artifact capable of serving a role as the atomic unit of computable knowledge and therefore comprised of at least one Knowledge Object Implementation.
 IRI [https://kgrid.org/koio#knowledgeobject](https://kgrid.org/koio#knowledgeobject)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
