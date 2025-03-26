@@ -126,7 +126,7 @@ Term status: stable
 Indicates that a service uses a specific knowledge.  
 IRI [https://kgrid.org/koio#dependsOn](https://kgrid.org/koio#dependsOn)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
-Term status: stable 
+Term status: stable  
 Has domain: [Service](https://kgrid.org/koio#Service)  
 Has range: [Knowledge](https://kgrid.org/koio#Knowledge)  
 
@@ -134,7 +134,7 @@ Has range: [Knowledge](https://kgrid.org/koio#Knowledge)
 Provides a method of asserting what type of interactions are possible for the class in question. The interface must be from the 'software interface' hierarchy.  
 IRI [https://kgrid.org/koio#hasInterface](https://kgrid.org/koio#hasInterface)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
-Term status: stable 
+Term status: stable  
 Has domain: [Service](https://kgrid.org/koio#Service)  
 Has range: [Software Interface]()  
 
@@ -142,7 +142,7 @@ Has range: [Software Interface]()
 It is the relationship between an algorithm and a piece of software which includes an implementation of that software for use when the software is executed. 
 IRI [https://kgrid.org/koio#isImplementedBy](https://kgrid.org/koio#isImplementedBy)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
-Term status: stable 
+Term status: stable  
 Has domain: [Test](https://kgrid.org/koio#Test), [Service](https://kgrid.org/koio#Service), [Knowledge](https://kgrid.org/koio#Knowledge)  
 Has range: [Implementation](https://kgrid.org/koio#Implementation)  
 
@@ -150,7 +150,7 @@ Has range: [Implementation](https://kgrid.org/koio#Implementation)
 Is a property that indicates an association between a knowledge object, knowledge, or service and documentation that describes, relates to, or provides information about each of these things.  
 IRI [https://kgrid.org/koio#hasDocumentation](https://kgrid.org/koio#hasDocumentation)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
-Term status: stable 
+Term status: stable  
 Has domain:[Test](https://kgrid.org/koio#Test), [Service](https://kgrid.org/koio#Service), [Knowledge](https://kgrid.org/koio#Knowledge), [Implementation](https://kgrid.org/koio#Implementation), [Knowledge Object](https://kgrid.org/koio#KnowledgeObject)  
 Has range:  [Information Artifact](https://kgrid.org/koio#InformationArtifact)  
 
@@ -158,7 +158,7 @@ Has range:  [Information Artifact](https://kgrid.org/koio#InformationArtifact)
 indicates that a Knowledge Object contains or is associated with specific Knowledge.  
 IRI [https://kgrid.org/koio#hasKnowledge](https://kgrid.org/koio#hasKnowledge)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
-Term status: stable 
+Term status: stable  
 Has domain: [Knowledge Object](https://kgrid.org/koio#KnowledgeObject)  
 Has range: [Knowledge](https://kgrid.org/koio#Knowledge)  
 
@@ -166,7 +166,7 @@ Has range: [Knowledge](https://kgrid.org/koio#Knowledge)
 It is a relation that holds between a whole KnowledgeObject and its Service part(s). Denotes that a KnowledgeObject includes or provides a specific Service.  
 IRI [https://kgrid.org/koio#hasService](https://kgrid.org/koio#hasService)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
-Term status: stable 
+Term status: stable  
 Has domain: [Knowledge Object](https://kgrid.org/koio#KnowledgeObject)   
 Has range: [Service](https://kgrid.org/koio#Service)  
 
@@ -174,7 +174,7 @@ Has range: [Service](https://kgrid.org/koio#Service)
 It is a property that links a knowledge object, service, or knowledge to a specific test designed to evaluate its functionality, performance, or reliability. This property signifies that the component has an associated test to verify or validate its behavior.  
 IRI [https://kgrid.org/koio#hasTest](https://kgrid.org/koio#hasTest)   
 Is defined by [https://kgrid.org/koio/2.1/docs/](https://kgrid.org/koio/2.1/docs/)  
-Term status: stable 
+Term status: stable  
 Has domain: [Knowledge Object](https://kgrid.org/koio#KnowledgeObject), [Service](https://kgrid.org/koio#Service), [Knowledge](https://kgrid.org/koio#Knowledge)  
 Has range: [Test](https://kgrid.org/koio#Test)  
 
