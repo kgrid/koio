@@ -1,7 +1,7 @@
 {
   "@id": "https://kgrid.org/koio/2.1/context",
   "@context" : {
-    "koio": "http://kgrid.org/koio#",
+    "koio": "https://kgrid.org/koio#",
     "dc": "http://purl.org/dc/elements/1.1/",
     "dcterms": "http://purl.org/dc/terms/",
     "schema":"http://schema.org/",
