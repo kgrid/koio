@@ -1,3 +1,9 @@
+---
+layout: default
+title: KOIO Specification
+permalink: /index.html
+---
+
 The Knowledge Object Implementation Ontology
 Draft Specification as of May 31, 2025
 
