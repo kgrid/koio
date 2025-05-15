@@ -93,7 +93,7 @@ KOIO provides a way of describing CBK artifacts, hopefully moving the world one 
 COMMITMENTS
 The content of KOIO reflects the following six commitments:
 
-		FOUR GENERAL COMPUTABLE KNOWLEDGE COMMITMENTS
+FOUR GENERAL COMPUTABLE KNOWLEDGE COMMITMENTS
 Computer actionable representations of knowledge have unique properties
 Infrastructure helps widely share computer actionable representations of knowledge 
 Formalized and standardized digital Knowledge Objects reflect and enable infrastructure
