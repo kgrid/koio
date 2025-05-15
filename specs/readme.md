@@ -1,7 +1,7 @@
 ---
 layout: default
 title: KOIO Specification
-permalink: /index.html
+permalink: /specs/
 ---
 
 The Knowledge Object Implementation Ontology
