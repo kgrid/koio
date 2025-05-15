@@ -20,7 +20,7 @@
 {"@context":"https://schema.org","@type":"WebPage","description":"This repository is for the Knowledge Object Implementation Ontology (KOIO)","headline":"KOIO Specification","url":"/koio/specs/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/koio/assets/css/style.css?v=307e7d8abdc02468dd502bbb0cd67e837dbb464e">
+    <link rel="stylesheet" href="/koio/assets/css/style.css?v=7f459118759814023be570ce9105306d8296cb3e">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -131,8 +131,11 @@ The purpose of KOIO is to make it easier for many people in different roles to f
 <p>COMMITMENTS
 The content of KOIO reflects the following six commitments:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	FOUR GENERAL COMPUTABLE KNOWLEDGE COMMITMENTS Computer actionable representations of knowledge have unique properties Infrastructure helps widely share computer actionable representations of knowledge  Formalized and standardized digital Knowledge Objects reflect and enable infrastructure Trust in computer actionable biomedical knowledge is increased by sharing metadata
-</code></pre></div></div>
+<p>FOUR GENERAL COMPUTABLE KNOWLEDGE COMMITMENTS
+Computer actionable representations of knowledge have unique properties
+Infrastructure helps widely share computer actionable representations of knowledge 
+Formalized and standardized digital Knowledge Objects reflect and enable infrastructure
+Trust in computer actionable biomedical knowledge is increased by sharing metadata</p>
 
 <p>TWO ADDED COMMITMENTS SPECIFIC TO COMPUTABLE BIOMEDICAL KNOWLEDGE
 For human health, open computer actionable representations of biomedical knowledge should remain open not precluding proprietary refinements, extensions or enhancements
@@ -229,21 +232,23 @@ The figure below depicts six core classes from KOIO related by six object proper
 <p>JSON-LD CONTEXT FILE FOR LINKING TO KOIO TERMS
 The following examples of KOIO use all rely on the same JSON-LD context file for implementing KOIO terms inside linked RDF metadata. This JSON-LD context file helps establish links to KOIO terms and also to terms from three other common RDF vocabularies. The initial lines of the context file are below and the whole context file can be found at: https://kgrid.org/koio/2.1/context. The examples that follow all include the @Context keyword from JSON-LD to invoke this context file.</p>
 
-<p>Snippet of Context File for Linking to KOIO 2.1 Terms
-  “@id”: “https://kgrid.org/koio/2.1/context”,
-  “@context” : {
-    “koio”: “http://kgrid.org/koio#”,
-    “dc”: “http://purl.org/dc/elements/1.1/”,
-    “dcterms”: “http://purl.org/dc/terms/”,
-    “schema”:”http://schema.org/”,</p>
+<p>Snippet of Context File for Linking to KOIO 2.1 Terms</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kgrid.org/koio/2.1/context"</span><span class="err">,</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"koio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://kgrid.org/koio#"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/dc/elements/1.1/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dcterms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/dc/terms/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"schema"</span><span class="p">:</span><span class="s2">"http://schema.org/"</span><span class="p">,</span><span class="w">
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"KnowledgeObject" : {
-  "@id" : "https://kgrid.org/koio#KnowledgeObject"
-},
-"versionInfo" : {
-  "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
-}, …
-</code></pre></div></div>
+
+    </span><span class="nl">"KnowledgeObject"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kgrid.org/koio#KnowledgeObject"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"versionInfo"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2002/07/owl#versionInfo"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+</span><span class="err">…</span><span class="w">
+</span></code></pre></div></div>
 
 <p>EXAMPLE 1
 In the example below, an Information Artifact of type ‘Knowledge Object’ is declared using KOIO. This Knowledge Object is then associated with a variety of common administrative and descriptive metadata using the Dublin Core Elements vocabulary.</p>
@@ -278,271 +283,275 @@ In the example below, an Information Artifact of type ‘Knowledge Object’ is 
 <p>EXAMPLE 2
 In the second example below, for the Knowledge Object declared in Example 1, an instance of ‘Knowledge’ is related to the Knowledge Object via the ‘hasKnowledge’ object property. In Example 2, the ‘Knowledge’ instance has id=bmiKnowledge. In addition, it ‘isImplementedBy’ a function stored inside a JavaScript file called bmi.js.</p>
 
-<p>EX 2:  Showing an instance of Knowledge as part of a Knowledge Object
-{
-    ~EX 1 FITS HERE~
-    “hasKnowledge”: [
-        {
-            “@id”: “bmiKnowledge”,
-            “@type”: “Knowledge”,
-            “implementedBy”: {
-                “@id”: “Knowledge/bmi.js”,
-                “@type”: [
-                    “Implementation”,
-                    “JavaScript”,
-                    “function”
-                ]
-            },
-            “schema:creator”: {
-                “@type”: “team”,
-                “schema:name”: “DISPLAY Lab”
-            }
-        }
-    ]
-}</p>
+<p>EX 2:  Showing an instance of Knowledge as part of a Knowledge Object</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="err">~EX</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">FITS</span><span class="w"> </span><span class="err">HERE~</span><span class="w">
+    </span><span class="nl">"hasKnowledge"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bmiKnowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge/bmi.js"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"JavaScript"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"function"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"schema:creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"team"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"schema:name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DISPLAY Lab"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <p>EXAMPLE 3
 In the third example below, for the Knowledge Object declared in Example 1, with the instance of Knowledge linked in Example 2, two instances of ‘Service’ are related via the ‘hasService’ object property. The first instance of ‘Service’ is an API service which has an implementation and is related to a service.yaml interface specification via the ‘hasInterface’ object property. The second instance of ‘Service’ is a command line interface (CLI) service which is implemented in a TypeScript file called bmi_cli.ts.</p>
 
-<p>EX 3:  Knowledge Object with Knowledge and Service(s)
-{  <br />
-    ~EX 1 FITS HERE~
-    ~EX 2 FITS HERE~
-    “hasService”: [
-        {
-            “@id”: “APIService”,
-            “@type”: [
-                “Service”,
-                “API”
-            ],
-            “dc:description”: “This service is used through JavaScript Activator”,
-            “dependsOn”: “bmiKnowledge”,
-            “implementedBy”: {
-                “@id”: “APIService”,
-                “@type”: [
-                    “Implementation”,
-                    “https://kgrid.org/specs/activationSpec.html#object”,
-                    “javascript”
-                ]
-            },
-             “hasInterface”: “APIService/service.yaml”	     	
-        },
-        {
-            “@id”: “CLIService”,
-            “@type”: [
-                “Service”
-            ],
-            “dependsOn”: “bmiKnowledge”,
-            “implementedBy”: {
-                “@id”: “CLIService/bmi_cli.ts”,
-                “@type”: [
-                    “Implementation”,
-                    “cli”
-                ]
-            },
-            “hasInterface”: “CLIService/readme.md”
-           } <br />
-        }
-    ]
-}</p>
+<p>EX 3:  Knowledge Object with Knowledge and Service(s)</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">    
+    </span><span class="err">~EX</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">FITS</span><span class="w"> </span><span class="err">HERE~</span><span class="w">
+    </span><span class="err">~EX</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="err">FITS</span><span class="w"> </span><span class="err">HERE~</span><span class="w">
+    </span><span class="nl">"hasService"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APIService"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Service"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"API"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This service is used through JavaScript Activator"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dependsOn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bmiKnowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APIService"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"https://kgrid.org/specs/activationSpec.html#object"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"javascript"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+             </span><span class="nl">"hasInterface"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APIService/service.yaml"</span><span class="w">	     	
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CLIService"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Service"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"dependsOn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bmiKnowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CLIService/bmi_cli.ts"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"cli"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"hasInterface"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CLIService/readme.md"</span><span class="w">
+           </span><span class="p">}</span><span class="w">   
+        </span><span class="err">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <p>EXAMPLE 4
 In the fourth example below, for the Knowledge Object declared in Example 1, the Knowledge Object itself and its instances of ‘Knowledge’ and ‘Service’ have been extended to include corresponding software tests using the ‘hasTest’ object property.</p>
 
-<p>EX 4:  Knowledge Object with Knowledge and Service(s) and Test(s):
-{ 
-  ~EX 1 FITS HERE~
-    “hasKnowledge”: [
-        {
-            “@id”: “bmiKnowledge”,
-            “@type”: “Knowledge”,
-            “implementedBy”: {
-                “@id”: “Knowledge/bmi.js”,
-                “@type”: [
-                    “Implementation”,
-                    “JavaScript”,
-                    “function”
-                ]
-            },
-            “schema:creator”: {
-                “@type”: “team”,
-                “schema:name”: “DISPLAY Lab”
-            },
-            “hasTest”: [
-                {
-                    “@id”: “tests/bmiKnowledgeTest.ts”,
-                    “dc:title”: “knowledge test”,
-                    “@type”: “Test”,
-                    “dc:description”: “These tests are written to test the implementation of the bmi formula.”
-                }
-            ]
-        }
-    ],
-    “hasService”: [
-        {
-            “@id”: “APIService”,
-            “@type”: [
-                “Service”,
-                “API”
-            ],
-            “dc:description”: “This service is used through JavaScript Activator”,
-            “hasServiceSpecification”: “APIService/service.yaml”,
-            “dependsOn”: “bmiKnowledge”,
-            “implementedBy”: {
-                “@id”: “APIService”,
-                “@type”: [
-                    “Implementation”,
-                    “https://kgrid.org/specs/activationSpec.html#object”,
-                    “javascript”
-                ]
-            },
-            “hasTest”: [
-                {
-                    “@id”: “tests/bmiTestAPIService.ts”,
-                    “dc:title”: “API service test”,
-                    “@type”: “Test”,
-                    “dc:description”: “These tests are written to test the implementation of API service and its usage.”
-                }
-            ]
-        },
-        {
-            “@id”: “CLIService”,
-            “@type”: [
-                “Service”
-            ],
-            “dependsOn”: “bmiKnowledge”,
-            “implementedBy”: {
-                “@id”: “CLIService/bmi_cli.ts”,
-                “@type”: [
-                    “Implementation”,
-                    “cli”
-                ]
-            }
-        }
-    ],
-    “hasTest”: [
-        {
-            “@id”: “tests/bmiKOTest.ts”,
-            “dc:title”: “KO test”,
-            “@type”: “Test”,
-            “dc:description”: “These tests are written to test the usage of the knowledge object and provide examples on how to use it.”
-        }
-    ]
-}</p>
+<p>EX 4:  Knowledge Object with Knowledge and Service(s) and Test(s):</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> 
+  </span><span class="err">~EX</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">FITS</span><span class="w"> </span><span class="err">HERE~</span><span class="w">
+    </span><span class="nl">"hasKnowledge"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bmiKnowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge/bmi.js"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"JavaScript"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"function"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"schema:creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"team"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"schema:name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DISPLAY Lab"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"hasTest"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tests/bmiKnowledgeTest.ts"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"knowledge test"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These tests are written to test the implementation of the bmi formula."</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"hasService"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APIService"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Service"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"API"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This service is used through JavaScript Activator"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"hasServiceSpecification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APIService/service.yaml"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dependsOn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bmiKnowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APIService"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"https://kgrid.org/specs/activationSpec.html#object"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"javascript"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"hasTest"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tests/bmiTestAPIService.ts"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API service test"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These tests are written to test the implementation of API service and its usage."</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CLIService"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Service"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"dependsOn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bmiKnowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CLIService/bmi_cli.ts"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"cli"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"hasTest"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tests/bmiKOTest.ts"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KO test"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These tests are written to test the usage of the knowledge object and provide examples on how to use it."</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <p>EXAMPLE 5
 In the fifth example below, for the Knowledge Object declared in Example 1, the Knowledge Object itself and its instances of ‘Knowledge’ and ‘Service’ have been further described with documentation linked using the ‘hasDocumentation’ object property. In KOIO, instances documentation are always of type ‘Information Artifact’ and can take any relevant form and have any file format.</p>
 
-<p>EX 5:  Knowledge Object with Knowledge and Service(s) and Test(s) and Information Artifacts that serve as documentation for these things
-{
-    ~EX 1 FITS HERE~
-    “hasKnowledge”: [
-        {
-            “@id”: “bmiKnowledge”,
-            “@type”: “Knowledge”,
-            “implementedBy”: {
-                “@id”: “Knowledge/bmi.js”,
-                “@type”: [
-                    “Implementation”,			
-                    “JavaScript”,
-                    “function”
-                ]
-            },
-            “schema:creator”: {
-                “@type”: “team”,
-                “schema:name”: “DISPLAY Lab”
-            },
-            “hasDocumentation”: [
-                {
-                    “@id”: “bmiKnowledgeDocumentation.md”,
-                    “@type”: “InformationArtifact”,
-                    “dc:title”: “BMI Knowledge documentation”,
-                    “dc:description”: “Documentation for bmi formula and how it is implemented as a function.”
-                }
-            ],
-            “hasTest”: [
-                {
-                    “@id”: “tests/bmiKnowledgeTest.ts”,
-                    “dc:title”: “knowledge test”,
-                    “@type”: “Test”,
-                    “dc:description”: “These tests are written to test the implementation of the bmi formula.”
-                }
-            ]
-        }
-    ],
-    “hasService”: [
-        {
-            “@id”: “APIService”,
-            “@type”: [
-                “Service”,
-                “API”
-            ],
-            “dc:description”: “This service is used through JavaScript Activator”,
-            “hasServiceSpecification”: “APIService/service.yaml”,
-            “dependsOn”: “bmiKnowledge”,
-            “implementedBy”: {
-                “@id”: “APIService”,
-                “@type”: [
-                    “Implementation”,
-                    “https://kgrid.org/specs/activationSpec.html#object”,
-                    “javascript”
-                ]
-            },
-            “hasDocumentation”: [
-                {
-                    “@id”: “bmiKOAPIDocumentation.md”,
-                    “@type”: “InformationArtifact”,
-                    “dc:title”: “Knowledge object’s API service documentation”,
-                    “dc:description”: “Instruction on how to use an activator to use API service”
-                }
-            ],
-            “hasTest”: [
-                {
-                    “@id”: “tests/bmiTestAPIService.ts”,
-                    “dc:title”: “API service test”,
-                    “@type”: “Test”,
-                    “dc:description”: “These tests are written to test the implementation of API service and its usage.”
-                }
-            ]
-        },
-        {
-            “@id”: “CLIService”,
-            “@type”: [
-                “Service”
-            ],
-            “dependsOn”: “bmiKnowledge”,
-            “implementedBy”: {
-                “@id”: “CLIService/bmi_cli.ts”,
-                “@type”: [
-                    “Implementation”,
-                    “cli”
-                ]
-            }
-        }
-    ],
-    “hasDocumentation”: [
-        {
-            “@id”: “bmiKODocumentation.md”,
-            “@type”: “InformationArtifact”,
-            “dc:title”: “Knowledge object documentation”,
-            “dc:description”: “Knowledge object read me file.”
-        },
-        {
-            “@id”: “bmiJupiterNotebookTutorial.ipynb”,
-            “@type”: “InformationArtifact”,
-            “dc:title”: “BMI Calculation”,
-            “dc:description”: “An interactive jupyter notebook tutorial for BMI calculation.”
-        }
-    ],
-    “hasTest”: [
-        {
-            “@id”: “tests/bmiKOTest.ts”,
-            “dc:title”: “KO test”,
-            “@type”: “Test”,
-            “dc:description”: “These tests are written to test the usage of the knowledge object and provide examples on how to use it.”
-        }
-    ]
-}</p>
+<p>EX 5:  Knowledge Object with Knowledge and Service(s) and Test(s) and Information Artifacts that serve as documentation for these things</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="err">~EX</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">FITS</span><span class="w"> </span><span class="err">HERE~</span><span class="w">
+    </span><span class="nl">"hasKnowledge"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bmiKnowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge/bmi.js"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">			
+                    </span><span class="s2">"JavaScript"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"function"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"schema:creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"team"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"schema:name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DISPLAY Lab"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"hasDocumentation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bmiKnowledgeDocumentation.md"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InformationArtifact"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BMI Knowledge documentation"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Documentation for bmi formula and how it is implemented as a function."</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"hasTest"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tests/bmiKnowledgeTest.ts"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"knowledge test"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These tests are written to test the implementation of the bmi formula."</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"hasService"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APIService"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Service"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"API"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This service is used through JavaScript Activator"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"hasServiceSpecification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APIService/service.yaml"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dependsOn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bmiKnowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APIService"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"https://kgrid.org/specs/activationSpec.html#object"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"javascript"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"hasDocumentation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bmiKOAPIDocumentation.md"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InformationArtifact"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge object's API service documentation"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Instruction on how to use an activator to use API service"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"hasTest"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tests/bmiTestAPIService.ts"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API service test"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These tests are written to test the implementation of API service and its usage."</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CLIService"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Service"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"dependsOn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bmiKnowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CLIService/bmi_cli.ts"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"cli"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"hasDocumentation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bmiKODocumentation.md"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InformationArtifact"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge object documentation"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge object read me file."</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bmiJupiterNotebookTutorial.ipynb"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InformationArtifact"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BMI Calculation"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An interactive jupyter notebook tutorial for BMI calculation."</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"hasTest"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tests/bmiKOTest.ts"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KO test"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These tests are written to test the usage of the knowledge object and provide examples on how to use it."</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <ol>
   <li>More Examples of Knowledge Objects described using KOIO</li>
@@ -563,552 +572,555 @@ Here is a link to a Knowledge Object with a computable guideline which contains 
 
 <p>The metadata in Example 6 also associate and describe three services with this Knowledge Object. Recall from the definition above that Services provide ways to utilize the Knowledge encapsulated within the Knowledge Object. The three services included in this Knowledge Object are ActivatorService, CLIService, and APIService. The ActivatorService provides a special API interface to the computable guideline arising from running the KGrid Activator tool as a software gateway. The CLIService provides an application with an interface to the computable guideline implemented using machine commands. The APIService provides an API interface by exposing the computable guideline without requiring a separate gateway tool.</p>
 
-<p>EX 6: Metadata for USPSTF Statin Use Guideline Knowledge Object (KO)
-{
-    “@context”: “https://kgrid.org/koio/2.1/context”,
-    “@id”: “cardiovascular-prevention-statin-use”,
-    “KOIOVersion”: “2.1”,
-    “@type”: “KnowledgeObject”,
-    “dc:identifier”: “ark:StatinUse”,
-    “dc:version”: “v1.9”,
-    “dc:date”: “2024-12-12”,
-    “dc:title”: “Statin Use for the Primary Prevention of Cardiovascular Disease in Adults: Preventive Medication”,
-    “dc:description”: “The USPSTF recommends that:\nFor adults aged 40 to 75 years who have 1 or more cardiovascular risk factors (ie, dyslipidemia, diabetes, hypertension, or smoking) and an estimated 10-year cardiovascular disease (CVD) risk of 10% or greater:\nInitiate a statin.\nGrade: B\n\nFor adults aged 40 to 75 years who have 1 or more cardiovascular risk factors (ie, dyslipidemia, diabetes, hypertension, or smoking) and an estimated 10-year CVD risk of 7.5% to less than 10%:\nSelectively offer a statin.\nGrade: C\n\nFor adults 76 years or older:\nThe evidence is insufficient to recommend for or against starting a statin.\nGrade: I”,
-    “schema:creator”: {
-        “@id”: “https://kgrid.org”,
-        “@type”: “schema:Organization”,
-        “schema:givenName”: “Knowledge Systems Lab”,
-        “schema:affiliation”: “Knowledge Systems Lab, University of Michigan Medical School”,
-        “schema:email”: “kgrid-developers@umich.edu”
-    },
-    “dc:publisher”: “Knowledge Systems Lab”,
-    “dc:license”: {
-        “@id”: “license.md”
-    },
-    “schema:keywords”: [
-        “Statin use”,
-        “Cardiovascular Disease”,
-        “USPSTF”,
-        “Preventive Medication”
-    ],
-    “hasKnowledge”: [
-        {
-            “@id”: “statin_use_for_the_primary_prevention_of_cardiovascular_disease”,
-            “@type”: “Knowledge”,
-            “implementedBy”: {
-                “@id”: “cardiovascular_prevention_statin_use/cardiovascular_prevention_statin_use.py”,
-                “@type”: [
-                    “Implementation”,
-                    “Function”,
-                    “Python”
-                ]
-            },
-            “dc:source”: “https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/statin-use-in-adults-preventive-medication#fullrecommendationstart”,
-            “dc:format”: “text/html”,
-            “dc:date”: “2022-08-23”,
-            “schema:creator”: {
-                “@type”: “schema:Organization”,
-                “schema:name”: “U.S. Preventive Services Task Force”
-            },
-            “hasTest”: [
-                {
-                    “@id”: “test_knowledge”,
-                    “dc:title”: “Knowledge test”,
-                    “@type”: “Test”,
-                    “dc:description”: “These tests are written to test the accuracy of the knowledge implementation.”,
-                    “implementedBy”: {
-                        “@id”: “tests/test_knowledge.py”,
-                        “@type”: [
-                            “Implementation”,
-                            “Python”
-                        ]
-                    }
-                },
-                {
-                    “@id”: “test_resources”,
-                    “@type”: “Test”,
-                    “dc:title”: “Implementation tests”,
-                    “dc:description”: “These tests are written to test the use of superclass KO to implement this knowledge object.”,
-                    “implementedBy”: {
-                        “@id”: “tests/test_resources.py”,
-                        “@type”: [
-                            “Implementation”,
-                            “Python”
-                        ]
-                    }
-                }
-            ],
-            “hasDocumentation”: [
-                {
-                    “@id”: “https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/statin-use-in-adults-preventive-medication#fullrecommendationstart”,
-                    “@type”: “InformationArtifact”,
-                    “dc:title”: “Statin Use for the Primary Prevention of Cardiovascular Disease in Adults: Preventive Medication”,
-                    “dc:description”: “This is the USPSTF documentation webpage for cardiovascular disease prevention statin use recommendation.”
-                }
-            ]
-        }
-    ],
-    “hasService”: [
-        {
-            “@id”: “ActivatorService”,
-            “@type”: [
-                “Service”,
-                “API”
-            ],
-            “dependsOn”: “statin_use_for_the_primary_prevention_of_cardiovascular_disease”,
-            “implementedBy”: {
-                “@id”: “cardiovascular_prevention_statin_use/”,
-                “@type”: [
-                    “https://kgrid.org/specs/activationSpec.html#object”,
-                    “Implementation”,
-                    “Python”
-                ]
-            }
-        },
-        {
-            “@id”: “CLIService”,
-            “@type”: [
-                “Service”,
-                “CLI”
-            ],
-            “dependsOn”: “statin_use_for_the_primary_prevention_of_cardiovascular_disease”,
-            “implementedBy”: {
-                “@id”: “cardiovascular_prevention_statin_use/cardiovascular_prevention_statin_use.py”,
-                “@type”: [
-                    “Implementation”,
-                    “Python”
-                ]
-            }
-        },
-        {
-            “@id”: “APIService”,
-            “@type”: [
-                “Service”,
-                “API”
-            ],
-            “dependsOn”: “statin_use_for_the_primary_prevention_of_cardiovascular_disease”,
-            “implementedBy”: {
-                “@id”: “cardiovascular_prevention_statin_use/cardiovascular_prevention_statin_use.py”,
-                “@type”: [
-                    “Implementation”,
-                    “Python”
-                ]
-            }
-        }
-    ],
-    “hasDocumentation”: [
-        {
-            “@id”: “https://colab.research.google.com/drive/1nlYQ3U1a4uJUmyMYBFxXArEGxDy4DGpp?usp=sharing”,
-            “@type”: “InformationArtifact”,
-            “dc:title”: “Using USPSTF Knowledgebase Package: A Step-by-Step Tutorial”,
-            “dc:description”: “This Google Colab tutorial demonstrates three different ways to use the cardiovascular-prevention-statin-use knowledge object:&lt;ul&gt;&lt;li&gt;using the built-in command-line interface (CLI) service&lt;/li&gt;&lt;li&gt;using the python activator&lt;/li&gt;&lt;li&gt;using the knowledge object’s knowledge representation directly in the code&lt;/li&gt;&lt;/ul&gt;”
-        },
-        {
-            “@id”: “README.md”,
-            “@type”: “InformationArtifact”,
-            “dc:title”: “README.md”,
-            “dc:description”: “read me file.”
-        }
-    ]
-}</p>
+<p>EX 6: Metadata for USPSTF Statin Use Guideline Knowledge Object (KO)</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kgrid.org/koio/2.1/context"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cardiovascular-prevention-statin-use"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"KOIOVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KnowledgeObject"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ark:StatinUse"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v1.9"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-12-12"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Statin Use for the Primary Prevention of Cardiovascular Disease in Adults: Preventive Medication"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The USPSTF recommends that:</span><span class="se">\n</span><span class="s2">For adults aged 40 to 75 years who have 1 or more cardiovascular risk factors (ie, dyslipidemia, diabetes, hypertension, or smoking) and an estimated 10-year cardiovascular disease (CVD) risk of 10% or greater:</span><span class="se">\n</span><span class="s2">Initiate a statin.</span><span class="se">\n</span><span class="s2">Grade: B</span><span class="se">\n\n</span><span class="s2">For adults aged 40 to 75 years who have 1 or more cardiovascular risk factors (ie, dyslipidemia, diabetes, hypertension, or smoking) and an estimated 10-year CVD risk of 7.5% to less than 10%:</span><span class="se">\n</span><span class="s2">Selectively offer a statin.</span><span class="se">\n</span><span class="s2">Grade: C</span><span class="se">\n\n</span><span class="s2">For adults 76 years or older:</span><span class="se">\n</span><span class="s2">The evidence is insufficient to recommend for or against starting a statin.</span><span class="se">\n</span><span class="s2">Grade: I"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"schema:creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kgrid.org"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"schema:Organization"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:givenName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge Systems Lab"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:affiliation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge Systems Lab, University of Michigan Medical School"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kgrid-developers@umich.edu"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"dc:publisher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge Systems Lab"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:license"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"license.md"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"schema:keywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"Statin use"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Cardiovascular Disease"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"USPSTF"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Preventive Medication"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"hasKnowledge"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"statin_use_for_the_primary_prevention_of_cardiovascular_disease"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cardiovascular_prevention_statin_use/cardiovascular_prevention_statin_use.py"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Function"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Python"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"dc:source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/statin-use-in-adults-preventive-medication#fullrecommendationstart"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/html"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-08-23"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"schema:creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"schema:Organization"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"schema:name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"U.S. Preventive Services Task Force"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"hasTest"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_knowledge"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge test"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These tests are written to test the accuracy of the knowledge implementation."</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tests/test_knowledge.py"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"Python"</span><span class="w">
+                        </span><span class="p">]</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_resources"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Implementation tests"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These tests are written to test the use of superclass KO to implement this knowledge object."</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tests/test_resources.py"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"Python"</span><span class="w">
+                        </span><span class="p">]</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"hasDocumentation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/statin-use-in-adults-preventive-medication#fullrecommendationstart"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InformationArtifact"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Statin Use for the Primary Prevention of Cardiovascular Disease in Adults: Preventive Medication"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the USPSTF documentation webpage for cardiovascular disease prevention statin use recommendation."</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"hasService"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ActivatorService"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Service"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"API"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"dependsOn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"statin_use_for_the_primary_prevention_of_cardiovascular_disease"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cardiovascular_prevention_statin_use/"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"https://kgrid.org/specs/activationSpec.html#object"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Python"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CLIService"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Service"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"CLI"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"dependsOn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"statin_use_for_the_primary_prevention_of_cardiovascular_disease"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cardiovascular_prevention_statin_use/cardiovascular_prevention_statin_use.py"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Python"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APIService"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Service"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"API"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"dependsOn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"statin_use_for_the_primary_prevention_of_cardiovascular_disease"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cardiovascular_prevention_statin_use/cardiovascular_prevention_statin_use.py"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Python"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"hasDocumentation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://colab.research.google.com/drive/1nlYQ3U1a4uJUmyMYBFxXArEGxDy4DGpp?usp=sharing"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InformationArtifact"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Using USPSTF Knowledgebase Package: A Step-by-Step Tutorial"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This Google Colab tutorial demonstrates three different ways to use the cardiovascular-prevention-statin-use knowledge object:&lt;ul&gt;&lt;li&gt;using the built-in command-line interface (CLI) service&lt;/li&gt;&lt;li&gt;using the python activator&lt;/li&gt;&lt;li&gt;using the knowledge object's knowledge representation directly in the code&lt;/li&gt;&lt;/ul&gt;"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"README.md"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InformationArtifact"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"README.md"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"read me file."</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <p>AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A HEALTH RISK SCORE CALCULATOR
 Here is a link to a Knowledge Object containing an executable representation of NIH Stroke Scale.</p>
 
 <p>In the metadata for this Knowledge Object appearing below in Example 7, there are no instances of Service or Test. There is one instance of Knowledge, and it is implemented in a computer executable format by the file called “nihss.py”. An interesting feature of these metadata is that the description of the single instance of Knowledge for the NIH Stroke Scale includes information about all the NIH Stroke Scale’s distinct items. For these, terms from the Function Ontology (fno), e.g., “expects”, and OWL enumerations of permitted values are included.</p>
 
-<p>EX 7: Metadata for National Institutes of Health Stroke Scale Risk Score Calculator KO
-{
-    “@context”: [
-        “https://kgrid.org/koio/2.1/context”,
-        {
-            “fno”: “https://w3id.org/function/ontology#”,
-            “xsd”: “https://www.w3.org/2001/XMLSchema#”,
-            “owl”: “http://www.w3.org/2002/07/owl#”
-        }
-    ],
-    “@id”: “nihss”,
-    “KOIOVersion”: “2.1”,
-    “@type”: “KnowledgeObject”,
-    “dc:identifier”: “ark:nihss”,
-    “dc:version”: “v1.0”,
-    “dc:title”: “NIH Stroke Scale”,
-    “dc:description”: “Uses the patient’s presenting symptoms and signs to quantify the severity of a suspected stroke.”,
-    “dc:contributors”: “Kgrid Team”,
-    “dc:keywords”: [
-        “stroke”,
-        “cerebrovascular accident”,
-        “CVA”,
-        “cerebral ischemia”,
-        “focal neurologic deficit”
-    ],
-    “hasKnowledge”: {
-        “@id”: “NIHStrokeScale”,
-        “@type”: [
-            “Knowledge”,
-            “fno:Function”
-        ],
-        “dc:Source”: “https://pubmed.ncbi.nlm.nih.gov/7974549/”,
-        “schema:creator”: {
-            “@type”: “schema:Person”,
-            “schema:name”: “Dr. Patrick D. Lyden”
-        },
-        “fno:expects”: [
-            {
-                “@id”: “consciousness”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “ALERT_KEENLY_RESPONSIVE”,
-                    “AROUSES_TO_MINOR_STIMULATION”,
-                    “REQUIRES_REPEATED_STIMULATION_TO_AROUSE”,
-                    “MOVEMENTS_TO_PAIN”,
-                    “POSTURES_OR_UNRESPONSIVE”
-                ],
-                “dc:description”: “The patient’s response to being asked for their age and the month of the year.”,
-                “fno:required”: “true”
-            },
-            {
-                “@id”: “month_and_age_questions”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “BOTH_QUESTIONS_RIGHT”,
-                    “ONE_QUESTION_RIGHT”,
-                    “ZERO_QUESTIONS_RIGHT”,
-                    “DYSARTHRIC_INTUBATED_TRAUMA_OR_LANGUAGE_BARRIER”,
-                    “APHASIC”
-                ],
-                “dc:description”: “The patient’s response to being asked for their age and the month of the year.”,
-                “fno:required”: “true”
-            },
-            {
-                “@id”: “blink_eyes_and_squeeze_hands”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “PERFORMS_BOTH_TASKS”,
-                    “PERFORMS_ONE_TASK”,
-                    “PERFORMS_ZERO_TASKS”
-                ],
-                “dc:description”: “The patient’s response to being asked to blink their eyes and squeeze the examiner’s hand. Can be pantomimed if patient does not understand.”,
-                “fno:required”: “true”
-            },
-            {
-                “@id”: “horizontal_extraocular_movements”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “NORMAL”,
-                    “PARTIAL_GAZE_PALSY_CAN_BE_OVERCOME”,
-                    “PARTIAL_GAZE_PALSY_CORRECTS_WITH_OCULOCEPHALIC_REFLEX”,
-                    “FORCED_GAZE_PALSY_CANNOT_BE_OVERCOME”
-                ],
-                “dc:description”: “The patient’s ability to perform horizontal extraocular movements. (i.e. look left and right with both eyes)”,
-                “fno:required”: “true”
-            },
-            {
-                “@id”: “visual_fields”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “NO_VISUAL_LOSS”,
-                    “PARTIAL_HEMIANOPIA”,
-                    “COMPLETE_HEMIANOPIA”,
-                    “PATIENT_IS_BILATERALLY_BLIND”,
-                    “BILATERAL_HEMIANOPIA”
-                ],
-                “dc:description”: “The integrity of the patient’s visual fields.”,
-                “fno:required”: “true”
-            },
-            {
-                “@id”: “facial_palsy”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “NORMAL_SYMMETRY”,
-                    “MINOR_PARALYSIS”,
-                    “PARTIAL_PARALYSIS”,
-                    “UNILATERAL_COMPLETE_PARALYSIS”,
-                    “BILATERAL_COMPLETE_PARALYSIS”
-                ],
-                “dc:description”: “The ability of the patient to engage their facial muscles.”,
-                “fno:required”: “true”
-            },
-            {
-                “@id”: “left_arm_motor_drift”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “NO_DRIFT_FOR_10_SECONDS”,
-                    “DRIFTS_BUT_DOES_NOT_HIT_BED”,
-                    “DRIFTS_HITS_BED”,
-                    “SOME_EFFORT_AGAINST_GRAVITY”,
-                    “NO_EFFORT_AGAINST_GRAVITY”,
-                    “NO_MOVEMENT”,
-                    “AMPUTATION_JOINT_FUSION”
-                ],
-                “dc:description”: “The patient’s ability to overcome gravity with their left arm and hold a position without drifting.”,
-                “fno:required”: “true”
-            },
-            {
-                “@id”: “right_arm_motor_drift”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “NO_DRIFT_FOR_10_SECONDS”,
-                    “DRIFTS_BUT_DOES_NOT_HIT_BED”,
-                    “DRIFTS_HITS_BED”,
-                    “SOME_EFFORT_AGAINST_GRAVITY”,
-                    “NO_EFFORT_AGAINST_GRAVITY”,
-                    “NO_MOVEMENT”,
-                    “AMPUTATION_JOINT_FUSION”
-                ],
-                “dc:description”: “The patient’s ability to overcome gravity with their right arm and hold a position without drifting.”,
-                “fno:required”: “true”
-            },
-            {
-                “@id”: “left_leg_motor_drift”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “NO_DRIFT_FOR_5_SECONDS”,
-                    “DRIFTS_BUT_DOES_NOT_HIT_BED”,
-                    “DRIFTS_HITS_BED”,
-                    “SOME_EFFORT_AGAINST_GRAVITY”,
-                    “NO_EFFORT_AGAINST_GRAVITY”,
-                    “NO_MOVEMENT”,
-                    “AMPUTATION_JOINT_FUSION”
-                ],
-                “dc:description”: “The patient’s ability to overcome gravity with their left leg and hold a position without drifting.”,
-                “fno:required”: “true”
-            },
-            {
-                “@id”: “right_leg_motor_drift”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “NO_DRIFT_FOR_5_SECONDS”,
-                    “DRIFTS_BUT_DOES_NOT_HIT_BED”,
-                    “DRIFTS_HITS_BED”,
-                    “SOME_EFFORT_AGAINST_GRAVITY”,
-                    “NO_EFFORT_AGAINST_GRAVITY”,
-                    “NO_MOVEMENT”,
-                    “AMPUTATION_JOINT_FUSION”
-                ],
-                “dc:description”: “The patient’s ability to overcome gravity with their right leg and hold a position without drifting.”,
-                “fno:required”: “true”
-            },
-            {
-                “@id”: “limb_ataxia”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “NO_ATAXIA”,
-                    “ATAXIA_IN_1_LIMB”,
-                    “ATAXIA_IN_2_LIMBS”,
-                    “DOES_NOT_UNDERSTAND”,
-                    “PARALYZED”,
-                    “AMPUTATION_JOINT_FUSION”
-                ],
-                “dc:description”: “The patient’s ability to coordinate their limbs.”,
-                “fno:required”: “true”
-            },
-            {
-                “@id”: “sensation”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “NORMAL_NO_SENSORY_LOSS”,
-                    “MILD_MODERATE_LOSS_LESS_SHARP_MORE_DULL”,
-                    “MILD_MODERATE_LOSS_CAN_SENSE_BEING_TOUCHED”,
-                    “COMPLETE_LOSS_CANNOT_SENSE_BEING_TOUCHED_AT_ALL”,
-                    “NO_RESPONSE_AND_QUADRIPLEGIC”,
-                    “COMA_UNRESPONSIVE”
-                ],
-                “dc:description”: “The patients’s ability to sense touch.”,
-                “fno:required”: “true”
-            },
-            {
-                “@id”: “language”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “NORMAL_NO_APHASIA”,                    “MILD_MODERATE_APHASIA_SOME_OBVIOUS_CHAGNES_WITHOUT_SIGNIFICANT_LIMITATION”,                    “SEVERE_APHASIA_FRAGMENTARY_EXPRESSION_INFERENCE_NEEDED_CANNOT_IDENTIFY_MATERIALS”,                    “MUTE_GLOBAL_APHASIA_NO_USABLE_SPEECH_AUDITORY_COMPREHENSION”,
-                    “COMA_UNRESPONSIVE”
-                ],
-                “dc:description”: “The patient’s ability to understand and construct language or lack thereof (i.e. aphasia).”,
-                “fno:required”: “true”
-            },
-            {
-                “@id”: “dysarthria”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “NORMAL”,
-                    “MILD_MODERATE_DYSARTHRIA_SLURRING_BUT_CAN_BE_UNDERSTOOD”,                    “SEVERE_DYSARTHRIA_UNINTELLIGIBLE_SLURRING_OR_OUT_OF_PROPORTION_TO_DYSPHAGIA”,
-                    “MUTE_ANARTHRIC”,
-                    “INTUBATED_UNABLE_TO_TEST”
-                ],
-                “dc:description”: “The patient’s ability to produce the sounds of language or lack thereof (i.e. dysarthria).”,
-                “fno:required”: “true”
-            },
-            {
-                “@id”: “inattention”,
-                “@type”: [
-                    “fno:Parameter”,
-                    “xsd:string”
-                ],
-                “owl:oneOf”: [
-                    “NO_ABNORMALITY”,
-                    “VISUAL_TACTILE_AUDITORY_SPATIAL_PERSONAL_INATTENTION”,
-                    “EXTINCTION_TO_BILATERAL_SIMULTANEOUS_STIMULATION”,
-                    “PROFOUND_HEMI_INATTENTION”,
-                    “EXTINCTION_TO_GREATER_THAN_1_MODALITY”
-                ],
-                “dc:description”: “The patient’s ability to maintain attention or lack thereof.”,
-                “fno:required”: “true”
-            }
-        ],
-        “implementedBy”: {
-            “@id”: “https://raw.githubusercontent.com/kgrid-lab/LLM_with_RAG_chatbot/main/KO/clinical_calculators/code/nihss.py”,
-            “@type”: [
-                “Implementation”,
-                “Function”,
-                “Python”
-            ]
-        }
-    }
-}</p>
+<p>EX 7: Metadata for National Institutes of Health Stroke Scale Risk Score Calculator KO</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"https://kgrid.org/koio/2.1/context"</span><span class="p">,</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"fno"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://w3id.org/function/ontology#"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"xsd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.w3.org/2001/XMLSchema#"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"owl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2002/07/owl#"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nihss"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"KOIOVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KnowledgeObject"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ark:nihss"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NIH Stroke Scale"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Uses the patient's presenting symptoms and signs to quantify the severity of a suspected stroke."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:contributors"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kgrid Team"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:keywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"stroke"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cerebrovascular accident"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"CVA"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cerebral ischemia"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"focal neurologic deficit"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"hasKnowledge"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NIHStrokeScale"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Knowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"fno:Function"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"dc:Source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://pubmed.ncbi.nlm.nih.gov/7974549/"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"schema:Person"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"schema:name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dr. Patrick D. Lyden"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"fno:expects"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"consciousness"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"ALERT_KEENLY_RESPONSIVE"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"AROUSES_TO_MINOR_STIMULATION"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"REQUIRES_REPEATED_STIMULATION_TO_AROUSE"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"MOVEMENTS_TO_PAIN"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"POSTURES_OR_UNRESPONSIVE"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The patient's response to being asked for their age and the month of the year."</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"month_and_age_questions"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"BOTH_QUESTIONS_RIGHT"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"ONE_QUESTION_RIGHT"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"ZERO_QUESTIONS_RIGHT"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"DYSARTHRIC_INTUBATED_TRAUMA_OR_LANGUAGE_BARRIER"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"APHASIC"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The patient's response to being asked for their age and the month of the year."</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blink_eyes_and_squeeze_hands"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"PERFORMS_BOTH_TASKS"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"PERFORMS_ONE_TASK"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"PERFORMS_ZERO_TASKS"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The patient's response to being asked to blink their eyes and squeeze the examiner's hand. Can be pantomimed if patient does not understand."</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"horizontal_extraocular_movements"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"NORMAL"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"PARTIAL_GAZE_PALSY_CAN_BE_OVERCOME"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"PARTIAL_GAZE_PALSY_CORRECTS_WITH_OCULOCEPHALIC_REFLEX"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"FORCED_GAZE_PALSY_CANNOT_BE_OVERCOME"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The patient's ability to perform horizontal extraocular movements. (i.e. look left and right with both eyes)"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visual_fields"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"NO_VISUAL_LOSS"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"PARTIAL_HEMIANOPIA"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"COMPLETE_HEMIANOPIA"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"PATIENT_IS_BILATERALLY_BLIND"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"BILATERAL_HEMIANOPIA"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The integrity of the patient's visual fields."</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"facial_palsy"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"NORMAL_SYMMETRY"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"MINOR_PARALYSIS"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"PARTIAL_PARALYSIS"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"UNILATERAL_COMPLETE_PARALYSIS"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"BILATERAL_COMPLETE_PARALYSIS"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The ability of the patient to engage their facial muscles."</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left_arm_motor_drift"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"NO_DRIFT_FOR_10_SECONDS"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"DRIFTS_BUT_DOES_NOT_HIT_BED"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"DRIFTS_HITS_BED"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"SOME_EFFORT_AGAINST_GRAVITY"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"NO_EFFORT_AGAINST_GRAVITY"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"NO_MOVEMENT"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"AMPUTATION_JOINT_FUSION"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The patient's ability to overcome gravity with their left arm and hold a position without drifting."</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"right_arm_motor_drift"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"NO_DRIFT_FOR_10_SECONDS"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"DRIFTS_BUT_DOES_NOT_HIT_BED"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"DRIFTS_HITS_BED"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"SOME_EFFORT_AGAINST_GRAVITY"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"NO_EFFORT_AGAINST_GRAVITY"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"NO_MOVEMENT"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"AMPUTATION_JOINT_FUSION"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The patient's ability to overcome gravity with their right arm and hold a position without drifting."</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left_leg_motor_drift"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"NO_DRIFT_FOR_5_SECONDS"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"DRIFTS_BUT_DOES_NOT_HIT_BED"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"DRIFTS_HITS_BED"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"SOME_EFFORT_AGAINST_GRAVITY"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"NO_EFFORT_AGAINST_GRAVITY"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"NO_MOVEMENT"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"AMPUTATION_JOINT_FUSION"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The patient's ability to overcome gravity with their left leg and hold a position without drifting."</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"right_leg_motor_drift"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"NO_DRIFT_FOR_5_SECONDS"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"DRIFTS_BUT_DOES_NOT_HIT_BED"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"DRIFTS_HITS_BED"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"SOME_EFFORT_AGAINST_GRAVITY"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"NO_EFFORT_AGAINST_GRAVITY"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"NO_MOVEMENT"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"AMPUTATION_JOINT_FUSION"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The patient's ability to overcome gravity with their right leg and hold a position without drifting."</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limb_ataxia"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"NO_ATAXIA"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"ATAXIA_IN_1_LIMB"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"ATAXIA_IN_2_LIMBS"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"DOES_NOT_UNDERSTAND"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"PARALYZED"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"AMPUTATION_JOINT_FUSION"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The patient's ability to coordinate their limbs."</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sensation"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"NORMAL_NO_SENSORY_LOSS"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"MILD_MODERATE_LOSS_LESS_SHARP_MORE_DULL"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"MILD_MODERATE_LOSS_CAN_SENSE_BEING_TOUCHED"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"COMPLETE_LOSS_CANNOT_SENSE_BEING_TOUCHED_AT_ALL"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"NO_RESPONSE_AND_QUADRIPLEGIC"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"COMA_UNRESPONSIVE"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The patients's ability to sense touch."</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"language"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"NORMAL_NO_APHASIA"</span><span class="p">,</span><span class="w">                    </span><span class="s2">"MILD_MODERATE_APHASIA_SOME_OBVIOUS_CHAGNES_WITHOUT_SIGNIFICANT_LIMITATION"</span><span class="p">,</span><span class="w">                    </span><span class="s2">"SEVERE_APHASIA_FRAGMENTARY_EXPRESSION_INFERENCE_NEEDED_CANNOT_IDENTIFY_MATERIALS"</span><span class="p">,</span><span class="w">                    </span><span class="s2">"MUTE_GLOBAL_APHASIA_NO_USABLE_SPEECH_AUDITORY_COMPREHENSION"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"COMA_UNRESPONSIVE"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The patient's ability to understand and construct language or lack thereof (i.e. aphasia)."</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dysarthria"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"NORMAL"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"MILD_MODERATE_DYSARTHRIA_SLURRING_BUT_CAN_BE_UNDERSTOOD"</span><span class="p">,</span><span class="w">                    </span><span class="s2">"SEVERE_DYSARTHRIA_UNINTELLIGIBLE_SLURRING_OR_OUT_OF_PROPORTION_TO_DYSPHAGIA"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"MUTE_ANARTHRIC"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"INTUBATED_UNABLE_TO_TEST"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The patient's ability to produce the sounds of language or lack thereof (i.e. dysarthria)."</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inattention"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"fno:Parameter"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"xsd:string"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"owl:oneOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"NO_ABNORMALITY"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"VISUAL_TACTILE_AUDITORY_SPATIAL_PERSONAL_INATTENTION"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"EXTINCTION_TO_BILATERAL_SIMULTANEOUS_STIMULATION"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"PROFOUND_HEMI_INATTENTION"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"EXTINCTION_TO_GREATER_THAN_1_MODALITY"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The patient's ability to maintain attention or lack thereof."</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"fno:required"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://raw.githubusercontent.com/kgrid-lab/LLM_with_RAG_chatbot/main/KO/clinical_calculators/code/nihss.py"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Function"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Python"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <p>AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A COMPUTABLE PHENOTYPE
 Here is a link to a Knowledge Object containing a computable phenotype for Nephrotic Syndrome.</p>
 
 <p>The metadata for this Knowledge Object are shown below Example 8. This Knowledge Object includes one instance of ‘Knowledge’, two instances of ‘Service’, and no instances of ‘Test’. In this case, the source of its one instance of knowledge was first published as a SQL query, a common format for expressing computable phenotypes. Then, the logic of this query was re-implemented in Python in a computer executable file called “classification_algorithm.py”.</p>
 
-<p>EX 8: Metadata for Nephrotic Syndrome Computable Phenotype KO
-{
-    “@context”: “https://kgrid.org/koio/2.1/context”,
-    “@id”: “NSCP”,
-    “KOIOVersion”: “2.1”,
-    “@type”: “KnowledgeObject”,
-    “dc:identifier”: “ark:NSCP”,
-    “dc:version”: “v1.0”,
-    “dc:date”: “2024-09”,
-    “dc:title”: “Nephrotic Syndrome Computable Phenotype”,
-    “dc:description”: “An algorithm to screen structured patient data and return inclusion encounters for nephrotic syndrome”,
-    “schema:contributor”: {
-        “@id”: “https://orcid.org/0000-0001-7377-163X”,
-        “@type”: “Person”,
-        “schema:familyName”: “Conte”,
-        “schema:givenName”: “Marisa”,
-        “schema:affiliation”: “Knowledge Systems Lab, University of Michigan Medical School”,
-        “schema:email”: “meese@umich.edu”
-    },
-    “schema:creator”: {
-        “@id”: “https://orcid.org/0009-0008-4454-5826”,
-        “@type”: “Person”,
-        “schema:familyName”: “Seifi”,
-        “schema:givenName”: “Farid”,
-        “schema:affiliation”: “Knowledge Systems Lab, University of Michigan Medical School”,
-        “schema:email”: “faridsei@med.umich.edu”
-    },
-    “dc:publisher”: “Knowledge Systems Lab”,
-    “dc:license”: {
-        “@id”: “license.md”
-    },
-    “dc:bibliographicCitation”: “Knowledge Systems Lab. (2024). Nephrotic Syndrome Computable Phenotype Knowledge Object v1.0. Available: https://github.com/kgrid-lab/nephroticsyndrome-computablephenotype.”,
-    “hasKnowledge”: [
-        {
-            “@id”: “NephroticSyndromeCP”,
-            “@type”: “Knowledge”,
-            “implementedBy”: {
-                “@id”: “classification_algorithm.py”,
-                “@type”: [
-                    “Implementation”,
-                    “Function”,
-                    “Python”
-                ]
-            },
-            “dc:source”: “https://github.com/AoliverioUM/nephroticsyndrome-computablephenotype/blob/main/Nephrotic_Syndrome_1_Patients_2018_0411.sql”,
-            “dc:format”: “application/sql”,
-            “dc:date”: “2018-04-11”,
-            “schema:creator”: {
-                “@type”: “Person”,
-                “schema:familyName”: “Dorn”,
-                “schema:givenName”: “Chad”,
-                “schema:affiliation”: “Vanderbilt University Medical Center”,
-                “schema:email”: “chad.a.dorn@vumc.org”
-            },
-            “dc:description”: “An SQL classification algorithm that creates a cohort of patients with primary nephrotic syndrome from structured data modeled on the PCORI Common Data Model”,
-            “dc:subject”: “https://www.ncbi.nlm.nih.gov/mesh/68009404”,
-            “dc:isReferencedBy”: “https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8986057”,
-            “schema:funder”: “Patient Centered Outcomes Research Institute”
-        }
-    ],
-    “hasService”: [
-        {
-            “@id”: “CLIService”,
-            “@type”: [
-                “Service”,
-                “CLI”
-            ],
-            “dependsOn”: “NephroticSyndromeCP”,
-            “implementedBy”: {
-                “@id”: “cli.py”,
-                “@type”: [
-                    “Implementation”,
-                    “Batch”,
-                    “Python”
-                ]
-            }
-        },
-        {
-            “@id”: “APIService”,
-            “@type”: [
-                “Service”,
-                “API”
-            ],
-            “dependsOn”: “NephroticSyndromeCP”,
-            “implementedBy”: {
-                “@id”: “api.py”,
-                “@type”: [
-                    “Implementation”,
-                    “API”,
-                    “Python”
-                ]
-            }
-        }
-    ]
-}</p>
+<p>EX 8: Metadata for Nephrotic Syndrome Computable Phenotype KO</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kgrid.org/koio/2.1/context"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NSCP"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"KOIOVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KnowledgeObject"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ark:NSCP"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-09"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nephrotic Syndrome Computable Phenotype"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An algorithm to screen structured patient data and return inclusion encounters for nephrotic syndrome"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"schema:contributor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://orcid.org/0000-0001-7377-163X"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Person"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:familyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Conte"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:givenName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marisa"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:affiliation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge Systems Lab, University of Michigan Medical School"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"meese@umich.edu"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"schema:creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://orcid.org/0009-0008-4454-5826"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Person"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:familyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Seifi"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:givenName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Farid"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:affiliation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge Systems Lab, University of Michigan Medical School"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"faridsei@med.umich.edu"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"dc:publisher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge Systems Lab"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:license"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"license.md"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"dc:bibliographicCitation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge Systems Lab. (2024). Nephrotic Syndrome Computable Phenotype Knowledge Object v1.0. Available: https://github.com/kgrid-lab/nephroticsyndrome-computablephenotype."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasKnowledge"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NephroticSyndromeCP"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"classification_algorithm.py"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Function"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Python"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"dc:source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/AoliverioUM/nephroticsyndrome-computablephenotype/blob/main/Nephrotic_Syndrome_1_Patients_2018_0411.sql"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/sql"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-04-11"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"schema:creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Person"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"schema:familyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dorn"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"schema:givenName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chad"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"schema:affiliation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vanderbilt University Medical Center"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"schema:email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chad.a.dorn@vumc.org"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An SQL classification algorithm that creates a cohort of patients with primary nephrotic syndrome from structured data modeled on the PCORI Common Data Model"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.ncbi.nlm.nih.gov/mesh/68009404"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dc:isReferencedBy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8986057"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"schema:funder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient Centered Outcomes Research Institute"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"hasService"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CLIService"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Service"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"CLI"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"dependsOn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NephroticSyndromeCP"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cli.py"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Batch"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Python"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APIService"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Service"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"API"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"dependsOn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NephroticSyndromeCP"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api.py"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Implementation"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"API"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Python"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <ol>
   <li>Adding KOIO-based Metadata to the Metadata for an Existing Artifact</li>
@@ -1120,85 +1132,86 @@ Here is a link to a Knowledge Object containing a computable phenotype for Nephr
 
 <p>In the following example, a new Knowledge Object (KO) containing previously existing CBK artifact content has been described using KOIO terms. In the example, the metadata added specifically by applying core KOIO terms is shown in bold type. While the new KO is described as a product of the Knowledge Systems Lab, the Knowledge element in this example is a product from the creators of the computable phenotype here. As intended, essentially all the metadata from the phenotype’s web page appears in the example. KOIO allows us to organize the existing metadata in a new and potentially more useful way by highlighting the Knowledge element and its corresponding documentation.</p>
 
-<p>{
-  “@context”: “https://kgrid.org/koio/2.1/context”,
-  “@id”: “https://phekb.org/phenotype/ace-inhibitor-ace-i-induced-cough”,
-  “KOIOVersion”: “2.1”,
-  “@type”: “KnowledgeObject”,
-  “dc:identifier”: “Phenotype 90”,
-  “dc:version”: “1.0.0”,
-  “dc:date”: “2025-05-08”,
-  “dc:title”: “ACE Inhibitor (ACE-I) induced cough”,
-  “dc:description”: “ACE-I induced cough is a common side effect of use of ACE inhibitors, one of the most common class of antihypertensives.  The frequency of ACEI-induced cough varies based on ancestry.  A GWAS of ACEI cough using this algorithm in the eMERGE Network identified KCNIP4 as associated with this phenotype, which was validated in two replication cohorts. Cases are those with ACEI cough.  Controls are those exposed to ACEI without adverse events noted and not switched to angiotensin receptor blockers (ARBs).”,
-  “dc:contributor”: “Vanderbilt University”,
-  “schema:creator”: {
-    “@id”: “https://kgrid.org”,
-    “@type”: “team”,
-    “schema:name”: “Knowledge Systems Lab”,
-    “schema:affiliation”: “Knowledge Systems Lab, University of Michigan Medical School”,
-    “schema:email”: “kgrid-developers@umich.edu”
-  },
-  “dc:publisher”: “Knowledge Systems Lab”,
-  “koio:hasKnowledge”: {
-    “@id”: “ACE Inhibitor (ACE-I) induced cough”,
-    “@type”: [
-      “Knowledge”,
-      “Drug Response - adverse effect or efficacy”
-    ],
-    “implementedBy”: {
-      “@id”: “https://phekb.org/sites/phenotype/files/Ace%20inhibitor%20algorithm-2012-11-20.doc”,
-      “@type”: “Logic description”
-    },
-    “status”:”final”,
-    “Phenotype Attributes”: [“CPT Codes”,”ICD 9 Codes”,”Medications”,”Natural Language Processing”],
-    “Network Associations”:”eMerge”,
-    “View Phenotyping Groups”:”eMerge Phenotype WG”,
-    “Owner Phenotyping Groups”:”eMerge Vanderbilt Group”,
-    “dc:source”: “https://phekb.org/phenotype/ace-inhibitor-ace-i-induced-cough”,
-    “dc:format”: “doc”,
-    “dc:date”: “2012-11-20”,
-    “schema:creator”: [
-      {
-        “@type”: “Person”,
-        “schema:familyName”: “Mosley”,
-        “schema:givenName”: “Jonathan”,
-        “schema:affiliation”: “Vanderbilt University Medical Center”
-      },
-      {
-        “@type”: “Person”,
-        “schema:familyName”: “Denny”,
-        “schema:givenName”: “Josh”,
-        “schema:affiliation”: “Vanderbilt University Medical Center”
-      }
-    ],
-    “dc:description”: “Ace inhibitor/cough phenotype algorithm in BioVU”,
-    “dc:subject”: “https://www-ncbi-nlm-nih-gov/mesh/68009404”,
-    “dc:isReferencedBy”: “https://pubmed.ncbi.nlm.nih.gov/26169577/”,
-    “dc:bibliographicCitation”: “Mosley JD, Shaffer CM, Van Driest SL, Weeke PE, Wells QS, Karnes JH, Velez Edwards DR, Wei WQ, Teixeira PL, Bastarache L, Crawford DC, Li R, Manolio TA, Bottinger EP, McCarty CA, Linneman JG, Brilliant MH, Pacheco JA, Thompson W, Chisholm RL, Jarvik GP, Crosslin DR, Carrell DS, Baldwin E, Ralston J, Larson EB, Grafton J, Scrol A, Jouni H, Kullo IJ, Tromp G, Borthwick KM, Kuivaniemi H, Carey DJ, Ritchie MD, Bradford Y, Verma SS, Chute CG, Veluchamy A, Siddiqui MK, Palmer CN, Doney A, MahmoudPour SH, Maitland-van der Zee AH, Morris AD, Denny JC, Roden DM. A genome-wide association study identifies variants in KCNIP4 associated with ACE inhibitor-induced cough. Pharmacogenomics J. 2016 Jun;16(3):231-7. doi: 10.1038/tpj.2015.51. Epub 2015 Jul 14. PMID: 26169577; PMCID: PMC4713364.”,
-    “hasDocumentation”: [
-      {
-        “@id”: “https://phekb.org/phenotype/ace-inhibitor-ace-i-induced-cough”,
-        “@type”: “InformationArtifact”,
-        “dc:title”: “ACE Inhibitor (ACE-I) induced cough”
-      },
-      {
-        “@id”: “https://phekb.org/sites/phenotype/files/ACEiCough_Data_Dictionary_VU_final.xls”,
-        “@type”: “InformationArtifact”,
-        “dc:title”: “Data Dictionary for ACEi Cough”
-      },
-      {
-        “@id”: “https://phekb.org/sites/phenotype/files/ACEi_cough_validation_guidelines_v3.doc”,
-        “@type”: “InformationArtifact”,
-        “dc:title”: “ACEi_cough_validation_guidelines_v3.doc”
-      },
-      {
-        “@id”: “https://phekb.org/sites/phenotype/files/validation%20spreadsheet.xls”,
-        “@type”: “InformationArtifact”,
-        “dc:title”: “validation spreadsheet.xls”
-      }
-    ]
-  }
-}</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kgrid.org/koio/2.1/context"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://phekb.org/phenotype/ace-inhibitor-ace-i-induced-cough"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"KOIOVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KnowledgeObject"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dc:identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Phenotype 90"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dc:version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dc:date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-05-08"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACE Inhibitor (ACE-I) induced cough"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACE-I induced cough is a common side effect of use of ACE inhibitors, one of the most common class of antihypertensives.  The frequency of ACEI-induced cough varies based on ancestry.  A GWAS of ACEI cough using this algorithm in the eMERGE Network identified KCNIP4 as associated with this phenotype, which was validated in two replication cohorts. Cases are those with ACEI cough.  Controls are those exposed to ACEI without adverse events noted and not switched to angiotensin receptor blockers (ARBs)."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dc:contributor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vanderbilt University"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"schema:creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kgrid.org"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"team"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"schema:name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge Systems Lab"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"schema:affiliation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge Systems Lab, University of Michigan Medical School"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"schema:email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kgrid-developers@umich.edu"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"dc:publisher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge Systems Lab"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"koio:hasKnowledge"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACE Inhibitor (ACE-I) induced cough"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"Knowledge"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Drug Response - adverse effect or efficacy"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://phekb.org/sites/phenotype/files/Ace%20inhibitor%20algorithm-2012-11-20.doc"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Logic description"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="s2">"final"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Phenotype Attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"CPT Codes"</span><span class="p">,</span><span class="s2">"ICD 9 Codes"</span><span class="p">,</span><span class="s2">"Medications"</span><span class="p">,</span><span class="s2">"Natural Language Processing"</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"Network Associations"</span><span class="p">:</span><span class="s2">"eMerge"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"View Phenotyping Groups"</span><span class="p">:</span><span class="s2">"eMerge Phenotype WG"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Owner Phenotyping Groups"</span><span class="p">:</span><span class="s2">"eMerge Vanderbilt Group"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://phekb.org/phenotype/ace-inhibitor-ace-i-induced-cough"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"doc"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-11-20"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"schema:creator"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Person"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:familyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mosley"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:givenName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jonathan"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:affiliation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vanderbilt University Medical Center"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Person"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:familyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Denny"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:givenName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Josh"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema:affiliation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vanderbilt University Medical Center"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"dc:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ace inhibitor/cough phenotype algorithm in BioVU"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www-ncbi-nlm-nih-gov/mesh/68009404"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:isReferencedBy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://pubmed.ncbi.nlm.nih.gov/26169577/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dc:bibliographicCitation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mosley JD, Shaffer CM, Van Driest SL, Weeke PE, Wells QS, Karnes JH, Velez Edwards DR, Wei WQ, Teixeira PL, Bastarache L, Crawford DC, Li R, Manolio TA, Bottinger EP, McCarty CA, Linneman JG, Brilliant MH, Pacheco JA, Thompson W, Chisholm RL, Jarvik GP, Crosslin DR, Carrell DS, Baldwin E, Ralston J, Larson EB, Grafton J, Scrol A, Jouni H, Kullo IJ, Tromp G, Borthwick KM, Kuivaniemi H, Carey DJ, Ritchie MD, Bradford Y, Verma SS, Chute CG, Veluchamy A, Siddiqui MK, Palmer CN, Doney A, MahmoudPour SH, Maitland-van der Zee AH, Morris AD, Denny JC, Roden DM. A genome-wide association study identifies variants in KCNIP4 associated with ACE inhibitor-induced cough. Pharmacogenomics J. 2016 Jun;16(3):231-7. doi: 10.1038/tpj.2015.51. Epub 2015 Jul 14. PMID: 26169577; PMCID: PMC4713364."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasDocumentation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://phekb.org/phenotype/ace-inhibitor-ace-i-induced-cough"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InformationArtifact"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACE Inhibitor (ACE-I) induced cough"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://phekb.org/sites/phenotype/files/ACEiCough_Data_Dictionary_VU_final.xls"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InformationArtifact"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data Dictionary for ACEi Cough"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://phekb.org/sites/phenotype/files/ACEi_cough_validation_guidelines_v3.doc"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InformationArtifact"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACEi_cough_validation_guidelines_v3.doc"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://phekb.org/sites/phenotype/files/validation%20spreadsheet.xls"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InformationArtifact"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"dc:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"validation spreadsheet.xls"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <ol>
   <li>Tools and Tests</li>
