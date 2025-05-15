@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>KOIO | koio</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="KOIO" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This repository is for the Knowledge Object Implementation Ontology (KOIO)" />
+<meta property="og:description" content="This repository is for the Knowledge Object Implementation Ontology (KOIO)" />
+<meta property="og:site_name" content="koio" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="KOIO" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"This repository is for the Knowledge Object Implementation Ontology (KOIO)","headline":"KOIO","url":"/koio/specs/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/koio/assets/css/style.css?v=73db4bc86452061db8f3cd3ad780637d49e70160">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/koio/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="/koio/">koio</a></h1>
+      
+
+      <h1 id="koio---the-knowledge-object-implementation-ontology">KOIO - The Knowledge Object Implementation Ontology</h1>
+<p>KOIO is a domain ontology that tells us what a Knowledge Object is as an artifact. It describes Knowledge Objects and their parts as they are implemented. For this reason, KOIO generally serves as an evolving formal and explicit model of Knowledge Objects. It can be used to describe the parts of many computable biomedical knowledge (CBK) artifacts found in the wild. In addition, KOIO functions as a formal specification for linked metadata relevant for describing, annotating, packaging, and handling CBK artifacts.</p>
+
+<p>The Knowledge Systems Lab (KSL) at the University of Michigan began work on KOIO in 2016 and continues to evolve KOIO over time. KSL’s general approach is to keep KOIO concise, connected, and common.</p>
+
+<p>To keep it concise, only a very small number of new terms describing key parts known to be valuable to CBK stakeholders are included in KOIO. These KOIO-defined terms include “Knowledge”, “Service”, and “Test”. As a model of Knowledge Objects, KOIO supports multiplicity of these parts meaning that a Knowledge Object may have one or more elements of knowledge plus multiple corresponding services and tests. KOIO enables the lifecycles and provenance of the key individual parts of Knowledge Objects to be tracked and documented independently.</p>
+
+<p>The key parts of Knowledge Objects defined in KOIO are logically connected to terms from the upper-level Basic Formal Ontology (BFO). In addition, KOIO adopts terms from the Information Artifact Ontology (IAO) and the Software Ontology (SWO) wherever possible.</p>
+
+<p>Finally, KOIO tries to leave implementation details out so that it can serve as a common ontology for describing nearly all CBK artifacts, regardless of the platforms or applications that support and incorporate them.</p>
+
+<p><img src="https://github.com/user-attachments/assets/cd93852c-ad4c-4916-9df0-d1846e51b2b7" alt="image" /></p>
+
+<p>KOIO ontology is currently used in the <a href="https://github.com/kgrid/specs/blob/master/docs/evolving-conceptual-model.md">Knowledge Grid (KGrid) poject</a> for <a href="https://github.com/kgrid/specs/blob/master/docs/kgrid-knowledge-objects.md">creating knowledge objects</a>.</p>
+
+<h2 id="about-this-repository">About this repository</h2>
+<p>The <a href="https://github.com/kgrid/koio">KOIO repository</a> is used for evolving, sharing, and managing KOIO. KOIO formally defines the structure of Knowledge Objects using linked data representations made available in canonical OWL files.</p>
+
+<p>KOIO comes in several versions indicated by folders labeled with version numbers. In addition several legacy contexts and examples of knwoledge objects conforming to various versions of KOIO are included. The other folders and files generaly pertain to the current working version of KOIO which has yet to be released.</p>
+
+<h2 id="downloads">Downloads</h2>
+<ul>
+  <li>Download latest version of KOIO at <a href="https://kgrid.org/koio/2.1/koio.owl">https://kgrid.org/koio/2.1/koio.owl</a></li>
+  <li>Download context file for <a href="https://github.com/kgrid/specs/blob/master/docs/kgrid-knowledge-objects.md">KGRID knowledge object development</a> at <a href="https://kgrid.org/koio/2.1/context">https://kgrid.org/koio/2.1/context</a></li>
+  <li>Access older releases at <a href="https://github.com/kgrid/koio/releases">https://github.com/kgrid/koio/releases</a></li>
+</ul>
+
+<h2 id="documentation-for-latest-release">Documentation for latest release</h2>
+<p>The KOIO ontology documentation could be found at <a href="https://kgrid.org/koio/2.1/docs/">https://kgrid.org/koio/2.1/docs/</a></p>
+
+<p>For more detail about the current release please see the slides at <a href="https://drive.google.com/file/d/19DmeYajmh0Wxll7hOjfbEfO_mnDvkSL8/view?usp=drive_link">https://drive.google.com/file/d/19DmeYajmh0Wxll7hOjfbEfO_mnDvkSL8/view?usp=drive_link</a>.</p>
+<h2 id="knowledge-systems-laboratory-ksl">Knowledge Systems Laboratory (KSL)</h2>
+<p>KSL is an R&amp;D lab in the Department of Learning Health Sciences at the University of Michigan Medical School. KSL created KOIO in 2016-17. It was first conceived as part of the Knowledge Grid (KGrid) project for devising better socio-technical knowledge infrastructure components for learning health systems. By 2023-24, KOIO came to be seen as an important KSL deliverable in its own right.</p>
+
+<h2 id="development-roles-and-rules">Development roles and rules</h2>
+<p>Here are the roles of people who will contribute in the development of this ontology and the rules that they should follow:</p>
+
+<h3 id="roles-workflow">Roles (workflow)</h3>
+<ul>
+  <li>Contributors: Propose a change (create issue in the backlog)</li>
+  <li>Committee: Review, approve or disapprove the proposed changes</li>
+  <li>Developers: Create a branch for each approved change, complete the change and merge back to the main. If changes to the main are significant, create a new release</li>
+</ul>
+
+<h3 id="rules">Rules</h3>
+<ul>
+  <li><strong>Release Procedures</strong>
+    <ul>
+      <li>Latest version of the ontology is always available under the most recent release</li>
+      <li>The files in the main branch <strong>are not necessarily</strong> the same as the latest version. Main branch may include new completed updates that are not significant to create a new release yet.</li>
+      <li>The repo will not automatically be released on our website with every change to the main.</li>
+      <li>A new release with a new version number will be created whenever the main branch is ready with significant changes. Use <strong>Simplified Two-Part Versioning</strong>, which has two parts: Major.Minor</li>
+      <li>Different versions of the ontology will be available under releases and tags (1.0, 1.1, 1.2, 2.0, …)</li>
+      <li>Once a new release is created, main (the new version) will manually be deployed on https://kgrid.org/koio/ using GitHub Actions workflow.</li>
+      <li>When creating a new release, add a version folder to the main branch like 1.1 and include the context file and technical documentation. The context file will have an @id with the version number (for example: “@id”: “https://kgrid.org/koio/1.0/context” )</li>
+      <li>Each time KSL releases a version of KOIO its record in the NCBO Bioportal needs to be updated.</li>
+    </ul>
+  </li>
+  <li><strong>Documentation Procedures</strong>
+    <ul>
+      <li>Readme.md includes
+        <ul>
+          <li>description of the ontology</li>
+          <li>download links (link to latest version of the OWL file, Context file and older versions of the ontology)</li>
+          <li>documentation link</li>
+          <li>description of KSL</li>
+          <li>instructions for Proposal and Change (Governance) Procedures</li>
+        </ul>
+      </li>
+      <li>Technical ontology documentation:
+        <ul>
+          <li>created using Protégé’s OWLDoc generator for the active ontology (delete doc folder and recreate it using OWLDoc)</li>
+          <li>must be updated every time the ontology changes</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Proposal and Change (Governance) Procedures</strong>
+    <ul>
+      <li>Change proposals should be recorded under issues in the KOIO Ontology Management project with all the details needed to discuss, plan and execute the change.</li>
+      <li>Issue templates will be used to help contributors know all the details needed for their proposed changes (i.e. add term, add synonym, revise subclass relationship, new annotation, Obsolete a term, …) when adding a new issue</li>
+      <li>A branch will be created for the work needed to be done to complete each approved change</li>
+      <li>Changes are only considered complete and ready for merge to the main when the OWL file, documentation, tests, context files, graph and examples are updated
+        <ul>
+          <li>Example in a released KOIO owl file will conform to the version of that file and only to the version of that file.</li>
+        </ul>
+      </li>
+      <li>All existing and new tests should pass before commiting any changes to a branch.</li>
+      <li>Once the changes are finalized they will be merged to the main branch</li>
+    </ul>
+  </li>
+  <li><strong>Ontology Evaluation Procedures</strong>
+    <ul>
+      <li>Add individuals\instances to the ontology</li>
+      <li>Perform Syntax Validation using tools like Protégé</li>
+      <li>Develop competency questions</li>
+      <li>Implement unit tests using SPARQL Queries</li>
+      <li>Integrate testing to GitHub using GitHub Actions for automatic Continuous Integration</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="namespace">Namespace</h2>
+<h3 id="classes">Classes</h3>
+<h4 id="KnowledgeObject">Knowledge Object</h4>
+<p>A Knowledge Object is an Information Artifact capable of serving a role as the atomic unit of computable knowledge and therefore comprised of at least one Knowledge Object Implementation.<br />
+IRI <a href="https://kgrid.org/koio#KnowledgeObject">https://kgrid.org/koio#KnowledgeObject</a> <br />
+Is defined by <a href="https://kgrid.org/koio/2.1/docs/">https://kgrid.org/koio/2.1/docs/</a><br />
+Term status: stable</p>
+
+<h4 id="Knowledge">Knowledge</h4>
+<p>Knowledge is information or understanding about a subject, obtained through experience or study.<br />
+IRI <a href="https://kgrid.org/koio#Knowledge">https://kgrid.org/koio#Knowledge</a> <br />
+Is defined by <a href="https://kgrid.org/koio/2.1/docs/">https://kgrid.org/koio/2.1/docs/</a><br />
+Term status: stable</p>
+
+<h4 id="Service">Service</h4>
+<p>A Service is a defined function or capability provided by a software system. Each Service provides a way to use or interact with a KnowledgeObject, facilitating access and utilization of the Knowledge encapsulated within the KnowledgeObject. A Service is a specification of what a self-contained piece of software does.<br />
+IRI <a href="https://kgrid.org/koio#Service">https://kgrid.org/koio#Service</a> <br />
+Is defined by <a href="https://kgrid.org/koio/2.1/docs/">https://kgrid.org/koio/2.1/docs/</a><br />
+Term status: stable</p>
+
+<h4 id="Test">Test</h4>
+<p>A test is an information content entity conveying a systematic procedure to assess specific aspects of software performance, functionality, or security. Tests are created to ensure that the software meets specified requirements or to identify any defects.<br />
+IRI <a href="https://kgrid.org/koio#Test">https://kgrid.org/koio#Test</a> <br />
+Is defined by <a href="https://kgrid.org/koio/2.1/docs/">https://kgrid.org/koio/2.1/docs/</a><br />
+Term status: stable</p>
+
+<h4 id="Implementation">Implementation</h4>
+<p>An implementation is a computer or machine processable file that is or informs a series of instructions that can be directly interpreted or executed.<br />
+IRI <a href="https://kgrid.org/koio#Implementation">https://kgrid.org/koio#Implementation</a> <br />
+Is defined by <a href="https://kgrid.org/koio/2.1/docs/">https://kgrid.org/koio/2.1/docs/</a><br />
+Term status: stable</p>
+
+<h4 id="InformationArtifact">Information Artifact</h4>
+<p>An Information Artifact is an Artifact that is the IndependentContinuant bearer created as the result of one or more intentional processes. Examples: uniprot, the english language, the contents of this document or a printout of it, the temperature measurements from a weather balloon. For more information, see the project home page at https://github.com/information-artifact-ontology/IAO.<br />
+IRI <a href="https://kgrid.org/koio#InformationArtifact">https://kgrid.org/koio#InformationArtifact</a> <br />
+Is defined by <a href="https://kgrid.org/koio/2.1/docs/">https://kgrid.org/koio/2.1/docs/</a><br />
+Term status: stable</p>
+
+<h3 id="object-properties">Object Properties</h3>
+<h4 id="dependsOn">depends on</h4>
+<p>Indicates that a service uses a specific knowledge.<br />
+IRI <a href="https://kgrid.org/koio#dependsOn">https://kgrid.org/koio#dependsOn</a> <br />
+Is defined by <a href="https://kgrid.org/koio/2.1/docs/">https://kgrid.org/koio/2.1/docs/</a><br />
+Term status: stable<br />
+Has domain: <a href="https://kgrid.org/koio#Service">Service</a><br />
+Has range: <a href="https://kgrid.org/koio#Knowledge">Knowledge</a></p>
+
+<h4 id="hasInterface">has interface</h4>
+<p>Provides a method of asserting what type of interactions are possible for the class in question. The interface must be from the ‘software interface’ hierarchy.<br />
+IRI <a href="https://kgrid.org/koio#hasInterface">https://kgrid.org/koio#hasInterface</a> <br />
+Is defined by <a href="https://kgrid.org/koio/2.1/docs/">https://kgrid.org/koio/2.1/docs/</a><br />
+Term status: stable<br />
+Has domain: <a href="https://kgrid.org/koio#Service">Service</a><br />
+Has range: <a href="">Software Interface</a></p>
+
+<h4 id="isImplementedBy">is implemented by</h4>
+<p>It is the relationship between an algorithm and a piece of software which includes an implementation of that software for use when the software is executed. 
+IRI <a href="https://kgrid.org/koio#isImplementedBy">https://kgrid.org/koio#isImplementedBy</a> <br />
+Is defined by <a href="https://kgrid.org/koio/2.1/docs/">https://kgrid.org/koio/2.1/docs/</a><br />
+Term status: stable<br />
+Has domain: <a href="https://kgrid.org/koio#Test">Test</a>, <a href="https://kgrid.org/koio#Service">Service</a>, <a href="https://kgrid.org/koio#Knowledge">Knowledge</a><br />
+Has range: <a href="https://kgrid.org/koio#Implementation">Implementation</a></p>
+
+<h4 id="hasDocumentation">has documentation</h4>
+<p>Is a property that indicates an association between a knowledge object, knowledge, or service and documentation that describes, relates to, or provides information about each of these things.<br />
+IRI <a href="https://kgrid.org/koio#hasDocumentation">https://kgrid.org/koio#hasDocumentation</a> <br />
+Is defined by <a href="https://kgrid.org/koio/2.1/docs/">https://kgrid.org/koio/2.1/docs/</a><br />
+Term status: stable<br />
+Has domain:<a href="https://kgrid.org/koio#Test">Test</a>, <a href="https://kgrid.org/koio#Service">Service</a>, <a href="https://kgrid.org/koio#Knowledge">Knowledge</a>, <a href="https://kgrid.org/koio#Implementation">Implementation</a>, <a href="https://kgrid.org/koio#KnowledgeObject">Knowledge Object</a><br />
+Has range:  <a href="https://kgrid.org/koio#InformationArtifact">Information Artifact</a></p>
+
+<h4 id="hasKnowledge">has knowledge</h4>
+<p>indicates that a Knowledge Object contains or is associated with specific Knowledge.<br />
+IRI <a href="https://kgrid.org/koio#hasKnowledge">https://kgrid.org/koio#hasKnowledge</a> <br />
+Is defined by <a href="https://kgrid.org/koio/2.1/docs/">https://kgrid.org/koio/2.1/docs/</a><br />
+Term status: stable<br />
+Has domain: <a href="https://kgrid.org/koio#KnowledgeObject">Knowledge Object</a><br />
+Has range: <a href="https://kgrid.org/koio#Knowledge">Knowledge</a></p>
+
+<h4 id="hasService">has service</h4>
+<p>It is a relation that holds between a whole KnowledgeObject and its Service part(s). Denotes that a KnowledgeObject includes or provides a specific Service.<br />
+IRI <a href="https://kgrid.org/koio#hasService">https://kgrid.org/koio#hasService</a> <br />
+Is defined by <a href="https://kgrid.org/koio/2.1/docs/">https://kgrid.org/koio/2.1/docs/</a><br />
+Term status: stable<br />
+Has domain: <a href="https://kgrid.org/koio#KnowledgeObject">Knowledge Object</a> <br />
+Has range: <a href="https://kgrid.org/koio#Service">Service</a></p>
+
+<h4 id="hasTest">has test</h4>
+<p>It is a property that links a knowledge object, service, or knowledge to a specific test designed to evaluate its functionality, performance, or reliability. This property signifies that the component has an associated test to verify or validate its behavior.<br />
+IRI <a href="https://kgrid.org/koio#hasTest">https://kgrid.org/koio#hasTest</a> <br />
+Is defined by <a href="https://kgrid.org/koio/2.1/docs/">https://kgrid.org/koio/2.1/docs/</a><br />
+Term status: stable<br />
+Has domain: <a href="https://kgrid.org/koio#KnowledgeObject">Knowledge Object</a>, <a href="https://kgrid.org/koio#Service">Service</a>, <a href="https://kgrid.org/koio#Knowledge">Knowledge</a><br />
+Has range: <a href="https://kgrid.org/koio#Test">Test</a></p>
+
+<h2 id="appendix-agenerate-json_ld-context-file-from-koio-owl-file-using-owl2jsonld-tool">Appendix A—Generate JSON_LD Context File From KOIO OWL File Using owl2jsonld Tool</h2>
+<p><a href="https://github.com/stain/owl2jsonld">owl2jsonld</a> is a tool that generate a JSON-LD @context for concepts (classes and properties) found in the specified OWL or RDFS ontology.</p>
+<ol>
+  <li>Install Java
+    <div class="language-batch highlighter-rouge"><div class="highlight"><pre class="highlight"><code># <span class="kd">JAVA</span> <span class="kd">installation</span> <span class="na">on</span> <span class="kd">Linux</span>
+<span class="kd">sudo</span> <span class="kd">apt</span> <span class="kd">update</span>
+<span class="kd">sudo</span> <span class="kd">apt</span> <span class="kd">install</span> <span class="kd">default</span><span class="na">-jre
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Download the Tool: You can download the owl2jsonld tool from its <a href="https://github.com/stain/owl2jsonld">GitHub repository</a>. The official releases include an uberjar (standalone JAR) that bundles all dependencies and can be used as a command-line tool.</p>
+  </li>
+  <li>Run the JAR File and create the context.json form the owl file:
+    <div class="language-batch highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">java</span> <span class="na">-jar </span><span class="kd">owl2jsonld</span><span class="o">-</span><span class="m">0</span>.2.1<span class="na">-standalone</span>.jar <span class="kd">file</span>:///path/to/owl/file/koio.owl <span class="na">-o </span><span class="kd">context</span>.json
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Note: path to owl file must be an IRI starting with <code class="language-plaintext highlighter-rouge">file://</code>.</p>
+
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
