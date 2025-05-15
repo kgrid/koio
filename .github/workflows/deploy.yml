@@ -20,7 +20,9 @@ jobs:
       - name: Create _config.yml
         run: |
           echo "theme: jekyll-theme-primer" > _config.yml
-          echo "baseurl: /koio" >> _config.yml  # Adjust if necessary
+          echo "baseurl: /koio" >> _config.yml
+          echo "include:" >> _config.yml
+          echo "  - specs" >> _config.yml
 
       - name: Create CNAME file
         run: |
