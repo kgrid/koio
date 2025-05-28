@@ -48,27 +48,27 @@ To contact KSL, use the following email address:
 
 ## Table of Contents
 ### [1. Introduction](#introduction)
-Problem <br>
-Purpose<br>
-Commitments<br>
-Conventions<br>
-Imported Ontologies<br>
-Prefixes and Namespaces<br>
-Who KOIO Is For<br>
-Our Ongoing Work to Model Computable Biomedical Knowledge (CBK)<br>
-The Mobilizing Computable Biomedical Knowledge (MCBK) Community<br>
+- Problem <br>
+- Purpose<br>
+- Commitments<br>
+- Conventions<br>
+- Imported Ontologies<br>
+- Prefixes and Namespaces<br>
+- Who KOIO Is For<br>
+- Our Ongoing Work to Model Computable Biomedical Knowledge (CBK)<br>
+- The Mobilizing Computable Biomedical Knowledge (MCBK) Community<br>
 
 ### [2. Definitions](#definitions)
-KOIO Classes<br>
-KOIO Object Properties<br>
-Classes and Properties Under Development<br>
+- KOIO Classes<br>
+- KOIO Object Properties<br>
+- Classes and Properties Under Development<br>
 
 ### [3. Knowledge Object Implementation Ontology](#knowledge-object-implementation-ontology)
    
 ### [4. Examples of Knowlege Objects described using KOIO](#examples-of-knowledge-objects-described-using-koio)
-Computable Guideline Knowledge Object<br>
-Clinical Calculator Knowledge Object<br>
-Computable Phenotype Knowledge Object<br>
+- Computable Guideline Knowledge Object<br>
+- Clinical Calculator Knowledge Object<br>
+- Computable Phenotype Knowledge Object<br>
 
 ### [5. Adding KOIO-based Metadata to the Metadata for an Existing Artifact](#adding-koio-based-metadata-to-the-metadata-for-an-existing-artifact)
 
@@ -1199,19 +1199,19 @@ When updating the KOIO ontology, changes are only considered complete and ready 
 
 ### References
 
-Previous KSL-KGRID specifications reviewed while making this document are:
-<https://kgrid.org/specs/packaging.html>
-<https://kgrid.org/specs/activationSpec.html#_1-introduction> 
+Previous KSL-KGRID specifications reviewed while making this document are:<br>
+<https://kgrid.org/specs/packaging.html><br>
+<https://kgrid.org/specs/activationSpec.html#_1-introduction> <br>
 <https://kgrid.org/specs/kgrid-knowledge-objects.html>
 
-Similar documents used as references when creating this document are:
-Provenance Ontology: <https://www.w3.org/TR/prov-o/>
-Function Ontology: <https://fno.io/spec/>
+Similar documents used as references when creating this document are:<br>
+Provenance Ontology: <https://www.w3.org/TR/prov-o/><br>
+Function Ontology: <https://fno.io/spec/><br>
 Research Object Crate Specification: <https://www.researchobject.org/ro-crate/specification/1.1/index.html>
 
-Ontologies used as upper level terms and/or to define terms included in KOIO are:
-Basic Formal Ontology (BFO)
-Information Artifact Ontology (IAO)
+Ontologies used as upper level terms and/or to define terms included in KOIO are:<br>
+Basic Formal Ontology (BFO)<br>
+Information Artifact Ontology (IAO)<br>
 Software Ontology (SWO)
 
 
