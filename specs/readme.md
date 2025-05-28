@@ -8,21 +8,21 @@ permalink: /specs/
 ### Draft Specification as of May 31, 2025
 
 **Current version:**
-2.1
+2.1<br>
 **This version:**
-<https://github.com/kgrid/koio/tree/master/2.1>
+<https://github.com/kgrid/koio/tree/master/2.1><br>
 **Latest release:**
-<https://github.com/kgrid/koio/releases/tag/2.1>
+<https://github.com/kgrid/koio/releases/tag/2.1><br>
 **Corresponding JSON-LD Context:**
-<https://kgrid.org/koio/2.1/context>
+<https://kgrid.org/koio/2.1/context><br>
 **Cite as:**
-Knowledge Systems Lab, Department of Learning Health Sciences, University of Michigan Medical School (2025), Knowledge Object Implementation Ontology (KOIO), <https://github.com/kgrid/koio/blob/master/2.1/koio.owl>
+Knowledge Systems Lab, Department of Learning Health Sciences, University of Michigan Medical School (2025), Knowledge Object Implementation Ontology (KOIO), <https://github.com/kgrid/koio/blob/master/2.1/koio.owl><br>
 **Publication (release) date:**
-February 19, 2025
+February 19, 2025<br>
 **Current Editors and Contributors:**
-Allen Flynn, Charles P. Friedman, Farid Seifi, Marisa Conte, Peter Boisvert, Zach Landis-Lewis, Niranjan Kumar
+Allen Flynn, Charles P. Friedman, Farid Seifi, Marisa Conte, Peter Boisvert, Zach Landis-Lewis, Niranjan Kumar<br>
 **Past Contributors:**
-Namita Bahulekar, Andrew Beck, Greg Farris, Nate Gittlen, Carl Lagoze, George Meng
+Namita Bahulekar, Andrew Beck, Greg Farris, Nate Gittlen, Carl Lagoze, George Meng<br>
 
 ## Abstract
 Knowledge Objects are structured, formal computer processable and machine readable packages of knowledge with additional resources that facilitate knowledge use and management.
@@ -48,15 +48,15 @@ To contact KSL, use the following email address:
 
 ## Table of Contents
 ### [1. Introduction](#introduction)
-Problem
-Purpose
-Commitments
-Conventions
-Imported Ontologies
-Prefixes and Namespaces
-Who KOIO Is For
-Our Ongoing Work to Model Computable Biomedical Knowledge (CBK)
-The Mobilizing Computable Biomedical Knowledge (MCBK) Community
+Problem <br>
+Purpose<br>
+Commitments<br>
+Conventions<br>
+Imported Ontologies<br>
+Prefixes and Namespaces<br>
+Who KOIO Is For<br>
+Our Ongoing Work to Model Computable Biomedical Knowledge (CBK)<br>
+The Mobilizing Computable Biomedical Knowledge (MCBK) Community<br>
 
 ### [2. Definitions](#definitions)
 KOIO Classes
@@ -72,7 +72,7 @@ Computable Phenotype Knowledge Object
 
 ### [5. Adding KOIO-based Metadata to the Metadata for an Existing Artifact](#adding-koio-based-metadata-to-the-metadata-for-an-existing-artifact)
 
-### [6. Tools and Tests](#toolsAndTests)
+### [6. Tools and Tests](#tools-and-tests)
 
 ### [References](#references)
 	
