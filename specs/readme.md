@@ -178,7 +178,7 @@ The following classes and properties are not included in KOIO 2.1 but may be inc
 
 ### Knowledge Object Implementation Ontology
 
-**THE CORE OF KOIO**
+**THE CORE OF KOIO**<br>
 The figure below depicts six core classes from KOIO related by six object properties (Not shown is a seventh hasDocumentation object property to associate documentation with instances of the six core classes). 
 
 The 'Knowledge', 'Service', and 'Test' classes  in grey represent a key set of three distinct parts of Knowledge Objects. These key parts may all have one or more instances of 'Implementation'. Each instance of 'Implementation' is a concrete, computer-actionable representation of some 'Knowledge', 'Service', or 'Test'. An instance of 'Service' may also depend on one or more instances of 'Knowledge'.  
@@ -189,7 +189,7 @@ In addition, KOIO recognizes that essentially all instances of 'Service' have on
 
 KOIO was developed with linked (meta)data in mind. KOIO comes with a general underlying commitment to linked data and the technologies of the semantic web. KOIO is intended to be used in various Resource Description Framework (RDF) technical environments. For this reason, KOIO is provided in OWL format and the metadata examples shown below are all provided in JSON-LD format. JSON-LD is one format for RDF triples. It is possible to convert the JSON-LD formatted examples to any other RDF serializations using tools like the [Easy RDF Converter](https://www.easyrdf.org/converter). 
 
-**JSON-LD CONTEXT FILE FOR LINKING TO KOIO TERMS**
+**JSON-LD CONTEXT FILE FOR LINKING TO KOIO TERMS**<br>
 The following examples of KOIO use all rely on the same JSON-LD context file for implementing KOIO terms inside linked RDF metadata. This JSON-LD context file helps establish links to KOIO terms and also to terms from three other common RDF vocabularies. The initial lines of the context file are below and the whole context file can be found at: <https://kgrid.org/koio/2.1/context>. The examples that follow all include the @Context keyword from JSON-LD to invoke this context file. 
 
 Snippet of Context File for Linking to KOIO 2.1 Terms
@@ -211,7 +211,7 @@ Snippet of Context File for Linking to KOIO 2.1 Terms
 …
 ```
 
-**EXAMPLE 1**
+**EXAMPLE 1**<br>
 In the example below, an Information Artifact of type 'Knowledge Object' is declared using KOIO. This Knowledge Object is then associated with a variety of common administrative and descriptive metadata using the Dublin Core Elements vocabulary.  
 
 EX 1:  Knowledge Object declaration
@@ -242,7 +242,7 @@ EX 1:  Knowledge Object declaration
 }
 ```
 
-**EXAMPLE 2**
+**EXAMPLE 2**<br>
 In the second example below, for the Knowledge Object declared in Example 1, an instance of 'Knowledge' is related to the Knowledge Object via the 'hasKnowledge' object property. In Example 2, the 'Knowledge' instance has id=bmiKnowledge. In addition, it 'isImplementedBy' a function stored inside a JavaScript file called bmi.js.
 
 EX 2:  Showing an instance of Knowledge as part of a Knowledge Object
@@ -270,7 +270,7 @@ EX 2:  Showing an instance of Knowledge as part of a Knowledge Object
 }
 ```
 
-**EXAMPLE 3**
+**EXAMPLE 3**<br>
 In the third example below, for the Knowledge Object declared in Example 1, with the instance of Knowledge linked in Example 2, two instances of 'Service' are related via the 'hasService' object property. The first instance of 'Service' is an API service which has an implementation and is related to a service.yaml interface specification via the 'hasInterface' object property. The second instance of 'Service' is a command line interface (CLI) service which is implemented in a TypeScript file called bmi_cli.ts.  
 
 EX 3:  Knowledge Object with Knowledge and Service(s)
@@ -317,7 +317,7 @@ EX 3:  Knowledge Object with Knowledge and Service(s)
 }
 ```
 
-**EXAMPLE 4**
+**EXAMPLE 4**<br>
 In the fourth example below, for the Knowledge Object declared in Example 1, the Knowledge Object itself and its instances of 'Knowledge' and 'Service' have been extended to include corresponding software tests using the 'hasTest' object property.  
 
 EX 4:  Knowledge Object with Knowledge and Service(s) and Test(s):
@@ -403,7 +403,7 @@ EX 4:  Knowledge Object with Knowledge and Service(s) and Test(s):
 }
 ```
 
-**EXAMPLE 5**
+**EXAMPLE 5**<br>
 In the fifth example below, for the Knowledge Object declared in Example 1, the Knowledge Object itself and its instances of 'Knowledge' and 'Service' have been further described with documentation linked using the 'hasDocumentation' object property. In KOIO, instances documentation are always of type 'Information Artifact' and can take any relevant form and have any file format.
 
 EX 5:  Knowledge Object with Knowledge and Service(s) and Test(s) and Information Artifacts that serve as documentation for these things
@@ -519,11 +519,10 @@ EX 5:  Knowledge Object with Knowledge and Service(s) and Test(s) and Informatio
 }
 ```
 
-### Examples of Knowledge Objects described using KOIO
-
+### Examples of Knowledge Objects described using KOIO<br>
 The examples of Knowledge Objects described using KOIO that follow are representative of the kinds of Knowledge Objects that enable clinical decision support and health data analysis. The following examples show metadata arising from applying KOIO 2.1. The initial one (Example 6) shows how a computable guideline and related resources can be described. The next example (Example 7) shows how a health risk score calculator and related resources can be described. The final example (Example 8) shows how a computable phenotype and related resources can be described. 
 
-**AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A COMPUTABLE GUIDELINE**
+**AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A COMPUTABLE GUIDELINE**<br>
 This is a [Knowledge Object with a computable guideline](https://github.com/kgrid-objects/USPSTF-collection/tree/main/cardiovascular-prevention-statin-use) which contains an executable representation of the inclusion and exclusion criteria for the United States Preventive Services Task Force (USPSTF) guideline on statin medication use. More information about this statin use guideline can be found [here](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/statin-use-in-adults-preventive-medication). 
 
 The metadata in Example 6 below begin with a description of the Knowledge Object as a whole. It has a simulated identifier (ark:StatinUse) and its own version (1.9). At the end of the metadata, the Knowledge Object is associated with documentation in two forms, a readme file and an interactive Google Collab notebook.  
@@ -687,7 +686,7 @@ EX 6: Metadata for USPSTF Statin Use Guideline Knowledge Object (KO)
 }
 ```
 
-**AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A HEALTH RISK SCORE CALCULATOR**
+**AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A HEALTH RISK SCORE CALCULATOR**<br>
 [This is a Knowledge Object containing an executable representation of NIH Stroke Scale](https://github.com/kgrid-objects/NIH-Stroke-Scale/tree/main). 
 
 In the metadata for this Knowledge Object appearing below in Example 7, there are no instances of Service or Test. There is one instance of Knowledge, and it is implemented in a computer executable format by the file called "nihss.py". An interesting feature of these metadata is that the description of the single instance of Knowledge for the NIH Stroke Scale includes information about all the NIH Stroke Scale's distinct items. For these, terms from the Function Ontology (fno), e.g., "expects", and OWL enumerations of permitted values are included.   
@@ -986,7 +985,7 @@ EX 7: Metadata for National Institutes of Health Stroke Scale Risk Score Calcula
 }
 ```
 
-**AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A COMPUTABLE PHENOTYPE**
+**AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A COMPUTABLE PHENOTYPE**<br>
 [This is a Knowledge Object containing a computable phenotype for Nephrotic Syndrome](https://github.com/kgrid-lab/nephroticsyndrome-computablephenotype).
 
 The metadata for this Knowledge Object are shown below Example 8. This Knowledge Object includes one instance of 'Knowledge', two instances of 'Service', and no instances of 'Test'. In this case, the source of its one instance of knowledge was first published as a SQL query, a common format for expressing computable phenotypes. Then, the logic of this query was re-implemented in Python in a computer executable file called "classification_algorithm.py".  
@@ -1180,7 +1179,7 @@ In the following example, a new Knowledge Object (KO) containing previously exis
 ```
 
 ### Tools and Tests
-**Tools**
+**Tools**<br>
 Github is used to create a [repository for KOIO](https://github.com/kgrid/koio) and manage the ontology's life cycle. [Github Issues](https://github.com/kgrid/koio/issues) is used to track changes to the KOIO ontology and [Github Pages](https://kgrid.org/koio/) is used to deploy the ontology's files and documentation.
 
 [Protege](https://protege.stanford.edu/) version 5.6.4 was used to create and validate the core OWL file.
@@ -1192,7 +1191,7 @@ In addition to the tools for managing KOIO, for people who wish to develop their
 - Create Knowledge Object Information Pages
 - Perform Metadata-driven Packaging of Knowledge Objects
 	
-**Testing**
+**Testing**<br>
 Ontology individuals and pytests are used to validate changes to the KOIO ontology. Two examples, bmi and tobacco KO, are created as individuals in the KOIO OWL file and loaded into an RDF graph along with the ontology during testing. Using an available [python file](https://github.com/kgrid/koio/blob/master/tests/test_ontology.py) with KOIO tests in it, the pytest framework is used to verify the accuracy of relationships within the ontology using unit tests.
 
 When updating the KOIO ontology, changes are only considered complete and ready for merging into the main branch once all related tests and examples are updated, and both existing and new tests are passed successfully.
