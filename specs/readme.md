@@ -134,15 +134,15 @@ The following classes and properties have been defined in the latest version of 
 **KOIO CLASSES**
 The following list starts with the Knowledge Object class, then lists four possible parts of any Knowledge Object.  
 
-KnowledgeObject, def., an Information Artifact capable of serving a role as the atomic unit of computable knowledge and therefore comprised of at least one Knowledge Object Implementation
+**KnowledgeObject**, def., an Information Artifact capable of serving a role as the atomic unit of computable knowledge and therefore comprised of at least one Knowledge Object Implementation
 
-Knowledge, def., information or understanding about a subject, obtained through experience or study.
+**Knowledge**, def., information or understanding about a subject, obtained through experience or study.
 
-Service, def., a defined function or capability provided by a software system. Each Service provides a way to use or interact with a Knowledge Object, facilitating access and utilization of the Knowledge encapsulated within the Knowledge Object. A Service is a specification of what a self-contained piece of software does.
+**Service**, def., a defined function or capability provided by a software system. Each Service provides a way to use or interact with a Knowledge Object, facilitating access and utilization of the Knowledge encapsulated within the Knowledge Object. A Service is a specification of what a self-contained piece of software does.
 
-Test, def., an information content entity conveying a systematic procedure to assess specific aspects of software performance, functionality, or security. Tests are created to ensure that the software meets specified requirements or to identify any defects.
+**Test**, def., an information content entity conveying a systematic procedure to assess specific aspects of software performance, functionality, or security. Tests are created to ensure that the software meets specified requirements or to identify any defects.
 
-Implementation, def., a computer or machine processable file that is or informs a series of instructions that can be directly interpreted or executed.
+**Implementation**, def., a computer or machine processable file that is or informs a series of instructions that can be directly interpreted or executed.
 
 **KOIO OBJECT PROPERTIES**
 The following lists of properties starts with two properties that relate disparate parts of Knowledge Objects followed by five properties that indicate the parts a Knowledge Object has. 
