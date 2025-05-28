@@ -7,21 +7,21 @@ permalink: /specs/
 # The Knowledge Object Implementation Ontology
 ### Draft Specification as of May 31, 2025
 
-**Current version:**
+**Current version:**<br>
 2.1<br>
-**This version:**
+**This version:**<br>
 <https://github.com/kgrid/koio/tree/master/2.1><br>
-**Latest release:**
+**Latest release:**<br>
 <https://github.com/kgrid/koio/releases/tag/2.1><br>
-**Corresponding JSON-LD Context:**
+**Corresponding JSON-LD Context:**<br>
 <https://kgrid.org/koio/2.1/context><br>
-**Cite as:**
+**Cite as:**<br>
 Knowledge Systems Lab, Department of Learning Health Sciences, University of Michigan Medical School (2025), Knowledge Object Implementation Ontology (KOIO), <https://github.com/kgrid/koio/blob/master/2.1/koio.owl><br>
-**Publication (release) date:**
+**Publication (release) date:**<br>
 February 19, 2025<br>
-**Current Editors and Contributors:**
+**Current Editors and Contributors:**<br>
 Allen Flynn, Charles P. Friedman, Farid Seifi, Marisa Conte, Peter Boisvert, Zach Landis-Lewis, Niranjan Kumar<br>
-**Past Contributors:**
+**Past Contributors:**<br>
 Namita Bahulekar, Andrew Beck, Greg Farris, Nate Gittlen, Carl Lagoze, George Meng<br>
 
 ## Abstract
@@ -59,16 +59,16 @@ Our Ongoing Work to Model Computable Biomedical Knowledge (CBK)<br>
 The Mobilizing Computable Biomedical Knowledge (MCBK) Community<br>
 
 ### [2. Definitions](#definitions)
-KOIO Classes
-KOIO Object Properties
-Classes and Properties Under Development
+KOIO Classes<br>
+KOIO Object Properties<br>
+Classes and Properties Under Development<br>
 
 ### [3. Knowledge Object Implementation Ontology](#knowledge-object-implementation-ontology)
    
 ### [4. Examples of Knowlege Objects described using KOIO](#examples-of-knowledge-objects-described-using-koio)
-Computable Guideline Knowledge Object
-Clinical Calculator Knowledge Object
-Computable Phenotype Knowledge Object
+Computable Guideline Knowledge Object<br>
+Clinical Calculator Knowledge Object<br>
+Computable Phenotype Knowledge Object<br>
 
 ### [5. Adding KOIO-based Metadata to the Metadata for an Existing Artifact](#adding-koio-based-metadata-to-the-metadata-for-an-existing-artifact)
 
@@ -211,7 +211,7 @@ Snippet of Context File for Linking to KOIO 2.1 Terms
 …
 ```
 
-EXAMPLE 1
+**EXAMPLE 1**
 In the example below, an Information Artifact of type 'Knowledge Object' is declared using KOIO. This Knowledge Object is then associated with a variety of common administrative and descriptive metadata using the Dublin Core Elements vocabulary.  
 
 EX 1:  Knowledge Object declaration
@@ -242,7 +242,7 @@ EX 1:  Knowledge Object declaration
 }
 ```
 
-EXAMPLE 2
+**EXAMPLE 2**
 In the second example below, for the Knowledge Object declared in Example 1, an instance of 'Knowledge' is related to the Knowledge Object via the 'hasKnowledge' object property. In Example 2, the 'Knowledge' instance has id=bmiKnowledge. In addition, it 'isImplementedBy' a function stored inside a JavaScript file called bmi.js.
 
 EX 2:  Showing an instance of Knowledge as part of a Knowledge Object
@@ -270,7 +270,7 @@ EX 2:  Showing an instance of Knowledge as part of a Knowledge Object
 }
 ```
 
-EXAMPLE 3
+**EXAMPLE 3**
 In the third example below, for the Knowledge Object declared in Example 1, with the instance of Knowledge linked in Example 2, two instances of 'Service' are related via the 'hasService' object property. The first instance of 'Service' is an API service which has an implementation and is related to a service.yaml interface specification via the 'hasInterface' object property. The second instance of 'Service' is a command line interface (CLI) service which is implemented in a TypeScript file called bmi_cli.ts.  
 
 EX 3:  Knowledge Object with Knowledge and Service(s)
@@ -317,7 +317,7 @@ EX 3:  Knowledge Object with Knowledge and Service(s)
 }
 ```
 
-EXAMPLE 4
+**EXAMPLE 4**
 In the fourth example below, for the Knowledge Object declared in Example 1, the Knowledge Object itself and its instances of 'Knowledge' and 'Service' have been extended to include corresponding software tests using the 'hasTest' object property.  
 
 EX 4:  Knowledge Object with Knowledge and Service(s) and Test(s):
@@ -403,7 +403,7 @@ EX 4:  Knowledge Object with Knowledge and Service(s) and Test(s):
 }
 ```
 
-EXAMPLE 5
+**EXAMPLE 5**
 In the fifth example below, for the Knowledge Object declared in Example 1, the Knowledge Object itself and its instances of 'Knowledge' and 'Service' have been further described with documentation linked using the 'hasDocumentation' object property. In KOIO, instances documentation are always of type 'Information Artifact' and can take any relevant form and have any file format.
 
 EX 5:  Knowledge Object with Knowledge and Service(s) and Test(s) and Information Artifacts that serve as documentation for these things
@@ -523,9 +523,8 @@ EX 5:  Knowledge Object with Knowledge and Service(s) and Test(s) and Informatio
 
 The examples of Knowledge Objects described using KOIO that follow are representative of the kinds of Knowledge Objects that enable clinical decision support and health data analysis. The following examples show metadata arising from applying KOIO 2.1. The initial one (Example 6) shows how a computable guideline and related resources can be described. The next example (Example 7) shows how a health risk score calculator and related resources can be described. The final example (Example 8) shows how a computable phenotype and related resources can be described. 
 
-AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A COMPUTABLE GUIDELINE
-Here is a link to a Knowledge Object with a computable guideline which contains an executable representation of the inclusion and exclusion criteria for the United States Preventive Services Task Force (USPSTF) guideline on statin medication use. More information about this statin use guideline can be found here. 
-
+**AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A COMPUTABLE GUIDELINE**
+This is a [Knowledge Object with a computable guideline](https://github.com/kgrid-objects/USPSTF-collection/tree/main/cardiovascular-prevention-statin-use) which contains an executable representation of the inclusion and exclusion criteria for the United States Preventive Services Task Force (USPSTF) guideline on statin medication use. More information about this statin use guideline can be found [here](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/statin-use-in-adults-preventive-medication). 
 
 The metadata in Example 6 below begin with a description of the Knowledge Object as a whole. It has a simulated identifier (ark:StatinUse) and its own version (1.9). At the end of the metadata, the Knowledge Object is associated with documentation in two forms, a readme file and an interactive Google Collab notebook.  
 
@@ -533,7 +532,7 @@ The rest of the metadata in Example 6 describe and provide links to the Knowledg
 
 The Knowledge Object in Example 6 has one 'knowledge' element pointing to a representation of guideline's inclusion and exclusion criteria in a Python file called cardiovascular_prevention_statin_use.py. This knowledge representation is associated with its own software test called test_knowledge.py. The knowledge is also associated with documentation, including a link to the relevant content from the guideline.
 
-Additional software tests for testing this Knowledge Object's metadata using the KGrid SDK are linked in the section of these metadata with @id = "test_resources".
+Additional software tests for testing this Knowledge Object's metadata using the [KGrid SDK](https://pypi.org/project/kgrid-sdk/) are linked in the section of these metadata with @id = "test_resources".
 
 The metadata in Example 6 also associate and describe three services with this Knowledge Object. Recall from the definition above that Services provide ways to utilize the Knowledge encapsulated within the Knowledge Object. The three services included in this Knowledge Object are ActivatorService, CLIService, and APIService. The ActivatorService provides a special API interface to the computable guideline arising from running the KGrid Activator tool as a software gateway. The CLIService provides an application with an interface to the computable guideline implemented using machine commands. The APIService provides an API interface by exposing the computable guideline without requiring a separate gateway tool.   
  
@@ -688,8 +687,8 @@ EX 6: Metadata for USPSTF Statin Use Guideline Knowledge Object (KO)
 }
 ```
 
-AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A HEALTH RISK SCORE CALCULATOR
-Here is a link to a Knowledge Object containing an executable representation of NIH Stroke Scale. 
+**AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A HEALTH RISK SCORE CALCULATOR**
+[This is a Knowledge Object containing an executable representation of NIH Stroke Scale](https://github.com/kgrid-objects/NIH-Stroke-Scale/tree/main). 
 
 In the metadata for this Knowledge Object appearing below in Example 7, there are no instances of Service or Test. There is one instance of Knowledge, and it is implemented in a computer executable format by the file called "nihss.py". An interesting feature of these metadata is that the description of the single instance of Knowledge for the NIH Stroke Scale includes information about all the NIH Stroke Scale's distinct items. For these, terms from the Function Ontology (fno), e.g., "expects", and OWL enumerations of permitted values are included.   
 
@@ -987,8 +986,8 @@ EX 7: Metadata for National Institutes of Health Stroke Scale Risk Score Calcula
 }
 ```
 
-AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A COMPUTABLE PHENOTYPE
-Here is a link to a Knowledge Object containing a computable phenotype for Nephrotic Syndrome.
+**AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A COMPUTABLE PHENOTYPE**
+[This is a Knowledge Object containing a computable phenotype for Nephrotic Syndrome](https://github.com/kgrid-lab/nephroticsyndrome-computablephenotype).
 
 The metadata for this Knowledge Object are shown below Example 8. This Knowledge Object includes one instance of 'Knowledge', two instances of 'Service', and no instances of 'Test'. In this case, the source of its one instance of knowledge was first published as a SQL query, a common format for expressing computable phenotypes. Then, the logic of this query was re-implemented in Python in a computer executable file called "classification_algorithm.py".  
 
