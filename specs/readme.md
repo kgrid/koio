@@ -185,7 +185,7 @@ The 'Knowledge', 'Service', and 'Test' classes  in grey represent a key set of t
 
 In addition, KOIO recognizes that essentially all instances of 'Service' have one or more instances of 'Software Interface', which is a specification of an interface enabling a machine or client application to access content in a Knowledge Object. Typically clients use software interfaces to access the knowledge exposed by services. 
 
-![KOIOclasses](https://github.com/kgrid/koio/blob/master/specs/KOIO2Image.png)
+![KOIOclasses](https://github.com/kgrid/koio/blob/master/specs/CoreKOIOConcepts.png)
 
 KOIO was developed with linked (meta)data in mind. KOIO comes with a general underlying commitment to linked data and the technologies of the semantic web. KOIO is intended to be used in various Resource Description Framework (RDF) technical environments. For this reason, KOIO is provided in OWL format and the metadata examples shown below are all provided in JSON-LD format. JSON-LD is one format for RDF triples. It is possible to convert the JSON-LD formatted examples to any other RDF serializations using tools like the [Easy RDF Converter](https://www.easyrdf.org/converter). 
 
