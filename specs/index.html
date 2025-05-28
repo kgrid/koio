@@ -20,7 +20,7 @@
 {"@context":"https://schema.org","@type":"WebPage","description":"This repository is for the Knowledge Object Implementation Ontology (KOIO)","headline":"KOIO Specification","url":"/koio/specs/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/koio/assets/css/style.css?v=7f459118759814023be570ce9105306d8296cb3e">
+    <link rel="stylesheet" href="/koio/assets/css/style.css?v=f67d310ca41da6e4c5db840f23218b1b093ba39a">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -39,28 +39,28 @@
       <h1><a href="/koio/">koio</a></h1>
       
 
-      <p>The Knowledge Object Implementation Ontology
-Draft Specification as of May 31, 2025</p>
+      <h1 id="the-knowledge-object-implementation-ontology">The Knowledge Object Implementation Ontology</h1>
+<h3 id="draft-specification-as-of-may-31-2025">Draft Specification as of May 31, 2025</h3>
 
-<p>Current version:
-2.1
-This version: 
-https://github.com/kgrid/koio/tree/master/2.1 tsk
-Latest release:
-https://github.com/kgrid/koio/releases/tag/2.1
-Corresponding JSON-LD Context: 
-https://kgrid.org/koio/2.1/context
-Cite as:
-Knowledge Systems Lab, Department of Learning Health Sciences, University of Michigan Medical School (2025), Knowledge Object Implementation Ontology (KOIO), https://github.com/kgrid/koio/blob/master/2.1/koio.owl
-Publication (release) date:
-February 19, 2025
-Current Editors and Contributors:
-Allen Flynn, Charles P. Friedman, Farid Seifi, Marisa Conte, Peter Boisvert, Zach Landis-Lewis. Niranjan Kumar
-Past Contributors:
-Namita Bahulekar, Andrew Beck, Greg Farris, Nate Gittlen, Carl Lagoze, George Meng</p>
+<p><strong>Current version:</strong><br />
+2.1<br />
+<strong>This version:</strong><br />
+<a href="https://github.com/kgrid/koio/tree/master/2.1">https://github.com/kgrid/koio/tree/master/2.1</a><br />
+<strong>Latest release:</strong><br />
+<a href="https://github.com/kgrid/koio/releases/tag/2.1">https://github.com/kgrid/koio/releases/tag/2.1</a><br />
+<strong>Corresponding JSON-LD Context:</strong><br />
+<a href="https://kgrid.org/koio/2.1/context">https://kgrid.org/koio/2.1/context</a><br />
+<strong>Cite as:</strong><br />
+Knowledge Systems Lab, Department of Learning Health Sciences, University of Michigan Medical School (2025), Knowledge Object Implementation Ontology (KOIO), <a href="https://github.com/kgrid/koio/blob/master/2.1/koio.owl">https://github.com/kgrid/koio/blob/master/2.1/koio.owl</a><br />
+<strong>Publication (release) date:</strong><br />
+February 19, 2025<br />
+<strong>Current Editors and Contributors:</strong><br />
+Allen Flynn, Charles P. Friedman, Farid Seifi, Marisa Conte, Peter Boisvert, Zach Landis-Lewis, Niranjan Kumar<br />
+<strong>Past Contributors:</strong><br />
+Namita Bahulekar, Andrew Beck, Greg Farris, Nate Gittlen, Carl Lagoze, George Meng<br /></p>
 
-<p>Abstract
-Knowledge Objects are structured, formal computer processable and machine readable packages of knowledge with additional resources that facilitate knowledge use and management.</p>
+<h2 id="abstract">Abstract</h2>
+<p>Knowledge Objects are structured, formal computer processable and machine readable packages of knowledge with additional resources that facilitate knowledge use and management.</p>
 
 <p>The Knowledge Object Implementation Ontology (KOIO) is a domain ontology that tells us precisely what a Knowledge Object is as an artifact. KOIO provides a systematic way to describe Knowledge Objects and their key parts as they are implemented in practice. For this reason, KOIO generally serves as an evolving formal model of Knowledge Objects. KOIO can also be used to describe the parts of existing computable biomedical knowledge (CBK) artifacts found in the wild. In a practical way, KOIO functions as a formal specification for linked metadata relevant for describing, annotating, packaging, and handling CBK artifacts.</p>
 
@@ -72,49 +72,49 @@ Knowledge Objects are structured, formal computer processable and machine readab
 
 <p>Finally, KOIO tries to leave all software and practice implementation details out so that it can serve as a common ontology for describing nearly all CBK artifacts, regardless of the platforms or applications that support and incorporate them, and agnostic as to how people ultimately use CBK artifacts.</p>
 
-<p>Status of this Document and Compliance
+<p><strong>Status of this Document and Compliance</strong>
 This document is a draft of a potential specification for KOIO. It has no official standing of any kind and does not represent the support or consensus of any standards organization. There is NO normative content in this document. Instead, all content is informational and serves to explain what KOIO is and how it might be used. For that reason, all compliance is informal and provisional. We show and link to actual examples of KOIO use in Section 4 below.</p>
 
-<p>Contact Information
+<p><strong>Contact Information</strong>
 The Knowledge Systems Lab (KSL) at the University of Michigan began work on KOIO in 2016 and continues to evolve KOIO over time. KSL is based in the Department of Learning Health Sciences at the University of Michigan Medical School.</p>
 
 <p>To contact KSL, use the following email address:
-knowledgesystemslab@umich.edu</p>
+<a href="mailto:knowledgesystemslab@umich.edu">knowledgesystemslab@umich.edu</a></p>
 
-<p>Table of Contents
-	1. Introduction
-Problem
-Purpose
-Commitments
-Conventions
-Imported Ontologies
-Prefixes and Namespaces
-Who KOIO Is For
-Our Ongoing Work to Model Computable Biomedical Knowledge (CBK)
-The MCBK Community
-	2. Definitions
-KOIO Classes
-KOIO Object Properties
-Classes and Properties Under Development
-	3. The Knowledge Object Implementation Ontology
-	4. Examples of Knowledge Objects with Metadata generated using KOIO
-Computable Guideline Knowledge Object
-Clinical Calculator Knowledge Object
-Computable Phenotype Knowledge Object
-      	5. Adding KOIO-based Metadata to the Metadata for an Existing Artifact</p>
-<ol>
-  <li>
-    <p>Tools and Tests</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<h3 id="1-introduction"><a href="#introduction">1. Introduction</a></h3>
+<p>Problem <br />
+Purpose<br />
+Commitments<br />
+Conventions<br />
+Imported Ontologies<br />
+Prefixes and Namespaces<br />
+Who KOIO Is For<br />
+Our Ongoing Work to Model Computable Biomedical Knowledge (CBK)<br />
+The Mobilizing Computable Biomedical Knowledge (MCBK) Community<br /></p>
 
-    <p>A. References</p>
-  </li>
-  <li>
-    <p>Introduction
-This introduction discusses what motivated KOIO and then covers the purpose of KOIO, KOIO’s commitments and other background information.</p>
-  </li>
-</ol>
+<h3 id="2-definitions"><a href="#definitions">2. Definitions</a></h3>
+<p>KOIO Classes<br />
+KOIO Object Properties<br />
+Classes and Properties Under Development<br /></p>
 
-<p>THE PROBLEM MOTIVATING WORK ON KOIO
+<h3 id="3-knowledge-object-implementation-ontology"><a href="#knowledge-object-implementation-ontology">3. Knowledge Object Implementation Ontology</a></h3>
+
+<h3 id="4-examples-of-knowlege-objects-described-using-koio"><a href="#examples-of-knowledge-objects-described-using-koio">4. Examples of Knowlege Objects described using KOIO</a></h3>
+<p>Computable Guideline Knowledge Object<br />
+Clinical Calculator Knowledge Object<br />
+Computable Phenotype Knowledge Object<br /></p>
+
+<h3 id="5-adding-koio-based-metadata-to-the-metadata-for-an-existing-artifact"><a href="#adding-koio-based-metadata-to-the-metadata-for-an-existing-artifact">5. Adding KOIO-based Metadata to the Metadata for an Existing Artifact</a></h3>
+
+<h3 id="6-tools-and-tests"><a href="#tools-and-tests">6. Tools and Tests</a></h3>
+
+<h3 id="references"><a href="#references">References</a></h3>
+
+<h3 id="introduction">Introduction</h3>
+<p>This introduction discusses what motivated KOIO and then covers the purpose of KOIO, KOIO’s commitments and other background information.</p>
+
+<p><strong>THE PROBLEM MOTIVATING WORK ON KOIO</strong>
 The knowledge management and organization problem motivating KOIO is that it is difficult to find, access, interoperate with (or integrate), and reuse units of content created to convey computer actionable and evidence-based representations of knowledge.</p>
 
 <p>In this context, to be “computer actionable” means either that knowledge is itself represented in the form of explicit machine instructions known as software OR that knowledge is represented in structured, predictable forms anticipated by and intentionally processed using explicit machine instructions. Other forms of computable actionable knowledge besides software include lookup tables and formalized data structures for representing concepts and relationships (e.g., RDF triples) and production rules.</p>
@@ -123,53 +123,53 @@ The knowledge management and organization problem motivating KOIO is that it is 
 
 <p>Finally, a “unit of content” is any file or group of files. KOIO specifies how to describe units of content called Knowledge Objects in a formal way.</p>
 
-<p>THE PURPOSE OF KOIO
+<p><strong>THE PURPOSE OF KOIO</strong>
 The purpose of KOIO is to make it easier for many people in different roles to find, access, and use CBK artifacts in their everyday professional work. Relevant roles include a variety of technical, clinical, research, and administrative roles, among others.</p>
 
 <p>KOIO provides a way of describing CBK artifacts, hopefully moving the world one step closer to realizing better infrastructure for computable actionable knowledge. Ideally, such infrastructure would make CBK artifacts openly and widely available, enabling more utilization of shared CBK and avoiding duplication of effort.</p>
 
-<p>COMMITMENTS
+<p><strong>COMMITMENTS</strong>
 The content of KOIO reflects the following six commitments:</p>
 
-<p>FOUR GENERAL COMPUTABLE KNOWLEDGE COMMITMENTS
-Computer actionable representations of knowledge have unique properties
-Infrastructure helps widely share computer actionable representations of knowledge 
-Formalized and standardized digital Knowledge Objects reflect and enable infrastructure
-Trust in computer actionable biomedical knowledge is increased by sharing metadata</p>
+<p><strong><em>FOUR GENERAL COMPUTABLE KNOWLEDGE COMMITMENTS</em></strong></p>
+<ul>
+  <li>Computer actionable representations of knowledge have unique properties</li>
+  <li>Infrastructure helps widely share computer actionable representations of knowledge</li>
+  <li>Formalized and standardized digital Knowledge Objects reflect and enable infrastructure</li>
+  <li>Trust in computer actionable biomedical knowledge is increased by sharing metadata</li>
+</ul>
 
-<p>TWO ADDED COMMITMENTS SPECIFIC TO COMPUTABLE BIOMEDICAL KNOWLEDGE
-For human health, open computer actionable representations of biomedical knowledge should remain open not precluding proprietary refinements, extensions or enhancements
-Metadata describing computer actionable representations of biomedical knowledge should be open even when the representations themselves are proprietary</p>
+<p><strong><em>TWO ADDED COMMITMENTS SPECIFIC TO COMPUTABLE BIOMEDICAL KNOWLEDGE</em></strong></p>
+<ul>
+  <li>For human health, open computer actionable representations of biomedical knowledge should remain open not precluding proprietary refinements, extensions or enhancements</li>
+  <li>Metadata describing computer actionable representations of biomedical knowledge should be open even when the representations themselves are proprietary</li>
+</ul>
 
-<p>CONVENTIONS
+<p><strong>CONVENTIONS</strong>
 KSL’s general approach is to keep KOIO concise, connected (to other ontologies and vocabularies), and common (to all Knowledge Objects).</p>
 
-<p>IMPORTED ONTOLOGIES
-KOIO imports two ontologies: the Information Artifact Ontology (IAO) and the Software Ontology (SWO). Links to these two ontologies are here:
-http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl
-https://raw.githubusercontent.com/allysonlister/swo/master/swo-full.owl</p>
+<p><strong>IMPORTED ONTOLOGIES</strong>
+KOIO imports two ontologies: the <a href="http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl">Information Artifact Ontology (IAO)</a> and the <a href="https://raw.githubusercontent.com/allysonlister/swo/master/swo-full.owl">Software Ontology (SWO)</a>.</p>
 
-<p>PREFIXES AND NAMESPACES
+<p><strong>PREFIXES AND NAMESPACES</strong>
 The Knowledge Object Implementation Ontology’s namespace is here:
-https://kgrid.org/koio#</p>
+<a href="https://kgrid.org/koio#">https://kgrid.org/koio#</a></p>
 
 <p>The preferred prefix is koio:</p>
 
-<p>WHO KOIO IS FOR
+<p><strong>WHO KOIO IS FOR</strong>
 KOIO is for people who want to describe instances of computer actionable representations of knowledge and corresponding software, software tests and documentation in a systematic way.</p>
 
-<p>OUR ONGOING WORK TO MODEL COMPUTABLE BIOMEDICAL KNOWLEDGE AND ADVANCE INFRASTRUCTURE 
+<p><strong>OUR ONGOING WORK TO MODEL COMPUTABLE BIOMEDICAL KNOWLEDGE AND ADVANCE INFRASTRUCTURE</strong>
 Developing and working with KOIO is part of a larger effort to model computable biomedical knowledge (CBK) - what it is, what it does, who uses it, how it is used, etc. We are pursuing this work as a means of informing the development of better knowledge infrastructure for CBK.</p>
 
-<p>RECOGNIZING THE MOBILIZING COMPUTABLE BIOMEDICAL KNOWLEDGE (MCBK) COMMUNITY
-The work to develop and improve KOIO has been inspired and guided by the members of the MCBK community. More information about this community is available at: https://mobilizecbk.med.umich.edu/</p>
+<p><strong>RECOGNIZING THE MOBILIZING COMPUTABLE BIOMEDICAL KNOWLEDGE (MCBK) COMMUNITY</strong>
+The work to develop and improve KOIO has been inspired and guided by the members of the MCBK community. More information about this community is available at: <a href="https://mobilizecbk.med.umich.edu/">https://mobilizecbk.med.umich.edu/</a></p>
 
-<ol>
-  <li>Definitions
-The following classes and properties have been defined in the latest version of KOIO. The following lists include only the unique classes and properties that KOIO stipulates.</li>
-</ol>
+<h3 id="definitions">Definitions</h3>
+<p>The following classes and properties have been defined in the latest version of KOIO. The following lists include only the unique classes and properties that KOIO stipulates.</p>
 
-<p>KOIO CLASSES
+<p><strong>KOIO CLASSES</strong>
 The following list starts with the Knowledge Object class, then lists four possible parts of any Knowledge Object.</p>
 
 <p>KnowledgeObject, def., an Information Artifact capable of serving a role as the atomic unit of computable knowledge and therefore comprised of at least one Knowledge Object Implementation</p>
@@ -182,55 +182,55 @@ The following list starts with the Knowledge Object class, then lists four possi
 
 <p>Implementation, def., a computer or machine processable file that is or informs a series of instructions that can be directly interpreted or executed.</p>
 
-<p>KOIO OBJECT PROPERTIES 
+<p><strong>KOIO OBJECT PROPERTIES</strong>
 The following lists of properties starts with two properties that relate disparate parts of Knowledge Objects followed by five properties that indicate the parts a Knowledge Object has.</p>
 
-<p>dependsOn, def., indicates that a Service uses specific Knowledge</p>
+<p><strong>dependsOn</strong>, def., indicates that a Service uses specific Knowledge</p>
 
-<p>isImplementedBy*, def. is the relationship between Knowledge, Service, and Test and a piece of software which includes an implementation of that software for use when the software is executed</p>
+<p><strong>isImplementedBy</strong>*, def. is the relationship between Knowledge, Service, and Test and a piece of software which includes an implementation of that software for use when the software is executed</p>
 
-<p>hasInterface*, def., provides a method of asserting what type of interactions are possible for any instance of Service. These methods may include APIs, command line interfaces, user interfaces, webservices interfaces, or other interfaces.</p>
+<p><strong>hasInterface</strong>*, def., provides a method of asserting what type of interactions are possible for any instance of Service. These methods may include APIs, command line interfaces, user interfaces, webservices interfaces, or other interfaces.</p>
 
-<p>hasDocumentation*, def., a property that indicates an association between a knowledge object, knowledge, service, test, and documentation that describes, relates to, or provides information about each of these things.</p>
+<p><strong>hasDocumentation</strong>*, def., a property that indicates an association between a knowledge object, knowledge, service, test, and documentation that describes, relates to, or provides information about each of these things.</p>
 
-<p>hasKnowledge, def., indicates that a Knowledge Object contains or is associated with specific Knowledge.</p>
+<p><strong>hasKnowledge</strong>, def., indicates that a Knowledge Object contains or is associated with specific Knowledge.</p>
 
-<p>hasService , def., a relation that holds between a whole Knowledge Object and its Service part(s). Denotes that a Knowledge Object includes or provides a specific Service.</p>
+<p><strong>hasService</strong>, def., a relation that holds between a whole Knowledge Object and its Service part(s). Denotes that a Knowledge Object includes or provides a specific Service.</p>
 
-<p>hasTest, def., a property that links a Knowledge Object, Service, or Knowledge to a specific Test designed to evaluate its functionality, performance, or reliability. This property signifies that the component has an associated test to verify or validate its behavior.</p>
+<p><strong>hasTest</strong>, def., a property that links a Knowledge Object, Service, or Knowledge to a specific Test designed to evaluate its functionality, performance, or reliability. This property signifies that the component has an associated test to verify or validate its behavior.</p>
 
 <ul>
   <li>Definitions with an asterisk have been revised after KOIO 2.1 was released and will appear in future releases of KOIO.</li>
 </ul>
 
-<p>CLASSES AND PROPERTIES UNDER DEVELOPMENT FOR FUTURE VERSIONS OF KOIO
-The following classes and properties are not included in KOIO 2.1 but may be included in future versions of KOIO. The items below and their definitions arise from work to model collections of Knowledge Objects. These classes and properties are a work in progress. Their utility is currently being explored. Question marks in brackets like this [?] indicate unsettled issues.</p>
+<p><strong>CLASSES AND PROPERTIES UNDER DEVELOPMENT FOR FUTURE VERSIONS OF KOIO</strong>
+The following classes and properties are not included in KOIO 2.1 but may be included in future versions of KOIO. The items below and their definitions arise from work to model collections of Knowledge Objects. These classes and properties are a work in progress. Their utility is currently being explored. Question marks in brackets [?] indicate unsettled issues.</p>
 
-<p>KnowledgeSet, def., is a type of Knowledge that is a non-empty [?] collection (unordered set [?]) or specification of a non-empty [?] collection (unordered set [?]) of Knowledge Objects and related files represented as an RDF Container [?], associated with some organizing principle [?]. Knowledge Sets can have metadata, examples, and documentation.</p>
+<p><strong>KnowledgeSet</strong>, def., is a type of Knowledge that is a non-empty [?] collection (unordered set [?]) or specification of a non-empty [?] collection (unordered set [?]) of Knowledge Objects and related files represented as an RDF Container [?], associated with some organizing principle [?]. Knowledge Sets can have metadata, examples, and documentation.</p>
 
-<p>KnowledgeBase, def., a type of Knowledge Object that has one or more Knowledge Sets and has one or more Purposes</p>
+<p><strong>KnowledgeBase</strong>, def., a type of Knowledge Object that has one or more Knowledge Sets and has one or more Purposes</p>
 
-<p>Purpose [? source?], def., a statement indicating why something exists spanning its audience [?], its intended platform for use [?], its use case(s) [?], its stakeholders [?], …</p>
+<p><strong>Purpose</strong> [? source?], def., a statement indicating why something exists spanning its audience [?], its intended platform for use [?], its use case(s) [?], its stakeholders [?], …</p>
 
-<p>hasKnowledgeSet [? need?], def., is a sub-property of hasKnowledge that links of Knowledge Object of type Knowledge Base to a specific KnowledgeSet</p>
+<p><strong>hasKnowledgeSet</strong> [? need?], def., is a sub-property of hasKnowledge that links of Knowledge Object of type Knowledge Base to a specific KnowledgeSet</p>
 
-<p>hasKnowledgeObject, def., a property that links of Knowledge Set to a Knowledge Object</p>
+<p><strong>hasKnowledgeObject</strong>, def., a property that links of Knowledge Set to a Knowledge Object</p>
 
-<ol>
-  <li>The Knowledge Object Implementation Ontology</li>
-</ol>
+<h3 id="knowledge-object-implementation-ontology">Knowledge Object Implementation Ontology</h3>
 
-<p>THE CORE OF KOIO
+<p><strong>THE CORE OF KOIO</strong>
 The figure below depicts six core classes from KOIO related by six object properties (Not shown is a seventh hasDocumentation object property to associate documentation with instances of the six core classes).</p>
 
 <p>The ‘Knowledge’, ‘Service’, and ‘Test’ classes  in grey represent a key set of three distinct parts of Knowledge Objects. These key parts may all have one or more instances of ‘Implementation’. Each instance of ‘Implementation’ is a concrete, computer-actionable representation of some ‘Knowledge’, ‘Service’, or ‘Test’. An instance of ‘Service’ may also depend on one or more instances of ‘Knowledge’.</p>
 
 <p>In addition, KOIO recognizes that essentially all instances of ‘Service’ have one or more instances of ‘Software Interface’, which is a specification of an interface enabling a machine or client application to access content in a Knowledge Object. Typically clients use software interfaces to access the knowledge exposed by services.</p>
 
-<p>KOIO was developed with linked (meta)data in mind. KOIO comes with a general underlying commitment to linked data and the technologies of the semantic web. KOIO is intended to be used in various Resource Description Framework (RDF) technical environments. For this reason, KOIO is provided in OWL format and the metadata examples shown below are all provided in JSON-LD format. JSON-LD is one format for RDF triples. It is possible to convert the JSON-LD formatted examples to any other RDF serializations using tools like the Easy RDF Converter.</p>
+<p><img src="https://github.com/kgrid/koio/blob/master/specs/KOIO2Image.png" alt="KOIOclasses" /></p>
 
-<p>JSON-LD CONTEXT FILE FOR LINKING TO KOIO TERMS
-The following examples of KOIO use all rely on the same JSON-LD context file for implementing KOIO terms inside linked RDF metadata. This JSON-LD context file helps establish links to KOIO terms and also to terms from three other common RDF vocabularies. The initial lines of the context file are below and the whole context file can be found at: https://kgrid.org/koio/2.1/context. The examples that follow all include the @Context keyword from JSON-LD to invoke this context file.</p>
+<p>KOIO was developed with linked (meta)data in mind. KOIO comes with a general underlying commitment to linked data and the technologies of the semantic web. KOIO is intended to be used in various Resource Description Framework (RDF) technical environments. For this reason, KOIO is provided in OWL format and the metadata examples shown below are all provided in JSON-LD format. JSON-LD is one format for RDF triples. It is possible to convert the JSON-LD formatted examples to any other RDF serializations using tools like the <a href="https://www.easyrdf.org/converter">Easy RDF Converter</a>.</p>
+
+<p><strong>JSON-LD CONTEXT FILE FOR LINKING TO KOIO TERMS</strong>
+The following examples of KOIO use all rely on the same JSON-LD context file for implementing KOIO terms inside linked RDF metadata. This JSON-LD context file helps establish links to KOIO terms and also to terms from three other common RDF vocabularies. The initial lines of the context file are below and the whole context file can be found at: <a href="https://kgrid.org/koio/2.1/context">https://kgrid.org/koio/2.1/context</a>. The examples that follow all include the @Context keyword from JSON-LD to invoke this context file.</p>
 
 <p>Snippet of Context File for Linking to KOIO 2.1 Terms</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kgrid.org/koio/2.1/context"</span><span class="err">,</span><span class="w">
@@ -250,7 +250,7 @@ The following examples of KOIO use all rely on the same JSON-LD context file for
 </span><span class="err">…</span><span class="w">
 </span></code></pre></div></div>
 
-<p>EXAMPLE 1
+<p><strong>EXAMPLE 1</strong>
 In the example below, an Information Artifact of type ‘Knowledge Object’ is declared using KOIO. This Knowledge Object is then associated with a variety of common administrative and descriptive metadata using the Dublin Core Elements vocabulary.</p>
 
 <p>EX 1:  Knowledge Object declaration</p>
@@ -280,7 +280,7 @@ In the example below, an Information Artifact of type ‘Knowledge Object’ is 
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>EXAMPLE 2
+<p><strong>EXAMPLE 2</strong>
 In the second example below, for the Knowledge Object declared in Example 1, an instance of ‘Knowledge’ is related to the Knowledge Object via the ‘hasKnowledge’ object property. In Example 2, the ‘Knowledge’ instance has id=bmiKnowledge. In addition, it ‘isImplementedBy’ a function stored inside a JavaScript file called bmi.js.</p>
 
 <p>EX 2:  Showing an instance of Knowledge as part of a Knowledge Object</p>
@@ -307,7 +307,7 @@ In the second example below, for the Knowledge Object declared in Example 1, an 
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>EXAMPLE 3
+<p><strong>EXAMPLE 3</strong>
 In the third example below, for the Knowledge Object declared in Example 1, with the instance of Knowledge linked in Example 2, two instances of ‘Service’ are related via the ‘hasService’ object property. The first instance of ‘Service’ is an API service which has an implementation and is related to a service.yaml interface specification via the ‘hasInterface’ object property. The second instance of ‘Service’ is a command line interface (CLI) service which is implemented in a TypeScript file called bmi_cli.ts.</p>
 
 <p>EX 3:  Knowledge Object with Knowledge and Service(s)</p>
@@ -353,7 +353,7 @@ In the third example below, for the Knowledge Object declared in Example 1, with
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>EXAMPLE 4
+<p><strong>EXAMPLE 4</strong>
 In the fourth example below, for the Knowledge Object declared in Example 1, the Knowledge Object itself and its instances of ‘Knowledge’ and ‘Service’ have been extended to include corresponding software tests using the ‘hasTest’ object property.</p>
 
 <p>EX 4:  Knowledge Object with Knowledge and Service(s) and Test(s):</p>
@@ -438,7 +438,7 @@ In the fourth example below, for the Knowledge Object declared in Example 1, the
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>EXAMPLE 5
+<p><strong>EXAMPLE 5</strong>
 In the fifth example below, for the Knowledge Object declared in Example 1, the Knowledge Object itself and its instances of ‘Knowledge’ and ‘Service’ have been further described with documentation linked using the ‘hasDocumentation’ object property. In KOIO, instances documentation are always of type ‘Information Artifact’ and can take any relevant form and have any file format.</p>
 
 <p>EX 5:  Knowledge Object with Knowledge and Service(s) and Test(s) and Information Artifacts that serve as documentation for these things</p>
@@ -553,14 +553,12 @@ In the fifth example below, for the Knowledge Object declared in Example 1, the 
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<ol>
-  <li>More Examples of Knowledge Objects described using KOIO</li>
-</ol>
+<h3 id="examples-of-knowledge-objects-described-using-koio">Examples of Knowledge Objects described using KOIO</h3>
 
 <p>The examples of Knowledge Objects described using KOIO that follow are representative of the kinds of Knowledge Objects that enable clinical decision support and health data analysis. The following examples show metadata arising from applying KOIO 2.1. The initial one (Example 6) shows how a computable guideline and related resources can be described. The next example (Example 7) shows how a health risk score calculator and related resources can be described. The final example (Example 8) shows how a computable phenotype and related resources can be described.</p>
 
-<p>AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A COMPUTABLE GUIDELINE
-Here is a link to a Knowledge Object with a computable guideline which contains an executable representation of the inclusion and exclusion criteria for the United States Preventive Services Task Force (USPSTF) guideline on statin medication use. More information about this statin use guideline can be found here.</p>
+<p><strong>AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A COMPUTABLE GUIDELINE</strong>
+This is a <a href="https://github.com/kgrid-objects/USPSTF-collection/tree/main/cardiovascular-prevention-statin-use">Knowledge Object with a computable guideline</a> which contains an executable representation of the inclusion and exclusion criteria for the United States Preventive Services Task Force (USPSTF) guideline on statin medication use. More information about this statin use guideline can be found <a href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/statin-use-in-adults-preventive-medication">here</a>.</p>
 
 <p>The metadata in Example 6 below begin with a description of the Knowledge Object as a whole. It has a simulated identifier (ark:StatinUse) and its own version (1.9). At the end of the metadata, the Knowledge Object is associated with documentation in two forms, a readme file and an interactive Google Collab notebook.</p>
 
@@ -568,7 +566,7 @@ Here is a link to a Knowledge Object with a computable guideline which contains 
 
 <p>The Knowledge Object in Example 6 has one ‘knowledge’ element pointing to a representation of guideline’s inclusion and exclusion criteria in a Python file called cardiovascular_prevention_statin_use.py. This knowledge representation is associated with its own software test called test_knowledge.py. The knowledge is also associated with documentation, including a link to the relevant content from the guideline.</p>
 
-<p>Additional software tests for testing this Knowledge Object’s metadata using the KGrid SDK are linked in the section of these metadata with @id = “test_resources”.</p>
+<p>Additional software tests for testing this Knowledge Object’s metadata using the <a href="https://pypi.org/project/kgrid-sdk/">KGrid SDK</a> are linked in the section of these metadata with @id = “test_resources”.</p>
 
 <p>The metadata in Example 6 also associate and describe three services with this Knowledge Object. Recall from the definition above that Services provide ways to utilize the Knowledge encapsulated within the Knowledge Object. The three services included in this Knowledge Object are ActivatorService, CLIService, and APIService. The ActivatorService provides a special API interface to the computable guideline arising from running the KGrid Activator tool as a software gateway. The CLIService provides an application with an interface to the computable guideline implemented using machine commands. The APIService provides an API interface by exposing the computable guideline without requiring a separate gateway tool.</p>
 
@@ -722,8 +720,8 @@ Here is a link to a Knowledge Object with a computable guideline which contains 
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A HEALTH RISK SCORE CALCULATOR
-Here is a link to a Knowledge Object containing an executable representation of NIH Stroke Scale.</p>
+<p><strong>AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A HEALTH RISK SCORE CALCULATOR</strong>
+<a href="https://github.com/kgrid-objects/NIH-Stroke-Scale/tree/main">This is a Knowledge Object containing an executable representation of NIH Stroke Scale</a>.</p>
 
 <p>In the metadata for this Knowledge Object appearing below in Example 7, there are no instances of Service or Test. There is one instance of Knowledge, and it is implemented in a computer executable format by the file called “nihss.py”. An interesting feature of these metadata is that the description of the single instance of Knowledge for the NIH Stroke Scale includes information about all the NIH Stroke Scale’s distinct items. For these, terms from the Function Ontology (fno), e.g., “expects”, and OWL enumerations of permitted values are included.</p>
 
@@ -1020,8 +1018,8 @@ Here is a link to a Knowledge Object containing an executable representation of 
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A COMPUTABLE PHENOTYPE
-Here is a link to a Knowledge Object containing a computable phenotype for Nephrotic Syndrome.</p>
+<p><strong>AN EXAMPLE OF A KNOWLEDGE OBJECT WITH A COMPUTABLE PHENOTYPE</strong>
+<a href="https://github.com/kgrid-lab/nephroticsyndrome-computablephenotype">This is a Knowledge Object containing a computable phenotype for Nephrotic Syndrome</a>.</p>
 
 <p>The metadata for this Knowledge Object are shown below Example 8. This Knowledge Object includes one instance of ‘Knowledge’, two instances of ‘Service’, and no instances of ‘Test’. In this case, the source of its one instance of knowledge was first published as a SQL query, a common format for expressing computable phenotypes. Then, the logic of this query was re-implemented in Python in a computer executable file called “classification_algorithm.py”.</p>
 
@@ -1122,15 +1120,13 @@ Here is a link to a Knowledge Object containing a computable phenotype for Nephr
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<ol>
-  <li>Adding KOIO-based Metadata to the Metadata for an Existing Artifact</li>
-</ol>
+<h3 id="adding-koio-based-metadata-to-the-metadata-for-an-existing-artifact">Adding KOIO-based Metadata to the Metadata for an Existing Artifact</h3>
 
-<p>KOIO is intended to allow creators and owners of existing CBK artifacts to extend the metadata they already have by adding KOIO terms. In this sense, KOIO can be shown to interoperate with other metadata generating and consuming processes. As one example of this, we have chosen a computable phenotype created by others and made available through PheKB to show how KOIO metadata can extend existing metadata.</p>
+<p>KOIO is intended to allow creators and owners of existing CBK artifacts to extend the metadata they already have by adding KOIO terms. In this sense, KOIO can be shown to interoperate with other metadata generating and consuming processes. As one example of this, we have chosen a computable phenotype created by others and made available through <a href="https://phekb.org/">PheKB</a> to show how KOIO metadata can extend existing metadata.</p>
 
-<p>EX 9: Using KOIO to Extend Existing Metadata for a Computable Phenotype for Angiotensin Converting Enzyme Inhibitor (ACE-I) induced cough.</p>
+<p>EX 9: Using KOIO to Extend Existing Metadata for a <a href="https://phekb.org/phenotype/ace-inhibitor-ace-i-induced-cough">Computable Phenotype for Angiotensin Converting Enzyme Inhibitor (ACE-I) induced cough</a>.</p>
 
-<p>In the following example, a new Knowledge Object (KO) containing previously existing CBK artifact content has been described using KOIO terms. In the example, the metadata added specifically by applying core KOIO terms is shown in bold type. While the new KO is described as a product of the Knowledge Systems Lab, the Knowledge element in this example is a product from the creators of the computable phenotype here. As intended, essentially all the metadata from the phenotype’s web page appears in the example. KOIO allows us to organize the existing metadata in a new and potentially more useful way by highlighting the Knowledge element and its corresponding documentation.</p>
+<p>In the following example, a new Knowledge Object (KO) containing previously existing CBK artifact content has been described using KOIO terms. In the example, the metadata added specifically by applying core KOIO terms is shown in bold type. While the new KO is described as a product of the Knowledge Systems Lab, the Knowledge element in this example is a product from the creators of the computable phenotype <a href="https://phekb.org/phenotype/ace-inhibitor-ace-i-induced-cough">here</a>. As intended, essentially all the metadata from the phenotype’s web page appears in the example. KOIO allows us to organize the existing metadata in a new and potentially more useful way by highlighting the Knowledge element and its corresponding documentation.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kgrid.org/koio/2.1/context"</span><span class="p">,</span><span class="w">
@@ -1213,38 +1209,37 @@ Here is a link to a Knowledge Object containing a computable phenotype for Nephr
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<ol>
-  <li>Tools and Tests</li>
-</ol>
+<h3 id="tools-and-tests">Tools and Tests</h3>
+<p><strong>Tools</strong>
+Github is used to create a <a href="https://github.com/kgrid/koio">repository for KOIO</a> and manage the ontology’s life cycle. <a href="https://github.com/kgrid/koio/issues">Github Issues</a> is used to track changes to the KOIO ontology and <a href="https://kgrid.org/koio/">Github Pages</a> is used to deploy the ontology’s files and documentation.</p>
 
-<p>Tools
-Github is used to create a repository for KOIO and manage the ontology’s life cycle. Github Issues is used to track changes to the KOIO ontology and Github Pages is used to deploy the ontology’s files and documentation.</p>
+<p><a href="https://protege.stanford.edu/">Protege</a> version 5.6.4 was used to create and validate the core OWL file.</p>
 
-<p>Protege version 5.6.4 has been used to create and validate the core OWL file.</p>
+<p><a href="https://github.com/stain/owl2jsonld">Owl2jsonld</a> version 0.2.1 was used to generate JSON_LD Context File From KOIO OWL File.</p>
 
-<p>Owl2jsonld version 0.2.1 used to generate JSON_LD Context File From KOIO OWL File.</p>
+<p>In addition to the tools for managing KOIO, for people who wish to develop their own Knowledge Objects following the KOIO specification, the <a href="https://github.com/kgrid/python-sdk">KGrid SDK CLI</a> can be used to:</p>
+<ul>
+  <li>Initiate a Knowledge Object</li>
+  <li>Create Knowledge Object Information Pages</li>
+  <li>Perform Metadata-driven Packaging of Knowledge Objects</li>
+</ul>
 
-<p>In addition to the tools for managing KOIO, for people who wish to develop their own Knowledge Objects following the KOIO specification, the KGrid SDK CLI can be used to:
-Initiate a Knowledge Object
-Create Knowledge Object Information Pages
-Perform Metadata-driven Packaging of Knowledge Objects</p>
-
-<p>Testing
-Ontology individuals and pytests are used to validate changes to the KOIO ontology. Two examples, bmi and tobacco KO, are created as individuals in the KOIO OWL file and loaded into an RDF graph along with the ontology during testing. Using an available python file with KOIO tests in it, the pytest framework is used to verify the accuracy of relationships within the ontology using unit tests.</p>
+<p><strong>Testing</strong>
+Ontology individuals and pytests are used to validate changes to the KOIO ontology. Two examples, bmi and tobacco KO, are created as individuals in the KOIO OWL file and loaded into an RDF graph along with the ontology during testing. Using an available <a href="https://github.com/kgrid/koio/blob/master/tests/test_ontology.py">python file</a> with KOIO tests in it, the pytest framework is used to verify the accuracy of relationships within the ontology using unit tests.</p>
 
 <p>When updating the KOIO ontology, changes are only considered complete and ready for merging into the main branch once all related tests and examples are updated, and both existing and new tests are passed successfully.</p>
 
-<p>A. References</p>
+<h3 id="references-1">References</h3>
 
 <p>Previous KSL-KGRID specifications reviewed while making this document are:
-https://kgrid.org/specs/packaging.html 
-https://kgrid.org/specs/activationSpec.html#_1-introduction 
-https://kgrid.org/specs/kgrid-knowledge-objects.html</p>
+<a href="https://kgrid.org/specs/packaging.html">https://kgrid.org/specs/packaging.html</a>
+<a href="https://kgrid.org/specs/activationSpec.html#_1-introduction">https://kgrid.org/specs/activationSpec.html#_1-introduction</a>
+<a href="https://kgrid.org/specs/kgrid-knowledge-objects.html">https://kgrid.org/specs/kgrid-knowledge-objects.html</a></p>
 
 <p>Similar documents used as references when creating this document are:
-https://www.w3.org/TR/prov-o/
-https://fno.io/spec/
-https://www.researchobject.org/ro-crate/specification/1.1/index.html</p>
+Provenance Ontology: <a href="https://www.w3.org/TR/prov-o/">https://www.w3.org/TR/prov-o/</a>
+Function Ontology: <a href="https://fno.io/spec/">https://fno.io/spec/</a>
+Research Object Crate Specification: <a href="https://www.researchobject.org/ro-crate/specification/1.1/index.html">https://www.researchobject.org/ro-crate/specification/1.1/index.html</a></p>
 
 <p>Ontologies used as upper level terms and/or to define terms included in KOIO are:
 Basic Formal Ontology (BFO)
