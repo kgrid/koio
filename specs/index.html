@@ -20,7 +20,7 @@
 {"@context":"https://schema.org","@type":"WebPage","description":"This repository is for the Knowledge Object Implementation Ontology (KOIO)","headline":"KOIO Specification","url":"/koio/specs/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/koio/assets/css/style.css?v=6754a82ccdfdf60db87e43be1a9f0c7e87642aef">
+    <link rel="stylesheet" href="/koio/assets/css/style.css?v=e1774c1e4d6b84794ebe79ec07cd1f4e7b66d0c0">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -72,10 +72,10 @@ Namita Bahulekar, Andrew Beck, Greg Farris, Nate Gittlen, Carl Lagoze, George Me
 
 <p>Finally, KOIO tries to leave all software and practice implementation details out so that it can serve as a common ontology for describing nearly all CBK artifacts, regardless of the platforms or applications that support and incorporate them, and agnostic as to how people ultimately use CBK artifacts.</p>
 
-<p><strong>Status of this Document and Compliance</strong>
+<p><strong>Status of this Document and Compliance</strong><br />
 This document is a draft of a potential specification for KOIO. It has no official standing of any kind and does not represent the support or consensus of any standards organization. There is NO normative content in this document. Instead, all content is informational and serves to explain what KOIO is and how it might be used. For that reason, all compliance is informal and provisional. We show and link to actual examples of KOIO use in Section 4 below.</p>
 
-<p><strong>Contact Information</strong>
+<p><strong>Contact Information</strong><br />
 The Knowledge Systems Lab (KSL) at the University of Michigan began work on KOIO in 2016 and continues to evolve KOIO over time. KSL is based in the Department of Learning Health Sciences at the University of Michigan Medical School.</p>
 
 <p>To contact KSL, use the following email address:
@@ -120,7 +120,7 @@ The Knowledge Systems Lab (KSL) at the University of Michigan began work on KOIO
 <h3 id="introduction">Introduction</h3>
 <p>This introduction discusses what motivated KOIO and then covers the purpose of KOIO, KOIO’s commitments and other background information.</p>
 
-<p><strong>THE PROBLEM MOTIVATING WORK ON KOIO</strong>
+<p><strong>THE PROBLEM MOTIVATING WORK ON KOIO</strong><br />
 The knowledge management and organization problem motivating KOIO is that it is difficult to find, access, interoperate with (or integrate), and reuse units of content created to convey computer actionable and evidence-based representations of knowledge.</p>
 
 <p>In this context, to be “computer actionable” means either that knowledge is itself represented in the form of explicit machine instructions known as software OR that knowledge is represented in structured, predictable forms anticipated by and intentionally processed using explicit machine instructions. Other forms of computable actionable knowledge besides software include lookup tables and formalized data structures for representing concepts and relationships (e.g., RDF triples) and production rules.</p>
@@ -129,15 +129,15 @@ The knowledge management and organization problem motivating KOIO is that it is 
 
 <p>Finally, a “unit of content” is any file or group of files. KOIO specifies how to describe units of content called Knowledge Objects in a formal way.</p>
 
-<p><strong>THE PURPOSE OF KOIO</strong>
+<p><strong>THE PURPOSE OF KOIO</strong><br />
 The purpose of KOIO is to make it easier for many people in different roles to find, access, and use CBK artifacts in their everyday professional work. Relevant roles include a variety of technical, clinical, research, and administrative roles, among others.</p>
 
 <p>KOIO provides a way of describing CBK artifacts, hopefully moving the world one step closer to realizing better infrastructure for computable actionable knowledge. Ideally, such infrastructure would make CBK artifacts openly and widely available, enabling more utilization of shared CBK and avoiding duplication of effort.</p>
 
-<p><strong>COMMITMENTS</strong>
+<p><strong>COMMITMENTS</strong><br />
 The content of KOIO reflects the following six commitments:</p>
 
-<p><strong><em>FOUR GENERAL COMPUTABLE KNOWLEDGE COMMITMENTS</em></strong></p>
+<p><strong><em>FOUR GENERAL COMPUTABLE KNOWLEDGE COMMITMENTS</em></strong><br /></p>
 <ul>
   <li>Computer actionable representations of knowledge have unique properties</li>
   <li>Infrastructure helps widely share computer actionable representations of knowledge</li>
@@ -145,31 +145,31 @@ The content of KOIO reflects the following six commitments:</p>
   <li>Trust in computer actionable biomedical knowledge is increased by sharing metadata</li>
 </ul>
 
-<p><strong><em>TWO ADDED COMMITMENTS SPECIFIC TO COMPUTABLE BIOMEDICAL KNOWLEDGE</em></strong></p>
+<p><strong><em>TWO ADDED COMMITMENTS SPECIFIC TO COMPUTABLE BIOMEDICAL KNOWLEDGE</em></strong><br /></p>
 <ul>
   <li>For human health, open computer actionable representations of biomedical knowledge should remain open not precluding proprietary refinements, extensions or enhancements</li>
   <li>Metadata describing computer actionable representations of biomedical knowledge should be open even when the representations themselves are proprietary</li>
 </ul>
 
-<p><strong>CONVENTIONS</strong>
+<p><strong>CONVENTIONS</strong><br />
 KSL’s general approach is to keep KOIO concise, connected (to other ontologies and vocabularies), and common (to all Knowledge Objects).</p>
 
-<p><strong>IMPORTED ONTOLOGIES</strong>
+<p><strong>IMPORTED ONTOLOGIES</strong><br />
 KOIO imports two ontologies: the <a href="http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl">Information Artifact Ontology (IAO)</a> and the <a href="https://raw.githubusercontent.com/allysonlister/swo/master/swo-full.owl">Software Ontology (SWO)</a>.</p>
 
-<p><strong>PREFIXES AND NAMESPACES</strong>
+<p><strong>PREFIXES AND NAMESPACES</strong><br />
 The Knowledge Object Implementation Ontology’s namespace is here:
 <a href="https://kgrid.org/koio#">https://kgrid.org/koio#</a></p>
 
 <p>The preferred prefix is koio:</p>
 
-<p><strong>WHO KOIO IS FOR</strong>
+<p><strong>WHO KOIO IS FOR</strong><br />
 KOIO is for people who want to describe instances of computer actionable representations of knowledge and corresponding software, software tests and documentation in a systematic way.</p>
 
-<p><strong>OUR ONGOING WORK TO MODEL COMPUTABLE BIOMEDICAL KNOWLEDGE AND ADVANCE INFRASTRUCTURE</strong>
+<p><strong>OUR ONGOING WORK TO MODEL COMPUTABLE BIOMEDICAL KNOWLEDGE AND ADVANCE INFRASTRUCTURE</strong><br />
 Developing and working with KOIO is part of a larger effort to model computable biomedical knowledge (CBK) - what it is, what it does, who uses it, how it is used, etc. We are pursuing this work as a means of informing the development of better knowledge infrastructure for CBK.</p>
 
-<p><strong>RECOGNIZING THE MOBILIZING COMPUTABLE BIOMEDICAL KNOWLEDGE (MCBK) COMMUNITY</strong>
+<p><strong>RECOGNIZING THE MOBILIZING COMPUTABLE BIOMEDICAL KNOWLEDGE (MCBK) COMMUNITY</strong><br />
 The work to develop and improve KOIO has been inspired and guided by the members of the MCBK community. More information about this community is available at: <a href="https://mobilizecbk.med.umich.edu/">https://mobilizecbk.med.umich.edu/</a></p>
 
 <h3 id="definitions">Definitions</h3>
@@ -178,15 +178,15 @@ The work to develop and improve KOIO has been inspired and guided by the members
 <p><strong>KOIO CLASSES</strong>
 The following list starts with the Knowledge Object class, then lists four possible parts of any Knowledge Object.</p>
 
-<p>KnowledgeObject, def., an Information Artifact capable of serving a role as the atomic unit of computable knowledge and therefore comprised of at least one Knowledge Object Implementation</p>
+<p><strong>KnowledgeObject</strong>, def., an Information Artifact capable of serving a role as the atomic unit of computable knowledge and therefore comprised of at least one Knowledge Object Implementation</p>
 
-<p>Knowledge, def., information or understanding about a subject, obtained through experience or study.</p>
+<p><strong>Knowledge</strong>, def., information or understanding about a subject, obtained through experience or study.</p>
 
-<p>Service, def., a defined function or capability provided by a software system. Each Service provides a way to use or interact with a Knowledge Object, facilitating access and utilization of the Knowledge encapsulated within the Knowledge Object. A Service is a specification of what a self-contained piece of software does.</p>
+<p><strong>Service</strong>, def., a defined function or capability provided by a software system. Each Service provides a way to use or interact with a Knowledge Object, facilitating access and utilization of the Knowledge encapsulated within the Knowledge Object. A Service is a specification of what a self-contained piece of software does.</p>
 
-<p>Test, def., an information content entity conveying a systematic procedure to assess specific aspects of software performance, functionality, or security. Tests are created to ensure that the software meets specified requirements or to identify any defects.</p>
+<p><strong>Test</strong>, def., an information content entity conveying a systematic procedure to assess specific aspects of software performance, functionality, or security. Tests are created to ensure that the software meets specified requirements or to identify any defects.</p>
 
-<p>Implementation, def., a computer or machine processable file that is or informs a series of instructions that can be directly interpreted or executed.</p>
+<p><strong>Implementation</strong>, def., a computer or machine processable file that is or informs a series of instructions that can be directly interpreted or executed.</p>
 
 <p><strong>KOIO OBJECT PROPERTIES</strong>
 The following lists of properties starts with two properties that relate disparate parts of Knowledge Objects followed by five properties that indicate the parts a Knowledge Object has.</p>
