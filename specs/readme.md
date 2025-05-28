@@ -37,10 +37,10 @@ The key parts of Knowledge Objects defined in KOIO are logically connected to te
 
 Finally, KOIO tries to leave all software and practice implementation details out so that it can serve as a common ontology for describing nearly all CBK artifacts, regardless of the platforms or applications that support and incorporate them, and agnostic as to how people ultimately use CBK artifacts.
 
-**Status of this Document and Compliance**
+**Status of this Document and Compliance**<br>
 This document is a draft of a potential specification for KOIO. It has no official standing of any kind and does not represent the support or consensus of any standards organization. There is NO normative content in this document. Instead, all content is informational and serves to explain what KOIO is and how it might be used. For that reason, all compliance is informal and provisional. We show and link to actual examples of KOIO use in Section 4 below.
 
-**Contact Information**
+**Contact Information**<br>
 The Knowledge Systems Lab (KSL) at the University of Michigan began work on KOIO in 2016 and continues to evolve KOIO over time. KSL is based in the Department of Learning Health Sciences at the University of Michigan Medical School.
 
 To contact KSL, use the following email address:
@@ -79,7 +79,7 @@ To contact KSL, use the following email address:
 ### Introduction
 This introduction discusses what motivated KOIO and then covers the purpose of KOIO, KOIO's commitments and other background information.
 
-**THE PROBLEM MOTIVATING WORK ON KOIO**
+**THE PROBLEM MOTIVATING WORK ON KOIO**<br>
 The knowledge management and organization problem motivating KOIO is that it is difficult to find, access, interoperate with (or integrate), and reuse units of content created to convey computer actionable and evidence-based representations of knowledge.
 
 In this context, to be "computer actionable" means either that knowledge is itself represented in the form of explicit machine instructions known as software OR that knowledge is represented in structured, predictable forms anticipated by and intentionally processed using explicit machine instructions. Other forms of computable actionable knowledge besides software include lookup tables and formalized data structures for representing concepts and relationships (e.g., RDF triples) and production rules.  
@@ -88,43 +88,43 @@ To be "evidence-based" means that the computer actionable knowledge of interest 
 
 Finally, a "unit of content" is any file or group of files. KOIO specifies how to describe units of content called Knowledge Objects in a formal way.  
 
-**THE PURPOSE OF KOIO**
+**THE PURPOSE OF KOIO**<br>
 The purpose of KOIO is to make it easier for many people in different roles to find, access, and use CBK artifacts in their everyday professional work. Relevant roles include a variety of technical, clinical, research, and administrative roles, among others.  
 
 KOIO provides a way of describing CBK artifacts, hopefully moving the world one step closer to realizing better infrastructure for computable actionable knowledge. Ideally, such infrastructure would make CBK artifacts openly and widely available, enabling more utilization of shared CBK and avoiding duplication of effort.
 
-**COMMITMENTS**
+**COMMITMENTS**<br>
 The content of KOIO reflects the following six commitments:
 
-***FOUR GENERAL COMPUTABLE KNOWLEDGE COMMITMENTS***
+***FOUR GENERAL COMPUTABLE KNOWLEDGE COMMITMENTS***<br>
 - Computer actionable representations of knowledge have unique properties
 - Infrastructure helps widely share computer actionable representations of knowledge 
 - Formalized and standardized digital Knowledge Objects reflect and enable infrastructure
 - Trust in computer actionable biomedical knowledge is increased by sharing metadata
 
-***TWO ADDED COMMITMENTS SPECIFIC TO COMPUTABLE BIOMEDICAL KNOWLEDGE***
+***TWO ADDED COMMITMENTS SPECIFIC TO COMPUTABLE BIOMEDICAL KNOWLEDGE***<br>
 - For human health, open computer actionable representations of biomedical knowledge should remain open not precluding proprietary refinements, extensions or enhancements
 - Metadata describing computer actionable representations of biomedical knowledge should be open even when the representations themselves are proprietary
 
-**CONVENTIONS**
+**CONVENTIONS**<br>
 KSL’s general approach is to keep KOIO concise, connected (to other ontologies and vocabularies), and common (to all Knowledge Objects). 
 
-**IMPORTED ONTOLOGIES**
+**IMPORTED ONTOLOGIES**<br>
 KOIO imports two ontologies: the [Information Artifact Ontology (IAO)](http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl) and the [Software Ontology (SWO)](https://raw.githubusercontent.com/allysonlister/swo/master/swo-full.owl). 
 
-**PREFIXES AND NAMESPACES**
+**PREFIXES AND NAMESPACES**<br>
 The Knowledge Object Implementation Ontology's namespace is here:
 <https://kgrid.org/koio#>
 
 The preferred prefix is koio:
 
-**WHO KOIO IS FOR**
+**WHO KOIO IS FOR**<br>
 KOIO is for people who want to describe instances of computer actionable representations of knowledge and corresponding software, software tests and documentation in a systematic way.
 
-**OUR ONGOING WORK TO MODEL COMPUTABLE BIOMEDICAL KNOWLEDGE AND ADVANCE INFRASTRUCTURE**
+**OUR ONGOING WORK TO MODEL COMPUTABLE BIOMEDICAL KNOWLEDGE AND ADVANCE INFRASTRUCTURE**<br>
 Developing and working with KOIO is part of a larger effort to model computable biomedical knowledge (CBK) - what it is, what it does, who uses it, how it is used, etc. We are pursuing this work as a means of informing the development of better knowledge infrastructure for CBK. 
 
-**RECOGNIZING THE MOBILIZING COMPUTABLE BIOMEDICAL KNOWLEDGE (MCBK) COMMUNITY**
+**RECOGNIZING THE MOBILIZING COMPUTABLE BIOMEDICAL KNOWLEDGE (MCBK) COMMUNITY**<br>
 The work to develop and improve KOIO has been inspired and guided by the members of the MCBK community. More information about this community is available at: <https://mobilizecbk.med.umich.edu/>
 
 
