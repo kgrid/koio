@@ -1,0 +1,136 @@
+{
+  "@id": "https://kgrid.org/koio/2.1/context",
+  "@context" : {
+    "koio": "https://kgrid.org/koio#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "schema":"http://schema.org/",
+
+    "KnowledgeObject" : {
+      "@id" : "https://kgrid.org/koio#KnowledgeObject"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "hasTest" : {
+      "@id" : "https://kgrid.org/koio#hasTest",
+      "@type" : "@id"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "Test" : {
+      "@id" : "https://kgrid.org/koio#Test"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "API" : {
+      "@id" : "http://www.ebi.ac.uk/swo/interface/SWO_9000054"
+    },
+    "KOIOVersion" : {
+      "@id" : "https://kgrid.org/koio#KOIOVersion"
+    },
+    "Knowledge" : {
+      "@id" : "https://kgrid.org/koio#Knowledge"
+    },
+    "Artifact" : {
+      "@id" : "https://kgrid.org/koio#Artifact"
+    },
+    "MaterialEntity" : {
+      "@id" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    },
+    "hasPart" : {
+      "@id" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "@type" : "@id"
+    },
+    "CLI" : {
+      "@id" : "http://www.ebi.ac.uk/swo/interface/SWO_9000053"
+    },
+    "hasService" : {
+      "@id" : "https://kgrid.org/koio#hasService",
+      "@type" : "@id"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "JavaScript" : {
+      "@id" : "http://www.ebi.ac.uk/swo/SWO_0000108"
+    },
+    "hasServiceSpecification" : {
+      "@id" : "https://kgrid.org/koio#hasServiceSpecification",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "Implementation" : {
+      "@id" : "https://kgrid.org/koio#Implementation"
+    },
+    "type" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#type"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher"
+    },
+    "InformationContentEntity" : {
+      "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    },
+    "hasInterface" : {
+      "@id" : "http://www.ebi.ac.uk/swo/SWO_0004001",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "Software" : {
+      "@id" : "http://www.ebi.ac.uk/swo/SWO_0000001"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Service" : {
+      "@id" : "https://kgrid.org/koio#Service"
+    },
+    "hasDocumentation" : {
+      "@id" : "https://kgrid.org/koio#hasDocumentation",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
+    },
+    "SWO_9000050" : {
+      "@id" : "http://www.ebi.ac.uk/swo/SWO_9000050"
+    },
+    "InformationArtifact" : {
+      "@id" : "https://kgrid.org/koio#InformationArtifact"
+    },
+    "KnowledgeObjectCollection" : {
+      "@id" : "https://kgrid.org/koio#KnowledgeObjectCollection"
+    },
+    "dependsOn" : {
+      "@id" : "http://purl.obolibrary.org/obo/RO_0002502",
+      "@type" : "@id"
+    },
+    "implementedBy" : {
+      "@id" : "http://www.ebi.ac.uk/swo/SWO_0000085",
+      "@type" : "@id"
+    },
+    "Collection" : {
+      "@id" : "https://kgrid.org/koio#Collection"
+    },
+    "hasKnowledge" : {
+      "@id" : "https://kgrid.org/koio#hasKnowledge",
+      "@type" : "@id"
+    },
+    "definition" : {
+      "@id" : "http://purl.obolibrary.org/obo/IAO_0000115"
+    },
+    "Python": {
+      "@id" : "http://www.ebi.ac.uk/swo/SWO_0000118"
+    },
+    "Function":{
+      "@id" : "https://w3id.org/function/ontology#Function"
+    }
+  }
+}
